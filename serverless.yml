@@ -1,4 +1,4 @@
-service: line-serverless-MongoDbStorage-LineConnector-example
+service: linebot-serverless-MongoDbStorage-LineConnector-typeScript-starter-Kit
 
 provider:
   name: aws
