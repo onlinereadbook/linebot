@@ -16,4 +16,5 @@ export default (bot: builder.UniversalBot) => {
             s.endDialog("bady " + s.userData.name);
         }
     ]);
+
 }
