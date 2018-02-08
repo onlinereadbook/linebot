@@ -22,8 +22,8 @@ var bot = new builder.UniversalBot(connector)
     mongoPort: config.mongoPort,
     // mongoIp: "ds125578.mlab.com",
     // mongoPort: "255xx",
-    // username: config.username,
-    // password: config.password
+    username: config.username,
+    password: config.password
   }));
   bot_dailog.default(bot)
   // bot.dialog("/",s=>{

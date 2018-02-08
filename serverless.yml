@@ -1,4 +1,4 @@
-service: rich-god
+service: rich
 
 provider:
   name: aws
@@ -8,6 +8,7 @@ provider:
     securityGroupIds:
      - "sg-db38a1a2"
     subnetIds:
+     - "subnet-39dd6b62" 
      - "subnet-44e59e0d"
 functions:
   line:
@@ -20,6 +21,7 @@ functions:
       securityGroupIds:
       - "sg-db38a1a2"
       subnetIds:
+      - "subnet-39dd6b62" 
       - "subnet-44e59e0d"
 plugins:
   - serverless-webpack
