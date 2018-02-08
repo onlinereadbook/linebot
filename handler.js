@@ -1,6 +1,6 @@
 'use strict';
 
-var config = require("./config")
+var config = require("./conf").conf;
 var botbuilder_linebot_connector_1 = require("botbuilder-linebot-connector");
 var botbuilder_mongodb_storage_1 = require("botbuilder-mongodb-storage");
 var builder = require('botbuilder');
