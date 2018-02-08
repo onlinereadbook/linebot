@@ -1,4 +1,4 @@
-service: linebot-serverless-MongoDbStorage-LineConnector-typeScript-starter-Kit
+service: rich-god
 
 provider:
   name: aws
@@ -6,9 +6,9 @@ provider:
   runtime: nodejs6.10
   vpc:
     securityGroupIds:
-     - "sg-db38a1xx"
+     - "sg-db38a1a2"
     subnetIds:
-     - "subnet-44e59exx"
+     - "subnet-44e59e0d"
 functions:
   line:
     handler: handler.line
@@ -18,9 +18,9 @@ functions:
           path: line
     vpc:
       securityGroupIds:
-      - "sg-db38a1xx"
+      - "sg-db38a1a2"
       subnetIds:
-      - "subnet-44e59exx"
+      - "subnet-44e59e0d"
 plugins:
   - serverless-webpack
   - serverless-offline
