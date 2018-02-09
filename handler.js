@@ -1,6 +1,7 @@
 'use strict';
 
 var config = require("./conf");
+console.log("config",config)
 
 var bot_dailog = require("./bot/bot")
 var botbuilder_linebot_connector_1 = require("botbuilder-linebot-connector");
@@ -20,15 +21,10 @@ var bot = new builder.UniversalBot(connector)
     collectionName: config.collectionName,
     mongoIp: config.mongoIp,
     mongoPort: config.mongoPort,
-    // mongoIp: "ds125578.mlab.com",
-    // mongoPort: "255xx",
     username: config.username,
     password: config.password
   }));
   bot_dailog.default(bot)
-  // bot.dialog("/",s=>{
-  //   s.beginDialog("good")
-  // })
 
 module.exports.line = (event, context, callback) => {
   connector.serverlessWebhock(event)
