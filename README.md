@@ -1,3 +1,7 @@
-# https-github.com-Wolke-linebot-serverless-dynamodb-LineConnector-typeScript-starter-Kit
-# https-github.com-Wolke-linebot-serverless-dynamodb-LineConnector-typeScript-starter-Kit
-# linebot-serverless-dynamodb-LineConnector-typeScript-starter-Kit
+# add conf.js
+LINE setting
+module.exports = {
+    channelId: "1561278xxx",
+    channelSecret: "xxx",
+    channelAccessToken: "xxx"
+}
