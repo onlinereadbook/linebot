@@ -46,14 +46,7 @@ var connector = new botbuilder_linebot_connector_1.LineConnector({
 });
 
 var bot = new builder.UniversalBot(connector).set('storage', adapter);
-// .set("storage", new botbuilder_mongodb_storage_1.MongoDbStorage({
-//   DatabaseName: config.DatabaseName,
-//   collectionName: config.collectionName,
-//   mongoIp: config.mongoIp,
-//   mongoPort: config.mongoPort,
-//   username: config.username,
-//   password: config.password
-// }));
+
 bot_dailog.default(bot)
 
 module.exports.line = (event, context, callback) => {
