@@ -5,8 +5,10 @@
   "main": "conf.js",
   "dependencies": {
     "@types/node": "^9.4.2",
+    "aws-sdk": "^2.211.0",
     "botbuilder-linebot-connector": "^2.1.4",
     "botbuilder-mongodb-storage": "^0.0.3",
+    "botbuilder-storage": "^1.0.2",
     "mongoose": "^5.0.3"
   },
   "devDependencies": {
