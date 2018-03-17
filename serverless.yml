@@ -26,10 +26,17 @@ functions:
           method: post
           path: line
           cors: true
+    notify:
+        handler: handler.notify
+        events:
+          - http:
+              method: post
+              path: notify
+              cors: true
   
 resources:
   Resources:
-    TodosDynamoDbTable:
+    DynamoDbTable:
       Type: 'AWS::DynamoDB::Table'
       DeletionPolicy: Retain
       Properties:

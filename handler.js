@@ -1,7 +1,7 @@
 'use strict';
 // Import dependencies
 const DynamoDB = require('aws-sdk/clients/dynamodb');
-const { DynamoBotStorage } = require('botbuilder-storage');
+const { DynamoBotStorage } = require('botbuilder-dynamodb-storage');
 
 // Instantiate the bot with a connector instance
 // const bot = new UniversalBot(connector);
@@ -54,13 +54,30 @@ module.exports.line = (event, context, callback) => {
   const response = {
     statusCode: 200,
     body: JSON.stringify({
-      message: 'Go Serverless v1.0! Your function executed successfully!',
+      message: 'line webhock!',
       input: event,
     }),
   };
-
   callback(null, response);
-
-  // Use this code if you don't use the http event with the LAMBDA-PROXY integration
-  // callback(null, { message: 'Go Serverless v1.0! Your function executed successfully!', event });
 };
+
+
+
+module.exports.notify = (event, context, callback) => {
+  // connector.serverlessWebhock(event)
+  var msg = new builder.Message().address(address);
+  msg.text('Hello, this is a notification');
+  msg.textLocale('en-US');
+  bot.send(msg);
+
+  const response = {
+    statusCode: 200,
+    body: JSON.stringify({
+      message: 'line notify!',
+      input: event,
+    }),
+  };
+  callback(null, response);
+};
+
+
