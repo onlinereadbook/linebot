@@ -31,7 +31,7 @@ const adapter = new DynamoBotStorage(client, settings)
 
 
 var config = require("./conf");
-console.log("config", config)
+// console.log("config", config)
 
 var bot_dailog = require("./bot/bot")
 var botbuilder_linebot_connector_1 = require("botbuilder-linebot-connector");
@@ -64,11 +64,31 @@ module.exports.line = (event, context, callback) => {
 
 
 module.exports.notify = (event, context, callback) => {
-  // connector.serverlessWebhock(event)
-  var msg = new builder.Message().address(address);
-  msg.text('Hello, this is a notification');
-  msg.textLocale('en-US');
-  bot.send(msg);
+  let body = JSON.parse(event.body);
+
+  let LineId = body.LineId;
+  let title = body.title
+  let description = body.description;
+  let startTime = body.startTime;
+  let item = {
+    TableName: process.env.DYNAMODB_TABLE,
+    Key: { ["id"]: { S: LineId } },
+  };
+  client.getItem(item, (err, doc) => {
+    if (err) {
+      return reject(err);
+    }
+    let docItem = doc && doc.Item || {};
+    let addressString = docItem.address && docItem.address.S && JSON.parse(docItem.address.S) || {};
+
+    if (addressString) {
+      // console.log("addressString", addressString)
+
+      var msg = new builder.Message().address(addressString);
+      msg.text(title + description);
+      bot.send(msg);
+    }
+  })
 
   const response = {
     statusCode: 200,

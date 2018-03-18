@@ -14,7 +14,7 @@ export default (bot: builder.UniversalBot) => {
     bot.dialog("/", [
         function (s) {
             var savedAddress = s.message.address;
-            console.log("savedAddress", savedAddress)
+            // console.log("savedAddress", savedAddress)
             s.send("我是小書");
 
             setTimeout(() => {
