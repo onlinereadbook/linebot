@@ -38,7 +38,7 @@ var botbuilder_linebot_connector_1 = require("botbuilder-linebot-connector");
 // var botbuilder_mongodb_storage_1 = require("botbuilder-mongodb-storage");
 var builder = require('botbuilder');
 var connector = new botbuilder_linebot_connector_1.LineConnector({
-  hasPushApi: true,
+  hasPushApi: false,
   // your line
   channelId: process.env.channelId || config.channelId,
   channelSecret: process.env.channelSecret || config.channelSecret,
@@ -69,7 +69,7 @@ module.exports.notify = (event, context, callback) => {
   let LineId = body.LineId;
   let title = body.title
   let description = body.description;
-  let startTime = body.startTime;
+  // let startTime = body.startTime;graph
   let item = {
     TableName: process.env.DYNAMODB_TABLE,
     Key: { ["id"]: { S: LineId } },
@@ -85,7 +85,7 @@ module.exports.notify = (event, context, callback) => {
       // console.log("addressString", addressString)
 
       var msg = new builder.Message().address(addressString);
-      msg.text(title + description);
+      msg.text(title + " " + description);
       bot.send(msg);
     }
   })

@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 390);
+/******/ 	return __webpack_require__(__webpack_require__.s = 391);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -4783,7 +4783,7 @@ AWS.util.update(AWS, {
    * @api private
    */
   XML: {
-    Builder: __webpack_require__(393),
+    Builder: __webpack_require__(394),
     Parser: null // conditionally set based on environment
   },
 
@@ -4809,20 +4809,20 @@ AWS.util.update(AWS, {
   /**
    * @api private
    */
-  apiLoader: __webpack_require__(499)
+  apiLoader: __webpack_require__(500)
 });
 
-__webpack_require__(500);
-__webpack_require__(503);
+__webpack_require__(501);
+__webpack_require__(504);
 
 __webpack_require__(115);
 __webpack_require__(187);
-__webpack_require__(504);
 __webpack_require__(505);
-__webpack_require__(507);
+__webpack_require__(506);
 __webpack_require__(508);
 __webpack_require__(509);
-__webpack_require__(516);
+__webpack_require__(510);
+__webpack_require__(517);
 
 /**
  * @readonly
@@ -6059,7 +6059,7 @@ var util = {
    */
   isDualstackAvailable: function isDualstackAvailable(service) {
     if (!service) return false;
-    var metadata = __webpack_require__(517);
+    var metadata = __webpack_require__(518);
     if (typeof service !== 'string') service = service.serviceIdentifier;
     if (typeof service !== 'string' || !metadata.hasOwnProperty(service)) return false;
     return !!metadata[service].dualstackAvailable;
@@ -6128,7 +6128,7 @@ var util = {
    */
   uuid: {
     v4: function uuidV4() {
-      return __webpack_require__(518).v4();
+      return __webpack_require__(519).v4();
     }
   },
 
@@ -6511,14 +6511,14 @@ var algs = __webpack_require__(14);
 var crypto = __webpack_require__(5);
 var Fingerprint = __webpack_require__(59);
 var Signature = __webpack_require__(29);
-var DiffieHellman = __webpack_require__(209).DiffieHellman;
+var DiffieHellman = __webpack_require__(210).DiffieHellman;
 var errs = __webpack_require__(28);
 var utils = __webpack_require__(11);
 var PrivateKey = __webpack_require__(15);
 var edCompat;
 
 try {
-	edCompat = __webpack_require__(211);
+	edCompat = __webpack_require__(212);
 } catch (e) {
 	/* Just continue through, and bail out if we try to use it. */
 }
@@ -6527,12 +6527,12 @@ var InvalidAlgorithmError = errs.InvalidAlgorithmError;
 var KeyParseError = errs.KeyParseError;
 
 var formats = {};
-formats['auto'] = __webpack_require__(212);
+formats['auto'] = __webpack_require__(213);
 formats['pem'] = __webpack_require__(34);
 formats['pkcs1'] = __webpack_require__(132);
 formats['pkcs8'] = __webpack_require__(61);
 formats['rfc4253'] = __webpack_require__(41);
-formats['ssh'] = __webpack_require__(214);
+formats['ssh'] = __webpack_require__(215);
 formats['ssh-private'] = __webpack_require__(88);
 formats['openssh'] = formats['ssh-private'];
 
@@ -6968,14 +6968,14 @@ var Signature = __webpack_require__(29);
 var errs = __webpack_require__(28);
 var util = __webpack_require__(4);
 var utils = __webpack_require__(11);
-var dhe = __webpack_require__(209);
+var dhe = __webpack_require__(210);
 var generateECDSA = dhe.generateECDSA;
 var generateED25519 = dhe.generateED25519;
 var edCompat;
 var nacl;
 
 try {
-	edCompat = __webpack_require__(211);
+	edCompat = __webpack_require__(212);
 } catch (e) {
 	/* Just continue through, and bail out if we try to use it. */
 }
@@ -6987,7 +6987,7 @@ var KeyParseError = errs.KeyParseError;
 var KeyEncryptedError = errs.KeyEncryptedError;
 
 var formats = {};
-formats['auto'] = __webpack_require__(212);
+formats['auto'] = __webpack_require__(213);
 formats['pem'] = __webpack_require__(34);
 formats['pkcs1'] = __webpack_require__(132);
 formats['pkcs8'] = __webpack_require__(61);
@@ -7222,8 +7222,8 @@ module.exports = require("path");
 /* 17 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseAssign = __webpack_require__(420),
-    baseCreate = __webpack_require__(421);
+var baseAssign = __webpack_require__(421),
+    baseCreate = __webpack_require__(422);
 
 /**
  * Creates an object that inherits from the `prototype` object. If a
@@ -7274,8 +7274,8 @@ module.exports = create;
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-var HeroCard_1 = __webpack_require__(195);
-var CardImage_1 = __webpack_require__(197);
+var HeroCard_1 = __webpack_require__(196);
+var CardImage_1 = __webpack_require__(198);
 var CardAction_1 = __webpack_require__(120);
 var utils = __webpack_require__(24);
 var consts = __webpack_require__(7);
@@ -12422,8 +12422,8 @@ module.exports = {
 /* 36 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseIsNative = __webpack_require__(395),
-    getValue = __webpack_require__(400);
+var baseIsNative = __webpack_require__(396),
+    getValue = __webpack_require__(401);
 
 /**
  * Gets the native function at `key` of `object`.
@@ -16544,7 +16544,7 @@ exports.ORDINAL_WORDS_PATTERN = '(?:' + Object.keys(exports.ORDINAL_WORDS).join(
 
   isFunction = __webpack_require__(70);
 
-  isEmpty = __webpack_require__(422);
+  isEmpty = __webpack_require__(423);
 
   XMLElement = null;
 
@@ -16571,8 +16571,8 @@ exports.ORDINAL_WORDS_PATTERN = '(?:' + Object.keys(exports.ORDINAL_WORDS).join(
         XMLComment = __webpack_require__(179);
         XMLDeclaration = __webpack_require__(167);
         XMLDocType = __webpack_require__(180);
-        XMLRaw = __webpack_require__(497);
-        XMLText = __webpack_require__(498);
+        XMLRaw = __webpack_require__(498);
+        XMLText = __webpack_require__(499);
       }
     }
 
@@ -17161,7 +17161,7 @@ function unescapeJsonPointer(str) {
 "use strict";
 
 
-var asap = __webpack_require__(371);
+var asap = __webpack_require__(372);
 
 function noop() {}
 
@@ -17870,8 +17870,8 @@ exports.systemLib.localePath(path.join(__dirname, '../locale/'));
 /***/ (function(module, exports, __webpack_require__) {
 
 var Symbol = __webpack_require__(71),
-    getRawTag = __webpack_require__(396),
-    objectToString = __webpack_require__(397);
+    getRawTag = __webpack_require__(397),
+    objectToString = __webpack_require__(398);
 
 /** `Object#toString` result references. */
 var nullTag = '[object Null]',
@@ -17942,7 +17942,7 @@ module.exports = isArrayLike;
 /* 52 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var arrayLikeKeys = __webpack_require__(409),
+var arrayLikeKeys = __webpack_require__(410),
     baseKeys = __webpack_require__(166),
     isArrayLike = __webpack_require__(51);
 
@@ -18027,11 +18027,11 @@ var apiLoader = AWS.apiLoader;
 
 apiLoader.services['sts'] = {};
 AWS.STS = Service.defineService('sts', ['2011-06-15']);
-__webpack_require__(522);
+__webpack_require__(523);
 Object.defineProperty(apiLoader.services['sts'], '2011-06-15', {
   get: function get() {
-    var model = __webpack_require__(523);
-    model.paginators = __webpack_require__(524).pagination;
+    var model = __webpack_require__(524);
+    model.paginators = __webpack_require__(525).pagination;
     return model;
   },
   enumerable: true,
@@ -18357,7 +18357,7 @@ var Identity = __webpack_require__(62);
 
 var formats = {};
 formats['openssh'] = __webpack_require__(591);
-formats['x509'] = __webpack_require__(215);
+formats['x509'] = __webpack_require__(216);
 formats['pem'] = __webpack_require__(592);
 
 var CertificateParseError = errs.CertificateParseError;
@@ -19537,9 +19537,9 @@ var Ref = __webpack_require__(42);
 var internals = {
     any: null,
     date: __webpack_require__(140),
-    string: __webpack_require__(365),
-    number: __webpack_require__(367),
-    boolean: __webpack_require__(368),
+    string: __webpack_require__(366),
+    number: __webpack_require__(368),
+    boolean: __webpack_require__(369),
     alt: null,
     object: null
 };
@@ -19549,7 +19549,7 @@ exports.schema = function (config) {
 
     internals.any = internals.any || new (__webpack_require__(26))();
     internals.alt = internals.alt || __webpack_require__(142);
-    internals.object = internals.object || __webpack_require__(369);
+    internals.object = internals.object || __webpack_require__(370);
 
     if (config &&
         typeof config === 'object') {
@@ -20830,11 +20830,11 @@ module.exports = eq;
 /* 73 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var listCacheClear = __webpack_require__(438),
-    listCacheDelete = __webpack_require__(439),
-    listCacheGet = __webpack_require__(440),
-    listCacheHas = __webpack_require__(441),
-    listCacheSet = __webpack_require__(442);
+var listCacheClear = __webpack_require__(439),
+    listCacheDelete = __webpack_require__(440),
+    listCacheGet = __webpack_require__(441),
+    listCacheHas = __webpack_require__(442),
+    listCacheSet = __webpack_require__(443);
 
 /**
  * Creates an list cache object.
@@ -20907,7 +20907,7 @@ module.exports = nativeCreate;
 /* 76 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var isKeyable = __webpack_require__(456);
+var isKeyable = __webpack_require__(457);
 
 /**
  * Gets the data for `map`.
@@ -22428,7 +22428,7 @@ module.exports = require("zlib");
 
 // Load modules
 
-const Sntp = __webpack_require__(205);
+const Sntp = __webpack_require__(206);
 const Boom = __webpack_require__(127);
 
 
@@ -23369,7 +23369,7 @@ function readSSHPrivate(type, buf, options) {
 		var rounds = kdfOptsBuf.readInt();
 		var cinf = utils.opensshCipherInfo(cipher);
 		if (bcrypt === undefined) {
-			bcrypt = __webpack_require__(213);
+			bcrypt = __webpack_require__(214);
 		}
 
 		if (typeof (options.passphrase) === 'string') {
@@ -23490,7 +23490,7 @@ function write(key, options) {
 		kdfopts = kdfssh.toBuffer();
 
 		if (bcrypt === undefined) {
-			bcrypt = __webpack_require__(213);
+			bcrypt = __webpack_require__(214);
 		}
 		var pass = new Uint8Array(passphrase);
 		var salti = new Uint8Array(salt);
@@ -24827,24 +24827,24 @@ module.exports = AWS = __webpack_require__(2);
 
 __webpack_require__(185);
 __webpack_require__(186);
-__webpack_require__(521);
-__webpack_require__(525);
+__webpack_require__(522);
 __webpack_require__(526);
-__webpack_require__(531);
+__webpack_require__(527);
+__webpack_require__(532);
 
 // Load the xml2js XML parser
-AWS.XML.Parser = __webpack_require__(532);
+AWS.XML.Parser = __webpack_require__(533);
 
 // Load Node HTTP client
-__webpack_require__(538);
+__webpack_require__(539);
 
 // Load custom credential providers
-__webpack_require__(539);
-__webpack_require__(541);
+__webpack_require__(540);
 __webpack_require__(542);
 __webpack_require__(543);
 __webpack_require__(544);
 __webpack_require__(545);
+__webpack_require__(546);
 
 var SharedIniFile = __webpack_require__(192);
 
@@ -25239,7 +25239,7 @@ module.exports = isPrototype;
 /* 107 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseIsArguments = __webpack_require__(411),
+var baseIsArguments = __webpack_require__(412),
     isObjectLike = __webpack_require__(53);
 
 /** Used for built-in method references. */
@@ -25282,7 +25282,7 @@ module.exports = isArguments;
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(module) {var root = __webpack_require__(27),
-    stubFalse = __webpack_require__(412);
+    stubFalse = __webpack_require__(413);
 
 /** Detect free variable `exports`. */
 var freeExports = typeof exports == 'object' && exports && !exports.nodeType && exports;
@@ -25354,9 +25354,9 @@ module.exports = function(module) {
 /* 110 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseIsTypedArray = __webpack_require__(413),
-    baseUnary = __webpack_require__(414),
-    nodeUtil = __webpack_require__(415);
+var baseIsTypedArray = __webpack_require__(414),
+    baseUnary = __webpack_require__(415),
+    nodeUtil = __webpack_require__(416);
 
 /* Node.js helper references. */
 var nodeIsTypedArray = nodeUtil && nodeUtil.isTypedArray;
@@ -25400,11 +25400,11 @@ module.exports = Map;
 /* 112 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var mapCacheClear = __webpack_require__(448),
-    mapCacheDelete = __webpack_require__(455),
-    mapCacheGet = __webpack_require__(457),
-    mapCacheHas = __webpack_require__(458),
-    mapCacheSet = __webpack_require__(459);
+var mapCacheClear = __webpack_require__(449),
+    mapCacheDelete = __webpack_require__(456),
+    mapCacheGet = __webpack_require__(458),
+    mapCacheHas = __webpack_require__(459),
+    mapCacheSet = __webpack_require__(460);
 
 /**
  * Creates a map cache object to store key-value pairs.
@@ -27429,9 +27429,9 @@ exports.Message = Message_1.Message;
 exports.AttachmentLayout = Message_1.AttachmentLayout;
 exports.TextFormat = Message_1.TextFormat;
 exports.InputHint = Message_1.InputHint;
-var ChatConnector_1 = __webpack_require__(198);
+var ChatConnector_1 = __webpack_require__(199);
 exports.ChatConnector = ChatConnector_1.ChatConnector;
-var ConsoleConnector_1 = __webpack_require__(372);
+var ConsoleConnector_1 = __webpack_require__(373);
 exports.ConsoleConnector = ConsoleConnector_1.ConsoleConnector;
 var Library_1 = __webpack_require__(49);
 exports.Library = Library_1.Library;
@@ -27443,11 +27443,11 @@ var AudioCard_1 = __webpack_require__(717);
 exports.AudioCard = AudioCard_1.AudioCard;
 var CardAction_1 = __webpack_require__(120);
 exports.CardAction = CardAction_1.CardAction;
-var CardImage_1 = __webpack_require__(197);
+var CardImage_1 = __webpack_require__(198);
 exports.CardImage = CardImage_1.CardImage;
 var CardMedia_1 = __webpack_require__(718);
 exports.CardMedia = CardMedia_1.CardMedia;
-var HeroCard_1 = __webpack_require__(195);
+var HeroCard_1 = __webpack_require__(196);
 exports.HeroCard = HeroCard_1.HeroCard;
 var Keyboard_1 = __webpack_require__(55);
 exports.Keyboard = Keyboard_1.Keyboard;
@@ -27461,7 +27461,7 @@ var SigninCard_1 = __webpack_require__(720);
 exports.SigninCard = SigninCard_1.SigninCard;
 var SuggestedActions_1 = __webpack_require__(721);
 exports.SuggestedActions = SuggestedActions_1.SuggestedActions;
-var ThumbnailCard_1 = __webpack_require__(196);
+var ThumbnailCard_1 = __webpack_require__(197);
 exports.ThumbnailCard = ThumbnailCard_1.ThumbnailCard;
 var VideoCard_1 = __webpack_require__(722);
 exports.VideoCard = VideoCard_1.VideoCard;
@@ -27484,27 +27484,27 @@ exports.IntentRecognizerSet = IntentRecognizerSet_1.IntentRecognizerSet;
 exports.RecognizeOrder = IntentRecognizerSet_1.RecognizeOrder;
 var LocalizedRegExpRecognizer_1 = __webpack_require__(782);
 exports.LocalizedRegExpRecognizer = LocalizedRegExpRecognizer_1.LocalizedRegExpRecognizer;
-var LuisRecognizer_1 = __webpack_require__(375);
+var LuisRecognizer_1 = __webpack_require__(376);
 exports.LuisRecognizer = LuisRecognizer_1.LuisRecognizer;
 var Prompt_1 = __webpack_require__(25);
 exports.Prompt = Prompt_1.Prompt;
 exports.PromptType = Prompt_1.PromptType;
 exports.ListStyle = Prompt_1.ListStyle;
-var PromptAttachment_1 = __webpack_require__(376);
+var PromptAttachment_1 = __webpack_require__(377);
 exports.PromptAttachment = PromptAttachment_1.PromptAttachment;
 var PromptChoice_1 = __webpack_require__(148);
 exports.PromptChoice = PromptChoice_1.PromptChoice;
-var PromptConfirm_1 = __webpack_require__(377);
+var PromptConfirm_1 = __webpack_require__(378);
 exports.PromptConfirm = PromptConfirm_1.PromptConfirm;
-var PromptNumber_1 = __webpack_require__(378);
+var PromptNumber_1 = __webpack_require__(379);
 exports.PromptNumber = PromptNumber_1.PromptNumber;
 var PromptRecognizers_1 = __webpack_require__(66);
 exports.PromptRecognizers = PromptRecognizers_1.PromptRecognizers;
 var Prompts_1 = __webpack_require__(783);
 exports.Prompts = Prompts_1.Prompts;
-var PromptText_1 = __webpack_require__(380);
+var PromptText_1 = __webpack_require__(381);
 exports.PromptText = PromptText_1.PromptText;
-var PromptTime_1 = __webpack_require__(381);
+var PromptTime_1 = __webpack_require__(382);
 exports.PromptTime = PromptTime_1.PromptTime;
 var RegExpRecognizer_1 = __webpack_require__(83);
 exports.RegExpRecognizer = RegExpRecognizer_1.RegExpRecognizer;
@@ -27514,7 +27514,7 @@ var WaterfallDialog_1 = __webpack_require__(81);
 exports.WaterfallDialog = WaterfallDialog_1.WaterfallDialog;
 var Middleware_1 = __webpack_require__(784);
 exports.Middleware = Middleware_1.Middleware;
-var BotStorage_1 = __webpack_require__(373);
+var BotStorage_1 = __webpack_require__(374);
 exports.MemoryBotStorage = BotStorage_1.MemoryBotStorage;
 var BotConnectorBot_1 = __webpack_require__(785);
 exports.BotConnectorBot = BotConnectorBot_1.BotConnectorBot;
@@ -27524,7 +27524,7 @@ var CommandDialog_1 = __webpack_require__(787);
 exports.CommandDialog = CommandDialog_1.CommandDialog;
 var TextBot_1 = __webpack_require__(788);
 exports.TextBot = TextBot_1.TextBot;
-var LegacyPrompts_1 = __webpack_require__(379);
+var LegacyPrompts_1 = __webpack_require__(380);
 exports.SimplePromptRecognizer = LegacyPrompts_1.SimplePromptRecognizer;
 
 
@@ -28181,7 +28181,7 @@ exports.getChannelId = getChannelId;
 
 
 var extend = __webpack_require__(125)
-var cookies = __webpack_require__(199)
+var cookies = __webpack_require__(200)
 var helpers = __webpack_require__(126)
 
 var paramsHaveRequestBody = helpers.paramsHaveRequestBody
@@ -29576,7 +29576,7 @@ module.exports.httpify = function (resp, headers) {
 
 var stringify = __webpack_require__(613);
 var parse = __webpack_require__(614);
-var formats = __webpack_require__(228);
+var formats = __webpack_require__(229);
 
 module.exports = {
     formats: formats,
@@ -29595,7 +29595,7 @@ module.exports = {
 var url = __webpack_require__(10)
   , equal = __webpack_require__(136)
   , util = __webpack_require__(47)
-  , SchemaObject = __webpack_require__(229)
+  , SchemaObject = __webpack_require__(230)
   , traverse = __webpack_require__(620);
 
 module.exports = resolve;
@@ -30436,8 +30436,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var Library_1 = __webpack_require__(49);
 var Session_1 = __webpack_require__(78);
 var DefaultLocalizer_1 = __webpack_require__(713);
-var BotStorage_1 = __webpack_require__(373);
-var SessionLogger_1 = __webpack_require__(374);
+var BotStorage_1 = __webpack_require__(374);
+var SessionLogger_1 = __webpack_require__(375);
 var RemoteSessionLogger_1 = __webpack_require__(715);
 var consts = __webpack_require__(7);
 var utils = __webpack_require__(24);
@@ -31866,7 +31866,7 @@ exports.PromptChoice = PromptChoice;
 var convert = __webpack_require__(791).convert;
 var bodyStream = __webpack_require__(811);
 var PassThrough = __webpack_require__(9).PassThrough;
-var FetchError = __webpack_require__(385);
+var FetchError = __webpack_require__(386);
 
 module.exports = Body;
 
@@ -32662,7 +32662,7 @@ function ContentType (type) {
 
 var AWS = __webpack_require__(2);
 var util = __webpack_require__(8);
-var QueryParamSerializer = __webpack_require__(392);
+var QueryParamSerializer = __webpack_require__(393);
 var Shape = __webpack_require__(68);
 
 function buildRequest(req) {
@@ -32990,9 +32990,9 @@ module.exports = {
 (function() {
   var XMLBuilder, assign;
 
-  assign = __webpack_require__(394);
+  assign = __webpack_require__(395);
 
-  XMLBuilder = __webpack_require__(418);
+  XMLBuilder = __webpack_require__(419);
 
   module.exports.create = function(name, xmldec, doctype, options) {
     options = assign({}, xmldec, doctype, options);
@@ -33213,7 +33213,7 @@ module.exports = isIterateeCall;
 /***/ (function(module, exports, __webpack_require__) {
 
 var isPrototype = __webpack_require__(106),
-    nativeKeys = __webpack_require__(416);
+    nativeKeys = __webpack_require__(417);
 
 /** Used for built-in method references. */
 var objectProto = Object.prototype;
@@ -33319,11 +33319,11 @@ module.exports = baseKeys;
 /* 168 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var DataView = __webpack_require__(423),
+var DataView = __webpack_require__(424),
     Map = __webpack_require__(111),
-    Promise = __webpack_require__(424),
-    Set = __webpack_require__(425),
-    WeakMap = __webpack_require__(426),
+    Promise = __webpack_require__(425),
+    Set = __webpack_require__(426),
+    WeakMap = __webpack_require__(427),
     baseGetTag = __webpack_require__(50),
     toSource = __webpack_require__(163);
 
@@ -33395,11 +33395,11 @@ module.exports = getTag;
 
   isFunction = __webpack_require__(70);
 
-  every = __webpack_require__(427);
+  every = __webpack_require__(428);
 
   XMLNode = __webpack_require__(44);
 
-  XMLAttribute = __webpack_require__(492);
+  XMLAttribute = __webpack_require__(493);
 
   XMLProcessingInstruction = __webpack_require__(177);
 
@@ -33602,11 +33602,11 @@ module.exports = getTag;
 /***/ (function(module, exports, __webpack_require__) {
 
 var ListCache = __webpack_require__(73),
-    stackClear = __webpack_require__(443),
-    stackDelete = __webpack_require__(444),
-    stackGet = __webpack_require__(445),
-    stackHas = __webpack_require__(446),
-    stackSet = __webpack_require__(447);
+    stackClear = __webpack_require__(444),
+    stackDelete = __webpack_require__(445),
+    stackGet = __webpack_require__(446),
+    stackHas = __webpack_require__(447),
+    stackSet = __webpack_require__(448);
 
 /**
  * Creates a stack cache object to store key-value pairs.
@@ -33634,7 +33634,7 @@ module.exports = Stack;
 /* 171 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseIsEqualDeep = __webpack_require__(460),
+var baseIsEqualDeep = __webpack_require__(461),
     isObjectLike = __webpack_require__(53);
 
 /**
@@ -33668,9 +33668,9 @@ module.exports = baseIsEqual;
 /* 172 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var SetCache = __webpack_require__(461),
-    arraySome = __webpack_require__(464),
-    cacheHas = __webpack_require__(465);
+var SetCache = __webpack_require__(462),
+    arraySome = __webpack_require__(465),
+    cacheHas = __webpack_require__(466);
 
 /** Used to compose bitmasks for value comparisons. */
 var COMPARE_PARTIAL_FLAG = 1,
@@ -33836,8 +33836,8 @@ module.exports = baseGet;
 
 var isArray = __webpack_require__(23),
     isKey = __webpack_require__(113),
-    stringToPath = __webpack_require__(480),
-    toString = __webpack_require__(483);
+    stringToPath = __webpack_require__(481),
+    toString = __webpack_require__(484);
 
 /**
  * Casts `value` to a path array if it's not one.
@@ -34040,13 +34040,13 @@ module.exports = castPath;
 
   XMLComment = __webpack_require__(179);
 
-  XMLDTDAttList = __webpack_require__(493);
+  XMLDTDAttList = __webpack_require__(494);
 
-  XMLDTDEntity = __webpack_require__(494);
+  XMLDTDEntity = __webpack_require__(495);
 
-  XMLDTDElement = __webpack_require__(495);
+  XMLDTDElement = __webpack_require__(496);
 
-  XMLDTDNotation = __webpack_require__(496);
+  XMLDTDNotation = __webpack_require__(497);
 
   XMLProcessingInstruction = __webpack_require__(177);
 
@@ -35192,7 +35192,7 @@ module.exports = require("domain");
 /***/ (function(module, exports, __webpack_require__) {
 
 var AWS = __webpack_require__(2);
-var os = __webpack_require__(546);
+var os = __webpack_require__(547);
 var path = __webpack_require__(16);
 
 /**
@@ -35384,6 +35384,21 @@ module.exports = DynamoDBSet;
 
 /***/ }),
 /* 195 */
+/***/ (function(module, exports) {
+
+module.exports = {
+    channelId: "1538409217",
+    channelSecret: "09eb20efa17e86cdc32e73125db35ff2",
+    channelAccessToken: "0d7vnHNmb2rbCOJe+Yihqkzf53S4FmuX/joTIfhRZToPS13+OOtb+X8X3WiNT9QDcMoSMxQk6Dcoj6WzdL+mInImFcemnBHHLXjqLb54tFpv9GpPPQ6nyBus8P7I8vIXIZxDPOv+/xg84s8UdzPTqAdB04t89/1O/w1cDnyilFU="
+}
+// module.exports = {
+//     channelId: "1568775940",
+//     channelSecret: "9a0be081372faa6a907bae96f276b746",
+//     channelAccessToken: "3lbbO2FMHaE6l3FOjK4Z2Yl1Xge4gdwTIKnbHUaBzLKl18d3aCL05bSXfDXVjEKEYkcpyQqTd5M+eaBeSuIdQxK8rgb9BlIPoB82ZCT/B/V/gcw0dtQ4cMEc79Lhmvzd+oDIEFahIWg63daZ20azHgdB04t89/1O/w1cDnyilFU="
+// }
+
+/***/ }),
+/* 196 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35399,7 +35414,7 @@ var __extends = (this && this.__extends) || (function () {
     };
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
-var ThumbnailCard_1 = __webpack_require__(196);
+var ThumbnailCard_1 = __webpack_require__(197);
 var HeroCard = (function (_super) {
     __extends(HeroCard, _super);
     function HeroCard(session) {
@@ -35413,7 +35428,7 @@ exports.HeroCard = HeroCard;
 
 
 /***/ }),
-/* 196 */
+/* 197 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35490,7 +35505,7 @@ exports.ThumbnailCard = ThumbnailCard;
 
 
 /***/ }),
-/* 197 */
+/* 198 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35536,7 +35551,7 @@ exports.CardImage = CardImage;
 
 
 /***/ }),
-/* 198 */
+/* 199 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35550,7 +35565,7 @@ var request = __webpack_require__(124);
 var async = __webpack_require__(32);
 var jwt = __webpack_require__(682);
 var zlib = __webpack_require__(84);
-var Promise = __webpack_require__(370);
+var Promise = __webpack_require__(371);
 var urlJoin = __webpack_require__(710);
 var pjson = __webpack_require__(711);
 var MAX_DATA_LENGTH = 65000;
@@ -36297,7 +36312,7 @@ var toAddress = {
 
 
 /***/ }),
-/* 199 */
+/* 200 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36342,7 +36357,7 @@ exports.jar = function (store) {
 
 
 /***/ }),
-/* 200 */
+/* 201 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36353,7 +36368,7 @@ exports.jar = function (store) {
 
 
 
-var punycode = __webpack_require__(201);
+var punycode = __webpack_require__(202);
 
 module.exports.getPublicSuffix = function getPublicSuffix(domain) {
   /*!
@@ -36447,13 +36462,13 @@ var index = module.exports.index = Object.freeze(
 
 
 /***/ }),
-/* 201 */
+/* 202 */
 /***/ (function(module, exports) {
 
 module.exports = require("punycode");
 
 /***/ }),
-/* 202 */
+/* 203 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36531,7 +36546,7 @@ Store.prototype.getAllCookies = function(cb) {
 
 
 /***/ }),
-/* 203 */
+/* 204 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36566,7 +36581,7 @@ Store.prototype.getAllCookies = function(cb) {
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-var pubsuffix = __webpack_require__(200);
+var pubsuffix = __webpack_require__(201);
 
 // Gives the permutation of all possible domainMatch()es of a given domain. The
 // array is in shortest-to-longest order.  Handy for indexing.
@@ -36594,7 +36609,7 @@ exports.permuteDomain = permuteDomain;
 
 
 /***/ }),
-/* 204 */
+/* 205 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36662,7 +36677,7 @@ exports.pathMatch = pathMatch;
 
 
 /***/ }),
-/* 205 */
+/* 206 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36671,7 +36686,7 @@ exports.pathMatch = pathMatch;
 // Load modules
 
 const Dgram = __webpack_require__(572);
-const Dns = __webpack_require__(206);
+const Dns = __webpack_require__(207);
 
 const Hoek = __webpack_require__(573);
 
@@ -37081,13 +37096,13 @@ exports.now = function () {
 
 
 /***/ }),
-/* 206 */
+/* 207 */
 /***/ (function(module, exports) {
 
 module.exports = require("dns");
 
 /***/ }),
-/* 207 */
+/* 208 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -38068,7 +38083,7 @@ exports.shallow = function (source) {
 
 
 /***/ }),
-/* 208 */
+/* 209 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -38163,7 +38178,7 @@ exports.fixedTimeComparison = function (a, b) {
 
 
 /***/ }),
-/* 209 */
+/* 210 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // Copyright 2017 Joyent, Inc.
@@ -38211,7 +38226,7 @@ function DiffieHellman(key) {
 	} else if (key.type === 'ecdsa') {
 		if (!CRYPTO_HAVE_ECDH) {
 			if (ecdh === undefined)
-				ecdh = __webpack_require__(210);
+				ecdh = __webpack_require__(211);
 			if (ec === undefined)
 				ec = __webpack_require__(87);
 			if (jsbn === undefined)
@@ -38540,7 +38555,7 @@ function generateECDSA(curve) {
 
 	} else {
 		if (ecdh === undefined)
-			ecdh = __webpack_require__(210);
+			ecdh = __webpack_require__(211);
 		if (ec === undefined)
 			ec = __webpack_require__(87);
 		if (jsbn === undefined)
@@ -38580,7 +38595,7 @@ function generateECDSA(curve) {
 
 
 /***/ }),
-/* 210 */
+/* 211 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var crypto = __webpack_require__(5);
@@ -38643,7 +38658,7 @@ exports.ECKey = function(curve, key, isPublic)
 
 
 /***/ }),
-/* 211 */
+/* 212 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // Copyright 2015 Joyent, Inc.
@@ -38745,7 +38760,7 @@ Signer.prototype.sign = function () {
 
 
 /***/ }),
-/* 212 */
+/* 213 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // Copyright 2015 Joyent, Inc.
@@ -38761,7 +38776,7 @@ var Key = __webpack_require__(13);
 var PrivateKey = __webpack_require__(15);
 
 var pem = __webpack_require__(34);
-var ssh = __webpack_require__(214);
+var ssh = __webpack_require__(215);
 var rfc4253 = __webpack_require__(41);
 
 function read(buf, options) {
@@ -38824,7 +38839,7 @@ function write(key, options) {
 
 
 /***/ }),
-/* 213 */
+/* 214 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -39387,7 +39402,7 @@ module.exports = {
 
 
 /***/ }),
-/* 214 */
+/* 215 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // Copyright 2015 Joyent, Inc.
@@ -39507,7 +39522,7 @@ function write(key, options) {
 
 
 /***/ }),
-/* 215 */
+/* 216 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // Copyright 2017 Joyent, Inc.
@@ -40239,7 +40254,7 @@ function writeBitField(setBits, bitIndex) {
 
 
 /***/ }),
-/* 216 */
+/* 217 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -40428,7 +40443,7 @@ function dumpException(ex)
 
 
 /***/ }),
-/* 217 */
+/* 218 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -40623,13 +40638,13 @@ function populateMaps (extensions, types) {
 
 
 /***/ }),
-/* 218 */
+/* 219 */
 /***/ (function(module, exports) {
 
 module.exports = require("tls");
 
 /***/ }),
-/* 219 */
+/* 220 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var util = __webpack_require__(4);
@@ -40823,11 +40838,11 @@ CombinedStream.prototype._emitError = function(err) {
 
 
 /***/ }),
-/* 220 */
+/* 221 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var async = __webpack_require__(221)
-  , abort = __webpack_require__(222)
+var async = __webpack_require__(222)
+  , abort = __webpack_require__(223)
   ;
 
 // API
@@ -40904,7 +40919,7 @@ function runJob(iterator, key, item, callback)
 
 
 /***/ }),
-/* 221 */
+/* 222 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var defer = __webpack_require__(607);
@@ -40944,7 +40959,7 @@ function async(callback)
 
 
 /***/ }),
-/* 222 */
+/* 223 */
 /***/ (function(module, exports) {
 
 // API
@@ -40979,7 +40994,7 @@ function clean(key)
 
 
 /***/ }),
-/* 223 */
+/* 224 */
 /***/ (function(module, exports) {
 
 // API
@@ -41022,11 +41037,11 @@ function state(list, sortMethod)
 
 
 /***/ }),
-/* 224 */
+/* 225 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var abort = __webpack_require__(222)
-  , async = __webpack_require__(221)
+var abort = __webpack_require__(223)
+  , async = __webpack_require__(222)
   ;
 
 // API
@@ -41057,12 +41072,12 @@ function terminator(callback)
 
 
 /***/ }),
-/* 225 */
+/* 226 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var iterate    = __webpack_require__(220)
-  , initState  = __webpack_require__(223)
-  , terminator = __webpack_require__(224)
+var iterate    = __webpack_require__(221)
+  , initState  = __webpack_require__(224)
+  , terminator = __webpack_require__(225)
   ;
 
 // Public API
@@ -41138,7 +41153,7 @@ function descending(a, b)
 
 
 /***/ }),
-/* 226 */
+/* 227 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var stream = __webpack_require__(9)
@@ -41171,7 +41186,7 @@ module.exports.isDuplex   = isDuplex
 
 
 /***/ }),
-/* 227 */
+/* 228 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -41380,7 +41395,7 @@ exports.isBuffer = function isBuffer(obj) {
 
 
 /***/ }),
-/* 228 */
+/* 229 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -41405,7 +41420,7 @@ module.exports = {
 
 
 /***/ }),
-/* 229 */
+/* 230 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -41421,7 +41436,7 @@ function SchemaObject(obj) {
 
 
 /***/ }),
-/* 230 */
+/* 231 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -41487,7 +41502,7 @@ module.exports = function (data, opts) {
 
 
 /***/ }),
-/* 231 */
+/* 232 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -41952,7 +41967,7 @@ module.exports = function generate_validate(it, $keyword, $ruleType) {
 
 
 /***/ }),
-/* 232 */
+/* 233 */
 /***/ (function(module, exports) {
 
 
@@ -42195,7 +42210,7 @@ function isObject(val) {
 
 
 /***/ }),
-/* 233 */
+/* 234 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -42351,7 +42366,7 @@ module.exports = function generate__limit(it, $keyword, $ruleType) {
 
 
 /***/ }),
-/* 234 */
+/* 235 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -42434,7 +42449,7 @@ module.exports = function generate__limitItems(it, $keyword, $ruleType) {
 
 
 /***/ }),
-/* 235 */
+/* 236 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -42522,7 +42537,7 @@ module.exports = function generate__limitLength(it, $keyword, $ruleType) {
 
 
 /***/ }),
-/* 236 */
+/* 237 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -42605,7 +42620,7 @@ module.exports = function generate__limitProperties(it, $keyword, $ruleType) {
 
 
 /***/ }),
-/* 237 */
+/* 238 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // Unique ID creation requires a high quality random # generator.  In node.js
@@ -42619,7 +42634,7 @@ module.exports = function nodeRNG() {
 
 
 /***/ }),
-/* 238 */
+/* 239 */
 /***/ (function(module, exports) {
 
 /**
@@ -42648,7 +42663,7 @@ module.exports = bytesToUuid;
 
 
 /***/ }),
-/* 239 */
+/* 240 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var jws = __webpack_require__(139);
@@ -42684,7 +42699,7 @@ module.exports = function (jwt, options) {
 
 
 /***/ }),
-/* 240 */
+/* 241 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*global module, process*/
@@ -42745,7 +42760,7 @@ module.exports = DataStream;
 
 
 /***/ }),
-/* 241 */
+/* 242 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var bufferEqual = __webpack_require__(684);
@@ -42876,7 +42891,7 @@ module.exports = function jwa(algorithm) {
 
 
 /***/ }),
-/* 242 */
+/* 243 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*global module*/
@@ -42892,7 +42907,7 @@ module.exports = function toString(obj) {
 
 
 /***/ }),
-/* 243 */
+/* 244 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var JsonWebTokenError = __webpack_require__(90);
@@ -42910,7 +42925,7 @@ NotBeforeError.prototype.constructor = NotBeforeError;
 module.exports = NotBeforeError;
 
 /***/ }),
-/* 244 */
+/* 245 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var JsonWebTokenError = __webpack_require__(90);
@@ -42928,7 +42943,7 @@ TokenExpiredError.prototype.constructor = TokenExpiredError;
 module.exports = TokenExpiredError;
 
 /***/ }),
-/* 245 */
+/* 246 */
 /***/ (function(module, exports) {
 
 /**
@@ -43096,7 +43111,7 @@ function plural(ms, msAbs, n, name) {
 
 
 /***/ }),
-/* 246 */
+/* 247 */
 /***/ (function(module, exports) {
 
 module.exports = extend
@@ -43121,7 +43136,7 @@ function extend() {
 
 
 /***/ }),
-/* 247 */
+/* 248 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -43200,7 +43215,7 @@ return af;
 
 
 /***/ }),
-/* 248 */
+/* 249 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -43348,7 +43363,7 @@ return ar;
 
 
 /***/ }),
-/* 249 */
+/* 250 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -43413,7 +43428,7 @@ return arDz;
 
 
 /***/ }),
-/* 250 */
+/* 251 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -43478,7 +43493,7 @@ return arKw;
 
 
 /***/ }),
-/* 251 */
+/* 252 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -43610,7 +43625,7 @@ return arLy;
 
 
 /***/ }),
-/* 252 */
+/* 253 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -43676,7 +43691,7 @@ return arMa;
 
 
 /***/ }),
-/* 253 */
+/* 254 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -43787,7 +43802,7 @@ return arSa;
 
 
 /***/ }),
-/* 254 */
+/* 255 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -43852,7 +43867,7 @@ return arTn;
 
 
 /***/ }),
-/* 255 */
+/* 256 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -43963,7 +43978,7 @@ return az;
 
 
 /***/ }),
-/* 256 */
+/* 257 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -44103,7 +44118,7 @@ return be;
 
 
 /***/ }),
-/* 257 */
+/* 258 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -44199,7 +44214,7 @@ return bg;
 
 
 /***/ }),
-/* 258 */
+/* 259 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -44264,7 +44279,7 @@ return bm;
 
 
 /***/ }),
-/* 259 */
+/* 260 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -44389,7 +44404,7 @@ return bn;
 
 
 /***/ }),
-/* 260 */
+/* 261 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -44514,7 +44529,7 @@ return bo;
 
 
 /***/ }),
-/* 261 */
+/* 262 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -44628,7 +44643,7 @@ return br;
 
 
 /***/ }),
-/* 262 */
+/* 263 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -44786,7 +44801,7 @@ return bs;
 
 
 /***/ }),
-/* 263 */
+/* 264 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -44880,7 +44895,7 @@ return ca;
 
 
 /***/ }),
-/* 264 */
+/* 265 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -45065,7 +45080,7 @@ return cs;
 
 
 /***/ }),
-/* 265 */
+/* 266 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -45134,7 +45149,7 @@ return cv;
 
 
 /***/ }),
-/* 266 */
+/* 267 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -45221,7 +45236,7 @@ return cy;
 
 
 /***/ }),
-/* 267 */
+/* 268 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -45287,7 +45302,7 @@ return da;
 
 
 /***/ }),
-/* 268 */
+/* 269 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -45371,7 +45386,7 @@ return de;
 
 
 /***/ }),
-/* 269 */
+/* 270 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -45456,7 +45471,7 @@ return deAt;
 
 
 /***/ }),
-/* 270 */
+/* 271 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -45540,7 +45555,7 @@ return deCh;
 
 
 /***/ }),
-/* 271 */
+/* 272 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -45646,7 +45661,7 @@ return dv;
 
 
 /***/ }),
-/* 272 */
+/* 273 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -45752,7 +45767,7 @@ return el;
 
 
 /***/ }),
-/* 273 */
+/* 274 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -45825,7 +45840,7 @@ return enAu;
 
 
 /***/ }),
-/* 274 */
+/* 275 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -45894,7 +45909,7 @@ return enCa;
 
 
 /***/ }),
-/* 275 */
+/* 276 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -45967,7 +45982,7 @@ return enGb;
 
 
 /***/ }),
-/* 276 */
+/* 277 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -46040,7 +46055,7 @@ return enIe;
 
 
 /***/ }),
-/* 277 */
+/* 278 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -46113,7 +46128,7 @@ return enNz;
 
 
 /***/ }),
-/* 278 */
+/* 279 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -46192,7 +46207,7 @@ return eo;
 
 
 /***/ }),
-/* 279 */
+/* 280 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -46290,7 +46305,7 @@ return es;
 
 
 /***/ }),
-/* 280 */
+/* 281 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -46387,7 +46402,7 @@ return esDo;
 
 
 /***/ }),
-/* 281 */
+/* 282 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -46476,7 +46491,7 @@ return esUs;
 
 
 /***/ }),
-/* 282 */
+/* 283 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -46563,7 +46578,7 @@ return et;
 
 
 /***/ }),
-/* 283 */
+/* 284 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -46635,7 +46650,7 @@ return eu;
 
 
 /***/ }),
-/* 284 */
+/* 285 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -46748,7 +46763,7 @@ return fa;
 
 
 /***/ }),
-/* 285 */
+/* 286 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -46863,7 +46878,7 @@ return fi;
 
 
 /***/ }),
-/* 286 */
+/* 287 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -46929,7 +46944,7 @@ return fo;
 
 
 /***/ }),
-/* 287 */
+/* 288 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -47009,7 +47024,7 @@ return frCa;
 
 
 /***/ }),
-/* 288 */
+/* 289 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -47093,7 +47108,7 @@ return frCh;
 
 
 /***/ }),
-/* 289 */
+/* 290 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -47174,7 +47189,7 @@ return fy;
 
 
 /***/ }),
-/* 290 */
+/* 291 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -47256,7 +47271,7 @@ return gd;
 
 
 /***/ }),
-/* 291 */
+/* 292 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -47339,7 +47354,7 @@ return gl;
 
 
 /***/ }),
-/* 292 */
+/* 293 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -47468,7 +47483,7 @@ return gomLatn;
 
 
 /***/ }),
-/* 293 */
+/* 294 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -47598,7 +47613,7 @@ return gu;
 
 
 /***/ }),
-/* 294 */
+/* 295 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -47703,7 +47718,7 @@ return he;
 
 
 /***/ }),
-/* 295 */
+/* 296 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -47833,7 +47848,7 @@ return hi;
 
 
 /***/ }),
-/* 296 */
+/* 297 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -47993,7 +48008,7 @@ return hr;
 
 
 /***/ }),
-/* 297 */
+/* 298 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -48109,7 +48124,7 @@ return hu;
 
 
 /***/ }),
-/* 298 */
+/* 299 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -48210,7 +48225,7 @@ return hyAm;
 
 
 /***/ }),
-/* 299 */
+/* 300 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -48299,7 +48314,7 @@ return id;
 
 
 /***/ }),
-/* 300 */
+/* 301 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -48437,7 +48452,7 @@ return is;
 
 
 /***/ }),
-/* 301 */
+/* 302 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -48513,7 +48528,7 @@ return it;
 
 
 /***/ }),
-/* 302 */
+/* 303 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -48599,7 +48614,7 @@ return ja;
 
 
 /***/ }),
-/* 303 */
+/* 304 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -48688,7 +48703,7 @@ return jv;
 
 
 /***/ }),
-/* 304 */
+/* 305 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -48783,7 +48798,7 @@ return ka;
 
 
 /***/ }),
-/* 305 */
+/* 306 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -48876,7 +48891,7 @@ return kk;
 
 
 /***/ }),
-/* 306 */
+/* 307 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -48940,7 +48955,7 @@ return km;
 
 
 /***/ }),
-/* 307 */
+/* 308 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -49072,7 +49087,7 @@ return kn;
 
 
 /***/ }),
-/* 308 */
+/* 309 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -49160,7 +49175,7 @@ return ko;
 
 
 /***/ }),
-/* 309 */
+/* 310 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -49254,7 +49269,7 @@ return ky;
 
 
 /***/ }),
-/* 310 */
+/* 311 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -49397,7 +49412,7 @@ return lb;
 
 
 /***/ }),
-/* 311 */
+/* 312 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -49473,7 +49488,7 @@ return lo;
 
 
 /***/ }),
-/* 312 */
+/* 313 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -49597,7 +49612,7 @@ return lt;
 
 
 /***/ }),
-/* 313 */
+/* 314 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -49701,7 +49716,7 @@ return lv;
 
 
 /***/ }),
-/* 314 */
+/* 315 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -49819,7 +49834,7 @@ return me;
 
 
 /***/ }),
-/* 315 */
+/* 316 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -49889,7 +49904,7 @@ return mi;
 
 
 /***/ }),
-/* 316 */
+/* 317 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -49985,7 +50000,7 @@ return mk;
 
 
 /***/ }),
-/* 317 */
+/* 318 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -50072,7 +50087,7 @@ return ml;
 
 
 /***/ }),
-/* 318 */
+/* 319 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -50239,7 +50254,7 @@ return mr;
 
 
 /***/ }),
-/* 319 */
+/* 320 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -50327,7 +50342,7 @@ return ms;
 
 
 /***/ }),
-/* 320 */
+/* 321 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -50416,7 +50431,7 @@ return msMy;
 
 
 /***/ }),
-/* 321 */
+/* 322 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -50482,7 +50497,7 @@ return mt;
 
 
 /***/ }),
-/* 322 */
+/* 323 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -50584,7 +50599,7 @@ return my;
 
 
 /***/ }),
-/* 323 */
+/* 324 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -50653,7 +50668,7 @@ return nb;
 
 
 /***/ }),
-/* 324 */
+/* 325 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -50782,7 +50797,7 @@ return ne;
 
 
 /***/ }),
-/* 325 */
+/* 326 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -50876,7 +50891,7 @@ return nl;
 
 
 /***/ }),
-/* 326 */
+/* 327 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -50970,7 +50985,7 @@ return nlBe;
 
 
 /***/ }),
-/* 327 */
+/* 328 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -51036,7 +51051,7 @@ return nn;
 
 
 /***/ }),
-/* 328 */
+/* 329 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -51166,7 +51181,7 @@ return paIn;
 
 
 /***/ }),
-/* 329 */
+/* 330 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -51298,7 +51313,7 @@ return pl;
 
 
 /***/ }),
-/* 330 */
+/* 331 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -51369,7 +51384,7 @@ return pt;
 
 
 /***/ }),
-/* 331 */
+/* 332 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -51436,7 +51451,7 @@ return ptBr;
 
 
 /***/ }),
-/* 332 */
+/* 333 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -51518,7 +51533,7 @@ return ro;
 
 
 /***/ }),
-/* 333 */
+/* 334 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -51708,7 +51723,7 @@ return ru;
 
 
 /***/ }),
-/* 334 */
+/* 335 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -51812,7 +51827,7 @@ return sd;
 
 
 /***/ }),
-/* 335 */
+/* 336 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -51879,7 +51894,7 @@ return se;
 
 
 /***/ }),
-/* 336 */
+/* 337 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -51956,7 +51971,7 @@ return si;
 
 
 /***/ }),
-/* 337 */
+/* 338 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -52119,7 +52134,7 @@ return sk;
 
 
 /***/ }),
-/* 338 */
+/* 339 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -52298,7 +52313,7 @@ return sl;
 
 
 /***/ }),
-/* 339 */
+/* 340 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -52374,7 +52389,7 @@ return sq;
 
 
 /***/ }),
-/* 340 */
+/* 341 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -52491,7 +52506,7 @@ return sr;
 
 
 /***/ }),
-/* 341 */
+/* 342 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -52608,7 +52623,7 @@ return srCyrl;
 
 
 /***/ }),
-/* 342 */
+/* 343 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -52703,7 +52718,7 @@ return ss;
 
 
 /***/ }),
-/* 343 */
+/* 344 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -52778,7 +52793,7 @@ return sv;
 
 
 /***/ }),
-/* 344 */
+/* 345 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -52843,7 +52858,7 @@ return sw;
 
 
 /***/ }),
-/* 345 */
+/* 346 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -52979,7 +52994,7 @@ return ta;
 
 
 /***/ }),
-/* 346 */
+/* 347 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -53074,7 +53089,7 @@ return te;
 
 
 /***/ }),
-/* 347 */
+/* 348 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -53148,7 +53163,7 @@ return tet;
 
 
 /***/ }),
-/* 348 */
+/* 349 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -53221,7 +53236,7 @@ return th;
 
 
 /***/ }),
-/* 349 */
+/* 350 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -53289,7 +53304,7 @@ return tlPh;
 
 
 /***/ }),
-/* 350 */
+/* 351 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -53417,7 +53432,7 @@ return tlh;
 
 
 /***/ }),
-/* 351 */
+/* 352 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -53513,7 +53528,7 @@ return tr;
 
 
 /***/ }),
-/* 352 */
+/* 353 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -53611,7 +53626,7 @@ return tzl;
 
 
 /***/ }),
-/* 353 */
+/* 354 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -53675,7 +53690,7 @@ return tzm;
 
 
 /***/ }),
-/* 354 */
+/* 355 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -53739,7 +53754,7 @@ return tzmLatn;
 
 
 /***/ }),
-/* 355 */
+/* 356 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -53897,7 +53912,7 @@ return uk;
 
 
 /***/ }),
-/* 356 */
+/* 357 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -54002,7 +54017,7 @@ return ur;
 
 
 /***/ }),
-/* 357 */
+/* 358 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -54066,7 +54081,7 @@ return uz;
 
 
 /***/ }),
-/* 358 */
+/* 359 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -54130,7 +54145,7 @@ return uzLatn;
 
 
 /***/ }),
-/* 359 */
+/* 360 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -54215,7 +54230,7 @@ return vi;
 
 
 /***/ }),
-/* 360 */
+/* 361 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -54289,7 +54304,7 @@ return xPseudo;
 
 
 /***/ }),
-/* 361 */
+/* 362 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -54355,7 +54370,7 @@ return yo;
 
 
 /***/ }),
-/* 362 */
+/* 363 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -54472,7 +54487,7 @@ return zhCn;
 
 
 /***/ }),
-/* 363 */
+/* 364 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -54583,7 +54598,7 @@ return zhHk;
 
 
 /***/ }),
-/* 364 */
+/* 365 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //! moment.js locale configuration
@@ -54693,7 +54708,7 @@ return zhTw;
 
 
 /***/ }),
-/* 365 */
+/* 366 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // Load modules
@@ -55167,7 +55182,7 @@ module.exports = new internals.String();
 
 
 /***/ }),
-/* 366 */
+/* 367 */
 /***/ (function(module, exports) {
 
 var internals = {
@@ -55347,7 +55362,7 @@ module.exports = internals.rfc3986;
 
 
 /***/ }),
-/* 367 */
+/* 368 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // Load modules
@@ -55537,7 +55552,7 @@ module.exports = new internals.Number();
 
 
 /***/ }),
-/* 368 */
+/* 369 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // Load modules
@@ -55584,7 +55599,7 @@ module.exports = new internals.Boolean();
 
 
 /***/ }),
-/* 369 */
+/* 370 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // Load modules
@@ -56344,7 +56359,7 @@ module.exports = new internals.Object();
 
 
 /***/ }),
-/* 370 */
+/* 371 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -56354,7 +56369,7 @@ module.exports = __webpack_require__(703)
 
 
 /***/ }),
-/* 371 */
+/* 372 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -56462,7 +56477,7 @@ function requestFlush() {
 
 
 /***/ }),
-/* 372 */
+/* 373 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -56684,7 +56699,7 @@ function log(text) {
 
 
 /***/ }),
-/* 373 */
+/* 374 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -56764,7 +56779,7 @@ exports.MemoryBotStorage = MemoryBotStorage;
 
 
 /***/ }),
-/* 374 */
+/* 375 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -56828,7 +56843,7 @@ exports.SessionLogger = SessionLogger;
 
 
 /***/ }),
-/* 375 */
+/* 376 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -56962,7 +56977,7 @@ exports.LuisRecognizer = LuisRecognizer;
 
 
 /***/ }),
-/* 376 */
+/* 377 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -57043,7 +57058,7 @@ exports.PromptAttachment = PromptAttachment;
 
 
 /***/ }),
-/* 377 */
+/* 378 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -57111,7 +57126,7 @@ exports.PromptConfirm = PromptConfirm;
 
 
 /***/ }),
-/* 378 */
+/* 379 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -57211,7 +57226,7 @@ exports.PromptNumber = PromptNumber;
 
 
 /***/ }),
-/* 379 */
+/* 380 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -57485,7 +57500,7 @@ Library_1.systemLib.dialog('BotBuilder:Prompts', new LegacyPrompts());
 
 
 /***/ }),
-/* 380 */
+/* 381 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -57566,7 +57581,7 @@ exports.PromptText = PromptText;
 
 
 /***/ }),
-/* 381 */
+/* 382 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -57621,26 +57636,26 @@ exports.PromptTime = PromptTime;
 
 
 /***/ }),
-/* 382 */
+/* 383 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__(789);
 // module.exports = require('./lib');
 
 /***/ }),
-/* 383 */
+/* 384 */
 /***/ (function(module, exports) {
 
 module.exports = [["a140","",62],["a180","",32],["a240","",62],["a280","",32],["a2ab","",5],["a2e3","€"],["a2ef",""],["a2fd",""],["a340","",62],["a380","",31,"　"],["a440","",62],["a480","",32],["a4f4","",10],["a540","",62],["a580","",32],["a5f7","",7],["a640","",62],["a680","",32],["a6b9","",7],["a6d9","",6],["a6ec",""],["a6f3",""],["a6f6","",8],["a740","",62],["a780","",32],["a7c2","",14],["a7f2","",12],["a896","",10],["a8bc",""],["a8bf","ǹ"],["a8c1",""],["a8ea","",20],["a958",""],["a95b",""],["a95d",""],["a989","〾⿰",11],["a997","",12],["a9f0","",14],["aaa1","",93],["aba1","",93],["aca1","",93],["ada1","",93],["aea1","",93],["afa1","",93],["d7fa","",4],["f8a1","",93],["f9a1","",93],["faa1","",93],["fba1","",93],["fca1","",93],["fda1","",93],["fe50","⺁⺄㑳㑇⺈⺋㖞㘚㘎⺌⺗㥮㤘㧏㧟㩳㧐㭎㱮㳠⺧⺪䁖䅟⺮䌷⺳⺶⺷䎱䎬⺻䏝䓖䙡䙌"],["fe80","䜣䜩䝼䞍⻊䥇䥺䥽䦂䦃䦅䦆䦟䦛䦷䦶䲣䲟䲠䲡䱷䲢䴓",6,"䶮",93]]
 
 /***/ }),
-/* 384 */
+/* 385 */
 /***/ (function(module, exports) {
 
 module.exports = [["0","\u0000",127],["a140","　，、。．‧；：？！︰…‥﹐﹑﹒·﹔﹕﹖﹗｜–︱—︳╴︴﹏（）︵︶｛｝︷︸〔〕︹︺【】︻︼《》︽︾〈〉︿﹀「」﹁﹂『』﹃﹄﹙﹚"],["a1a1","﹛﹜﹝﹞‘’“”〝〞‵′＃＆＊※§〃○●△▲◎☆★◇◆□■▽▼㊣℅¯￣＿ˍ﹉﹊﹍﹎﹋﹌﹟﹠﹡＋－×÷±√＜＞＝≦≧≠∞≒≡﹢",4,"～∩∪⊥∠∟⊿㏒㏑∫∮∵∴♀♂⊕⊙↑↓←→↖↗↙↘∥∣／"],["a240","＼∕﹨＄￥〒￠￡％＠℃℉﹩﹪﹫㏕㎜㎝㎞㏎㎡㎎㎏㏄°兙兛兞兝兡兣嗧瓩糎▁",7,"▏▎▍▌▋▊▉┼┴┬┤├▔─│▕┌┐└┘╭"],["a2a1","╮╰╯═╞╪╡◢◣◥◤╱╲╳０",9,"Ⅰ",9,"〡",8,"十卄卅Ａ",25,"ａ",21],["a340","ｗｘｙｚΑ",16,"Σ",6,"α",16,"σ",6,"ㄅ",10],["a3a1","ㄐ",25,"˙ˉˊˇˋ"],["a3e1","€"],["a440","一乙丁七乃九了二人儿入八几刀刁力匕十卜又三下丈上丫丸凡久么也乞于亡兀刃勺千叉口土士夕大女子孑孓寸小尢尸山川工己已巳巾干廾弋弓才"],["a4a1","丑丐不中丰丹之尹予云井互五亢仁什仃仆仇仍今介仄元允內六兮公冗凶分切刈勻勾勿化匹午升卅卞厄友及反壬天夫太夭孔少尤尺屯巴幻廿弔引心戈戶手扎支文斗斤方日曰月木欠止歹毋比毛氏水火爪父爻片牙牛犬王丙"],["a540","世丕且丘主乍乏乎以付仔仕他仗代令仙仞充兄冉冊冬凹出凸刊加功包匆北匝仟半卉卡占卯卮去可古右召叮叩叨叼司叵叫另只史叱台句叭叻四囚外"],["a5a1","央失奴奶孕它尼巨巧左市布平幼弁弘弗必戊打扔扒扑斥旦朮本未末札正母民氐永汁汀氾犯玄玉瓜瓦甘生用甩田由甲申疋白皮皿目矛矢石示禾穴立丞丟乒乓乩亙交亦亥仿伉伙伊伕伍伐休伏仲件任仰仳份企伋光兇兆先全"],["a640","共再冰列刑划刎刖劣匈匡匠印危吉吏同吊吐吁吋各向名合吃后吆吒因回囝圳地在圭圬圯圩夙多夷夸妄奸妃好她如妁字存宇守宅安寺尖屹州帆并年"],["a6a1","式弛忙忖戎戌戍成扣扛托收早旨旬旭曲曳有朽朴朱朵次此死氖汝汗汙江池汐汕污汛汍汎灰牟牝百竹米糸缶羊羽老考而耒耳聿肉肋肌臣自至臼舌舛舟艮色艾虫血行衣西阡串亨位住佇佗佞伴佛何估佐佑伽伺伸佃佔似但佣"],["a740","作你伯低伶余佝佈佚兌克免兵冶冷別判利刪刨劫助努劬匣即卵吝吭吞吾否呎吧呆呃吳呈呂君吩告吹吻吸吮吵吶吠吼呀吱含吟听囪困囤囫坊坑址坍"],["a7a1","均坎圾坐坏圻壯夾妝妒妨妞妣妙妖妍妤妓妊妥孝孜孚孛完宋宏尬局屁尿尾岐岑岔岌巫希序庇床廷弄弟彤形彷役忘忌志忍忱快忸忪戒我抄抗抖技扶抉扭把扼找批扳抒扯折扮投抓抑抆改攻攸旱更束李杏材村杜杖杞杉杆杠"],["a840","杓杗步每求汞沙沁沈沉沅沛汪決沐汰沌汨沖沒汽沃汲汾汴沆汶沍沔沘沂灶灼災灸牢牡牠狄狂玖甬甫男甸皂盯矣私秀禿究系罕肖肓肝肘肛肚育良芒"],["a8a1","芋芍見角言谷豆豕貝赤走足身車辛辰迂迆迅迄巡邑邢邪邦那酉釆里防阮阱阪阬並乖乳事些亞享京佯依侍佳使佬供例來侃佰併侈佩佻侖佾侏侑佺兔兒兕兩具其典冽函刻券刷刺到刮制剁劾劻卒協卓卑卦卷卸卹取叔受味呵"],["a940","咖呸咕咀呻呷咄咒咆呼咐呱呶和咚呢周咋命咎固垃坷坪坩坡坦坤坼夜奉奇奈奄奔妾妻委妹妮姑姆姐姍始姓姊妯妳姒姅孟孤季宗定官宜宙宛尚屈居"],["a9a1","屆岷岡岸岩岫岱岳帘帚帖帕帛帑幸庚店府底庖延弦弧弩往征彿彼忝忠忽念忿怏怔怯怵怖怪怕怡性怩怫怛或戕房戾所承拉拌拄抿拂抹拒招披拓拔拋拈抨抽押拐拙拇拍抵拚抱拘拖拗拆抬拎放斧於旺昔易昌昆昂明昀昏昕昊"],["aa40","昇服朋杭枋枕東果杳杷枇枝林杯杰板枉松析杵枚枓杼杪杲欣武歧歿氓氛泣注泳沱泌泥河沽沾沼波沫法泓沸泄油況沮泗泅泱沿治泡泛泊沬泯泜泖泠"],["aaa1","炕炎炒炊炙爬爭爸版牧物狀狎狙狗狐玩玨玟玫玥甽疝疙疚的盂盲直知矽社祀祁秉秈空穹竺糾罔羌羋者肺肥肢肱股肫肩肴肪肯臥臾舍芳芝芙芭芽芟芹花芬芥芯芸芣芰芾芷虎虱初表軋迎返近邵邸邱邶采金長門阜陀阿阻附"],["ab40","陂隹雨青非亟亭亮信侵侯便俠俑俏保促侶俘俟俊俗侮俐俄係俚俎俞侷兗冒冑冠剎剃削前剌剋則勇勉勃勁匍南卻厚叛咬哀咨哎哉咸咦咳哇哂咽咪品"],["aba1","哄哈咯咫咱咻咩咧咿囿垂型垠垣垢城垮垓奕契奏奎奐姜姘姿姣姨娃姥姪姚姦威姻孩宣宦室客宥封屎屏屍屋峙峒巷帝帥帟幽庠度建弈弭彥很待徊律徇後徉怒思怠急怎怨恍恰恨恢恆恃恬恫恪恤扁拜挖按拼拭持拮拽指拱拷"],["ac40","拯括拾拴挑挂政故斫施既春昭映昧是星昨昱昤曷柿染柱柔某柬架枯柵柩柯柄柑枴柚查枸柏柞柳枰柙柢柝柒歪殃殆段毒毗氟泉洋洲洪流津洌洱洞洗"],["aca1","活洽派洶洛泵洹洧洸洩洮洵洎洫炫為炳炬炯炭炸炮炤爰牲牯牴狩狠狡玷珊玻玲珍珀玳甚甭畏界畎畋疫疤疥疢疣癸皆皇皈盈盆盃盅省盹相眉看盾盼眇矜砂研砌砍祆祉祈祇禹禺科秒秋穿突竿竽籽紂紅紀紉紇約紆缸美羿耄"],["ad40","耐耍耑耶胖胥胚胃胄背胡胛胎胞胤胝致舢苧范茅苣苛苦茄若茂茉苒苗英茁苜苔苑苞苓苟苯茆虐虹虻虺衍衫要觔計訂訃貞負赴赳趴軍軌述迦迢迪迥"],["ada1","迭迫迤迨郊郎郁郃酋酊重閂限陋陌降面革韋韭音頁風飛食首香乘亳倌倍倣俯倦倥俸倩倖倆值借倚倒們俺倀倔倨俱倡個候倘俳修倭倪俾倫倉兼冤冥冢凍凌准凋剖剜剔剛剝匪卿原厝叟哨唐唁唷哼哥哲唆哺唔哩哭員唉哮哪"],["ae40","哦唧唇哽唏圃圄埂埔埋埃堉夏套奘奚娑娘娜娟娛娓姬娠娣娩娥娌娉孫屘宰害家宴宮宵容宸射屑展屐峭峽峻峪峨峰島崁峴差席師庫庭座弱徒徑徐恙"],["aea1","恣恥恐恕恭恩息悄悟悚悍悔悌悅悖扇拳挈拿捎挾振捕捂捆捏捉挺捐挽挪挫挨捍捌效敉料旁旅時晉晏晃晒晌晅晁書朔朕朗校核案框桓根桂桔栩梳栗桌桑栽柴桐桀格桃株桅栓栘桁殊殉殷氣氧氨氦氤泰浪涕消涇浦浸海浙涓"],["af40","浬涉浮浚浴浩涌涊浹涅浥涔烊烘烤烙烈烏爹特狼狹狽狸狷玆班琉珮珠珪珞畔畝畜畚留疾病症疲疳疽疼疹痂疸皋皰益盍盎眩真眠眨矩砰砧砸砝破砷"],["afa1","砥砭砠砟砲祕祐祠祟祖神祝祗祚秤秣秧租秦秩秘窄窈站笆笑粉紡紗紋紊素索純紐紕級紜納紙紛缺罟羔翅翁耆耘耕耙耗耽耿胱脂胰脅胭胴脆胸胳脈能脊胼胯臭臬舀舐航舫舨般芻茫荒荔荊茸荐草茵茴荏茲茹茶茗荀茱茨荃"],["b040","虔蚊蚪蚓蚤蚩蚌蚣蚜衰衷袁袂衽衹記訐討訌訕訊託訓訖訏訑豈豺豹財貢起躬軒軔軏辱送逆迷退迺迴逃追逅迸邕郡郝郢酒配酌釘針釗釜釙閃院陣陡"],["b0a1","陛陝除陘陞隻飢馬骨高鬥鬲鬼乾偺偽停假偃偌做偉健偶偎偕偵側偷偏倏偯偭兜冕凰剪副勒務勘動匐匏匙匿區匾參曼商啪啦啄啞啡啃啊唱啖問啕唯啤唸售啜唬啣唳啁啗圈國圉域堅堊堆埠埤基堂堵執培夠奢娶婁婉婦婪婀"],["b140","娼婢婚婆婊孰寇寅寄寂宿密尉專將屠屜屝崇崆崎崛崖崢崑崩崔崙崤崧崗巢常帶帳帷康庸庶庵庾張強彗彬彩彫得徙從徘御徠徜恿患悉悠您惋悴惦悽"],["b1a1","情悻悵惜悼惘惕惆惟悸惚惇戚戛扈掠控捲掖探接捷捧掘措捱掩掉掃掛捫推掄授掙採掬排掏掀捻捩捨捺敝敖救教敗啟敏敘敕敔斜斛斬族旋旌旎晝晚晤晨晦晞曹勗望梁梯梢梓梵桿桶梱梧梗械梃棄梭梆梅梔條梨梟梡梂欲殺"],["b240","毫毬氫涎涼淳淙液淡淌淤添淺清淇淋涯淑涮淞淹涸混淵淅淒渚涵淚淫淘淪深淮淨淆淄涪淬涿淦烹焉焊烽烯爽牽犁猜猛猖猓猙率琅琊球理現琍瓠瓶"],["b2a1","瓷甜產略畦畢異疏痔痕疵痊痍皎盔盒盛眷眾眼眶眸眺硫硃硎祥票祭移窒窕笠笨笛第符笙笞笮粒粗粕絆絃統紮紹紼絀細紳組累終紲紱缽羞羚翌翎習耜聊聆脯脖脣脫脩脰脤舂舵舷舶船莎莞莘荸莢莖莽莫莒莊莓莉莠荷荻荼"],["b340","莆莧處彪蛇蛀蚶蛄蚵蛆蛋蚱蚯蛉術袞袈被袒袖袍袋覓規訪訝訣訥許設訟訛訢豉豚販責貫貨貪貧赧赦趾趺軛軟這逍通逗連速逝逐逕逞造透逢逖逛途"],["b3a1","部郭都酗野釵釦釣釧釭釩閉陪陵陳陸陰陴陶陷陬雀雪雩章竟頂頃魚鳥鹵鹿麥麻傢傍傅備傑傀傖傘傚最凱割剴創剩勞勝勛博厥啻喀喧啼喊喝喘喂喜喪喔喇喋喃喳單喟唾喲喚喻喬喱啾喉喫喙圍堯堪場堤堰報堡堝堠壹壺奠"],["b440","婷媚婿媒媛媧孳孱寒富寓寐尊尋就嵌嵐崴嵇巽幅帽幀幃幾廊廁廂廄弼彭復循徨惑惡悲悶惠愜愣惺愕惰惻惴慨惱愎惶愉愀愒戟扉掣掌描揀揩揉揆揍"],["b4a1","插揣提握揖揭揮捶援揪換摒揚揹敞敦敢散斑斐斯普晰晴晶景暑智晾晷曾替期朝棺棕棠棘棗椅棟棵森棧棹棒棲棣棋棍植椒椎棉棚楮棻款欺欽殘殖殼毯氮氯氬港游湔渡渲湧湊渠渥渣減湛湘渤湖湮渭渦湯渴湍渺測湃渝渾滋"],["b540","溉渙湎湣湄湲湩湟焙焚焦焰無然煮焜牌犄犀猶猥猴猩琺琪琳琢琥琵琶琴琯琛琦琨甥甦畫番痢痛痣痙痘痞痠登發皖皓皴盜睏短硝硬硯稍稈程稅稀窘"],["b5a1","窗窖童竣等策筆筐筒答筍筋筏筑粟粥絞結絨絕紫絮絲絡給絢絰絳善翔翕耋聒肅腕腔腋腑腎脹腆脾腌腓腴舒舜菩萃菸萍菠菅萋菁華菱菴著萊菰萌菌菽菲菊萸萎萄菜萇菔菟虛蛟蛙蛭蛔蛛蛤蛐蛞街裁裂袱覃視註詠評詞証詁"],["b640","詔詛詐詆訴診訶詖象貂貯貼貳貽賁費賀貴買貶貿貸越超趁跎距跋跚跑跌跛跆軻軸軼辜逮逵週逸進逶鄂郵鄉郾酣酥量鈔鈕鈣鈉鈞鈍鈐鈇鈑閔閏開閑"],["b6a1","間閒閎隊階隋陽隅隆隍陲隄雁雅雄集雇雯雲韌項順須飧飪飯飩飲飭馮馭黃黍黑亂傭債傲傳僅傾催傷傻傯僇剿剷剽募勦勤勢勣匯嗟嗨嗓嗦嗎嗜嗇嗑嗣嗤嗯嗚嗡嗅嗆嗥嗉園圓塞塑塘塗塚塔填塌塭塊塢塒塋奧嫁嫉嫌媾媽媼"],["b740","媳嫂媲嵩嵯幌幹廉廈弒彙徬微愚意慈感想愛惹愁愈慎慌慄慍愾愴愧愍愆愷戡戢搓搾搞搪搭搽搬搏搜搔損搶搖搗搆敬斟新暗暉暇暈暖暄暘暍會榔業"],["b7a1","楚楷楠楔極椰概楊楨楫楞楓楹榆楝楣楛歇歲毀殿毓毽溢溯滓溶滂源溝滇滅溥溘溼溺溫滑準溜滄滔溪溧溴煎煙煩煤煉照煜煬煦煌煥煞煆煨煖爺牒猷獅猿猾瑯瑚瑕瑟瑞瑁琿瑙瑛瑜當畸瘀痰瘁痲痱痺痿痴痳盞盟睛睫睦睞督"],["b840","睹睪睬睜睥睨睢矮碎碰碗碘碌碉硼碑碓硿祺祿禁萬禽稜稚稠稔稟稞窟窠筷節筠筮筧粱粳粵經絹綑綁綏絛置罩罪署義羨群聖聘肆肄腱腰腸腥腮腳腫"],["b8a1","腹腺腦舅艇蒂葷落萱葵葦葫葉葬葛萼萵葡董葩葭葆虞虜號蛹蜓蜈蜇蜀蛾蛻蜂蜃蜆蜊衙裟裔裙補裘裝裡裊裕裒覜解詫該詳試詩詰誇詼詣誠話誅詭詢詮詬詹詻訾詨豢貊貉賊資賈賄貲賃賂賅跡跟跨路跳跺跪跤跦躲較載軾輊"],["b940","辟農運遊道遂達逼違遐遇遏過遍遑逾遁鄒鄗酬酪酩釉鈷鉗鈸鈽鉀鈾鉛鉋鉤鉑鈴鉉鉍鉅鈹鈿鉚閘隘隔隕雍雋雉雊雷電雹零靖靴靶預頑頓頊頒頌飼飴"],["b9a1","飽飾馳馱馴髡鳩麂鼎鼓鼠僧僮僥僖僭僚僕像僑僱僎僩兢凳劃劂匱厭嗾嘀嘛嘗嗽嘔嘆嘉嘍嘎嗷嘖嘟嘈嘐嗶團圖塵塾境墓墊塹墅塽壽夥夢夤奪奩嫡嫦嫩嫗嫖嫘嫣孵寞寧寡寥實寨寢寤察對屢嶄嶇幛幣幕幗幔廓廖弊彆彰徹慇"],["ba40","愿態慷慢慣慟慚慘慵截撇摘摔撤摸摟摺摑摧搴摭摻敲斡旗旖暢暨暝榜榨榕槁榮槓構榛榷榻榫榴槐槍榭槌榦槃榣歉歌氳漳演滾漓滴漩漾漠漬漏漂漢"],["baa1","滿滯漆漱漸漲漣漕漫漯澈漪滬漁滲滌滷熔熙煽熊熄熒爾犒犖獄獐瑤瑣瑪瑰瑭甄疑瘧瘍瘋瘉瘓盡監瞄睽睿睡磁碟碧碳碩碣禎福禍種稱窪窩竭端管箕箋筵算箝箔箏箸箇箄粹粽精綻綰綜綽綾綠緊綴網綱綺綢綿綵綸維緒緇綬"],["bb40","罰翠翡翟聞聚肇腐膀膏膈膊腿膂臧臺與舔舞艋蓉蒿蓆蓄蒙蒞蒲蒜蓋蒸蓀蓓蒐蒼蓑蓊蜿蜜蜻蜢蜥蜴蜘蝕蜷蜩裳褂裴裹裸製裨褚裯誦誌語誣認誡誓誤"],["bba1","說誥誨誘誑誚誧豪貍貌賓賑賒赫趙趕跼輔輒輕輓辣遠遘遜遣遙遞遢遝遛鄙鄘鄞酵酸酷酴鉸銀銅銘銖鉻銓銜銨鉼銑閡閨閩閣閥閤隙障際雌雒需靼鞅韶頗領颯颱餃餅餌餉駁骯骰髦魁魂鳴鳶鳳麼鼻齊億儀僻僵價儂儈儉儅凜"],["bc40","劇劈劉劍劊勰厲嘮嘻嘹嘲嘿嘴嘩噓噎噗噴嘶嘯嘰墀墟增墳墜墮墩墦奭嬉嫻嬋嫵嬌嬈寮寬審寫層履嶝嶔幢幟幡廢廚廟廝廣廠彈影德徵慶慧慮慝慕憂"],["bca1","慼慰慫慾憧憐憫憎憬憚憤憔憮戮摩摯摹撞撲撈撐撰撥撓撕撩撒撮播撫撚撬撙撢撳敵敷數暮暫暴暱樣樟槨樁樞標槽模樓樊槳樂樅槭樑歐歎殤毅毆漿潼澄潑潦潔澆潭潛潸潮澎潺潰潤澗潘滕潯潠潟熟熬熱熨牖犛獎獗瑩璋璃"],["bd40","瑾璀畿瘠瘩瘟瘤瘦瘡瘢皚皺盤瞎瞇瞌瞑瞋磋磅確磊碾磕碼磐稿稼穀稽稷稻窯窮箭箱範箴篆篇篁箠篌糊締練緯緻緘緬緝編緣線緞緩綞緙緲緹罵罷羯"],["bda1","翩耦膛膜膝膠膚膘蔗蔽蔚蓮蔬蔭蔓蔑蔣蔡蔔蓬蔥蓿蔆螂蝴蝶蝠蝦蝸蝨蝙蝗蝌蝓衛衝褐複褒褓褕褊誼諒談諄誕請諸課諉諂調誰論諍誶誹諛豌豎豬賠賞賦賤賬賭賢賣賜質賡赭趟趣踫踐踝踢踏踩踟踡踞躺輝輛輟輩輦輪輜輞"],["be40","輥適遮遨遭遷鄰鄭鄧鄱醇醉醋醃鋅銻銷鋪銬鋤鋁銳銼鋒鋇鋰銲閭閱霄霆震霉靠鞍鞋鞏頡頫頜颳養餓餒餘駝駐駟駛駑駕駒駙骷髮髯鬧魅魄魷魯鴆鴉"],["bea1","鴃麩麾黎墨齒儒儘儔儐儕冀冪凝劑劓勳噙噫噹噩噤噸噪器噥噱噯噬噢噶壁墾壇壅奮嬝嬴學寰導彊憲憑憩憊懍憶憾懊懈戰擅擁擋撻撼據擄擇擂操撿擒擔撾整曆曉暹曄曇暸樽樸樺橙橫橘樹橄橢橡橋橇樵機橈歙歷氅濂澱澡"],["bf40","濃澤濁澧澳激澹澶澦澠澴熾燉燐燒燈燕熹燎燙燜燃燄獨璜璣璘璟璞瓢甌甍瘴瘸瘺盧盥瞠瞞瞟瞥磨磚磬磧禦積穎穆穌穋窺篙簑築篤篛篡篩篦糕糖縊"],["bfa1","縑縈縛縣縞縝縉縐罹羲翰翱翮耨膳膩膨臻興艘艙蕊蕙蕈蕨蕩蕃蕉蕭蕪蕞螃螟螞螢融衡褪褲褥褫褡親覦諦諺諫諱謀諜諧諮諾謁謂諷諭諳諶諼豫豭貓賴蹄踱踴蹂踹踵輻輯輸輳辨辦遵遴選遲遼遺鄴醒錠錶鋸錳錯錢鋼錫錄錚"],["c040","錐錦錡錕錮錙閻隧隨險雕霎霑霖霍霓霏靛靜靦鞘頰頸頻頷頭頹頤餐館餞餛餡餚駭駢駱骸骼髻髭鬨鮑鴕鴣鴦鴨鴒鴛默黔龍龜優償儡儲勵嚎嚀嚐嚅嚇"],["c0a1","嚏壕壓壑壎嬰嬪嬤孺尷屨嶼嶺嶽嶸幫彌徽應懂懇懦懋戲戴擎擊擘擠擰擦擬擱擢擭斂斃曙曖檀檔檄檢檜櫛檣橾檗檐檠歜殮毚氈濘濱濟濠濛濤濫濯澀濬濡濩濕濮濰燧營燮燦燥燭燬燴燠爵牆獰獲璩環璦璨癆療癌盪瞳瞪瞰瞬"],["c140","瞧瞭矯磷磺磴磯礁禧禪穗窿簇簍篾篷簌篠糠糜糞糢糟糙糝縮績繆縷縲繃縫總縱繅繁縴縹繈縵縿縯罄翳翼聱聲聰聯聳臆臃膺臂臀膿膽臉膾臨舉艱薪"],["c1a1","薄蕾薜薑薔薯薛薇薨薊虧蟀蟑螳蟒蟆螫螻螺蟈蟋褻褶襄褸褽覬謎謗謙講謊謠謝謄謐豁谿豳賺賽購賸賻趨蹉蹋蹈蹊轄輾轂轅輿避遽還邁邂邀鄹醣醞醜鍍鎂錨鍵鍊鍥鍋錘鍾鍬鍛鍰鍚鍔闊闋闌闈闆隱隸雖霜霞鞠韓顆颶餵騁"],["c240","駿鮮鮫鮪鮭鴻鴿麋黏點黜黝黛鼾齋叢嚕嚮壙壘嬸彝懣戳擴擲擾攆擺擻擷斷曜朦檳檬櫃檻檸櫂檮檯歟歸殯瀉瀋濾瀆濺瀑瀏燻燼燾燸獷獵璧璿甕癖癘"],["c2a1","癒瞽瞿瞻瞼礎禮穡穢穠竄竅簫簧簪簞簣簡糧織繕繞繚繡繒繙罈翹翻職聶臍臏舊藏薩藍藐藉薰薺薹薦蟯蟬蟲蟠覆覲觴謨謹謬謫豐贅蹙蹣蹦蹤蹟蹕軀轉轍邇邃邈醫醬釐鎔鎊鎖鎢鎳鎮鎬鎰鎘鎚鎗闔闖闐闕離雜雙雛雞霤鞣鞦"],["c340","鞭韹額顏題顎顓颺餾餿餽餮馥騎髁鬃鬆魏魎魍鯊鯉鯽鯈鯀鵑鵝鵠黠鼕鼬儳嚥壞壟壢寵龐廬懲懷懶懵攀攏曠曝櫥櫝櫚櫓瀛瀟瀨瀚瀝瀕瀘爆爍牘犢獸"],["c3a1","獺璽瓊瓣疇疆癟癡矇礙禱穫穩簾簿簸簽簷籀繫繭繹繩繪羅繳羶羹羸臘藩藝藪藕藤藥藷蟻蠅蠍蟹蟾襠襟襖襞譁譜識證譚譎譏譆譙贈贊蹼蹲躇蹶蹬蹺蹴轔轎辭邊邋醱醮鏡鏑鏟鏃鏈鏜鏝鏖鏢鏍鏘鏤鏗鏨關隴難霪霧靡韜韻類"],["c440","願顛颼饅饉騖騙鬍鯨鯧鯖鯛鶉鵡鵲鵪鵬麒麗麓麴勸嚨嚷嚶嚴嚼壤孀孃孽寶巉懸懺攘攔攙曦朧櫬瀾瀰瀲爐獻瓏癢癥礦礪礬礫竇競籌籃籍糯糰辮繽繼"],["c4a1","纂罌耀臚艦藻藹蘑藺蘆蘋蘇蘊蠔蠕襤覺觸議譬警譯譟譫贏贍躉躁躅躂醴釋鐘鐃鏽闡霰飄饒饑馨騫騰騷騵鰓鰍鹹麵黨鼯齟齣齡儷儸囁囀囂夔屬巍懼懾攝攜斕曩櫻欄櫺殲灌爛犧瓖瓔癩矓籐纏續羼蘗蘭蘚蠣蠢蠡蠟襪襬覽譴"],["c540","護譽贓躊躍躋轟辯醺鐮鐳鐵鐺鐸鐲鐫闢霸霹露響顧顥饗驅驃驀騾髏魔魑鰭鰥鶯鶴鷂鶸麝黯鼙齜齦齧儼儻囈囊囉孿巔巒彎懿攤權歡灑灘玀瓤疊癮癬"],["c5a1","禳籠籟聾聽臟襲襯觼讀贖贗躑躓轡酈鑄鑑鑒霽霾韃韁顫饕驕驍髒鬚鱉鰱鰾鰻鷓鷗鼴齬齪龔囌巖戀攣攫攪曬欐瓚竊籤籣籥纓纖纔臢蘸蘿蠱變邐邏鑣鑠鑤靨顯饜驚驛驗髓體髑鱔鱗鱖鷥麟黴囑壩攬灞癱癲矗罐羈蠶蠹衢讓讒"],["c640","讖艷贛釀鑪靂靈靄韆顰驟鬢魘鱟鷹鷺鹼鹽鼇齷齲廳欖灣籬籮蠻觀躡釁鑲鑰顱饞髖鬣黌灤矚讚鑷韉驢驥纜讜躪釅鑽鑾鑼鱷鱸黷豔鑿鸚爨驪鬱鸛鸞籲"],["c940","乂乜凵匚厂万丌乇亍囗兀屮彳丏冇与丮亓仂仉仈冘勼卬厹圠夃夬尐巿旡殳毌气爿丱丼仨仜仩仡仝仚刌匜卌圢圣夗夯宁宄尒尻屴屳帄庀庂忉戉扐氕"],["c9a1","氶汃氿氻犮犰玊禸肊阞伎优伬仵伔仱伀价伈伝伂伅伢伓伄仴伒冱刓刉刐劦匢匟卍厊吇囡囟圮圪圴夼妀奼妅奻奾奷奿孖尕尥屼屺屻屾巟幵庄异弚彴忕忔忏扜扞扤扡扦扢扙扠扚扥旯旮朾朹朸朻机朿朼朳氘汆汒汜汏汊汔汋"],["ca40","汌灱牞犴犵玎甪癿穵网艸艼芀艽艿虍襾邙邗邘邛邔阢阤阠阣佖伻佢佉体佤伾佧佒佟佁佘伭伳伿佡冏冹刜刞刡劭劮匉卣卲厎厏吰吷吪呔呅吙吜吥吘"],["caa1","吽呏呁吨吤呇囮囧囥坁坅坌坉坋坒夆奀妦妘妠妗妎妢妐妏妧妡宎宒尨尪岍岏岈岋岉岒岊岆岓岕巠帊帎庋庉庌庈庍弅弝彸彶忒忑忐忭忨忮忳忡忤忣忺忯忷忻怀忴戺抃抌抎抏抔抇扱扻扺扰抁抈扷扽扲扴攷旰旴旳旲旵杅杇"],["cb40","杙杕杌杈杝杍杚杋毐氙氚汸汧汫沄沋沏汱汯汩沚汭沇沕沜汦汳汥汻沎灴灺牣犿犽狃狆狁犺狅玕玗玓玔玒町甹疔疕皁礽耴肕肙肐肒肜芐芏芅芎芑芓"],["cba1","芊芃芄豸迉辿邟邡邥邞邧邠阰阨阯阭丳侘佼侅佽侀侇佶佴侉侄佷佌侗佪侚佹侁佸侐侜侔侞侒侂侕佫佮冞冼冾刵刲刳剆刱劼匊匋匼厒厔咇呿咁咑咂咈呫呺呾呥呬呴呦咍呯呡呠咘呣呧呤囷囹坯坲坭坫坱坰坶垀坵坻坳坴坢"],["cc40","坨坽夌奅妵妺姏姎妲姌姁妶妼姃姖妱妽姀姈妴姇孢孥宓宕屄屇岮岤岠岵岯岨岬岟岣岭岢岪岧岝岥岶岰岦帗帔帙弨弢弣弤彔徂彾彽忞忥怭怦怙怲怋"],["cca1","怴怊怗怳怚怞怬怢怍怐怮怓怑怌怉怜戔戽抭抴拑抾抪抶拊抮抳抯抻抩抰抸攽斨斻昉旼昄昒昈旻昃昋昍昅旽昑昐曶朊枅杬枎枒杶杻枘枆构杴枍枌杺枟枑枙枃杽极杸杹枔欥殀歾毞氝沓泬泫泮泙沶泔沭泧沷泐泂沺泃泆泭泲"],["cd40","泒泝沴沊沝沀泞泀洰泍泇沰泹泏泩泑炔炘炅炓炆炄炑炖炂炚炃牪狖狋狘狉狜狒狔狚狌狑玤玡玭玦玢玠玬玝瓝瓨甿畀甾疌疘皯盳盱盰盵矸矼矹矻矺"],["cda1","矷祂礿秅穸穻竻籵糽耵肏肮肣肸肵肭舠芠苀芫芚芘芛芵芧芮芼芞芺芴芨芡芩苂芤苃芶芢虰虯虭虮豖迒迋迓迍迖迕迗邲邴邯邳邰阹阽阼阺陃俍俅俓侲俉俋俁俔俜俙侻侳俛俇俖侺俀侹俬剄剉勀勂匽卼厗厖厙厘咺咡咭咥哏"],["ce40","哃茍咷咮哖咶哅哆咠呰咼咢咾呲哞咰垵垞垟垤垌垗垝垛垔垘垏垙垥垚垕壴复奓姡姞姮娀姱姝姺姽姼姶姤姲姷姛姩姳姵姠姾姴姭宨屌峐峘峌峗峋峛"],["cea1","峞峚峉峇峊峖峓峔峏峈峆峎峟峸巹帡帢帣帠帤庰庤庢庛庣庥弇弮彖徆怷怹恔恲恞恅恓恇恉恛恌恀恂恟怤恄恘恦恮扂扃拏挍挋拵挎挃拫拹挏挌拸拶挀挓挔拺挕拻拰敁敃斪斿昶昡昲昵昜昦昢昳昫昺昝昴昹昮朏朐柁柲柈枺"],["cf40","柜枻柸柘柀枷柅柫柤柟枵柍枳柷柶柮柣柂枹柎柧柰枲柼柆柭柌枮柦柛柺柉柊柃柪柋欨殂殄殶毖毘毠氠氡洨洴洭洟洼洿洒洊泚洳洄洙洺洚洑洀洝浂"],["cfa1","洁洘洷洃洏浀洇洠洬洈洢洉洐炷炟炾炱炰炡炴炵炩牁牉牊牬牰牳牮狊狤狨狫狟狪狦狣玅珌珂珈珅玹玶玵玴珫玿珇玾珃珆玸珋瓬瓮甮畇畈疧疪癹盄眈眃眄眅眊盷盻盺矧矨砆砑砒砅砐砏砎砉砃砓祊祌祋祅祄秕种秏秖秎窀"],["d040","穾竑笀笁籺籸籹籿粀粁紃紈紁罘羑羍羾耇耎耏耔耷胘胇胠胑胈胂胐胅胣胙胜胊胕胉胏胗胦胍臿舡芔苙苾苹茇苨茀苕茺苫苖苴苬苡苲苵茌苻苶苰苪"],["d0a1","苤苠苺苳苭虷虴虼虳衁衎衧衪衩觓訄訇赲迣迡迮迠郱邽邿郕郅邾郇郋郈釔釓陔陏陑陓陊陎倞倅倇倓倢倰倛俵俴倳倷倬俶俷倗倜倠倧倵倯倱倎党冔冓凊凄凅凈凎剡剚剒剞剟剕剢勍匎厞唦哢唗唒哧哳哤唚哿唄唈哫唑唅哱"],["d140","唊哻哷哸哠唎唃唋圁圂埌堲埕埒垺埆垽垼垸垶垿埇埐垹埁夎奊娙娖娭娮娕娏娗娊娞娳孬宧宭宬尃屖屔峬峿峮峱峷崀峹帩帨庨庮庪庬弳弰彧恝恚恧"],["d1a1","恁悢悈悀悒悁悝悃悕悛悗悇悜悎戙扆拲挐捖挬捄捅挶捃揤挹捋捊挼挩捁挴捘捔捙挭捇挳捚捑挸捗捀捈敊敆旆旃旄旂晊晟晇晑朒朓栟栚桉栲栳栻桋桏栖栱栜栵栫栭栯桎桄栴栝栒栔栦栨栮桍栺栥栠欬欯欭欱欴歭肂殈毦毤"],["d240","毨毣毢毧氥浺浣浤浶洍浡涒浘浢浭浯涑涍淯浿涆浞浧浠涗浰浼浟涂涘洯浨涋浾涀涄洖涃浻浽浵涐烜烓烑烝烋缹烢烗烒烞烠烔烍烅烆烇烚烎烡牂牸"],["d2a1","牷牶猀狺狴狾狶狳狻猁珓珙珥珖玼珧珣珩珜珒珛珔珝珚珗珘珨瓞瓟瓴瓵甡畛畟疰痁疻痄痀疿疶疺皊盉眝眛眐眓眒眣眑眕眙眚眢眧砣砬砢砵砯砨砮砫砡砩砳砪砱祔祛祏祜祓祒祑秫秬秠秮秭秪秜秞秝窆窉窅窋窌窊窇竘笐"],["d340","笄笓笅笏笈笊笎笉笒粄粑粊粌粈粍粅紞紝紑紎紘紖紓紟紒紏紌罜罡罞罠罝罛羖羒翃翂翀耖耾耹胺胲胹胵脁胻脀舁舯舥茳茭荄茙荑茥荖茿荁茦茜茢"],["d3a1","荂荎茛茪茈茼荍茖茤茠茷茯茩荇荅荌荓茞茬荋茧荈虓虒蚢蚨蚖蚍蚑蚞蚇蚗蚆蚋蚚蚅蚥蚙蚡蚧蚕蚘蚎蚝蚐蚔衃衄衭衵衶衲袀衱衿衯袃衾衴衼訒豇豗豻貤貣赶赸趵趷趶軑軓迾迵适迿迻逄迼迶郖郠郙郚郣郟郥郘郛郗郜郤酐"],["d440","酎酏釕釢釚陜陟隼飣髟鬯乿偰偪偡偞偠偓偋偝偲偈偍偁偛偊偢倕偅偟偩偫偣偤偆偀偮偳偗偑凐剫剭剬剮勖勓匭厜啵啶唼啍啐唴唪啑啢唶唵唰啒啅"],["d4a1","唌唲啥啎唹啈唭唻啀啋圊圇埻堔埢埶埜埴堀埭埽堈埸堋埳埏堇埮埣埲埥埬埡堎埼堐埧堁堌埱埩埰堍堄奜婠婘婕婧婞娸娵婭婐婟婥婬婓婤婗婃婝婒婄婛婈媎娾婍娹婌婰婩婇婑婖婂婜孲孮寁寀屙崞崋崝崚崠崌崨崍崦崥崏"],["d540","崰崒崣崟崮帾帴庱庴庹庲庳弶弸徛徖徟悊悐悆悾悰悺惓惔惏惤惙惝惈悱惛悷惊悿惃惍惀挲捥掊掂捽掽掞掭掝掗掫掎捯掇掐据掯捵掜捭掮捼掤挻掟"],["d5a1","捸掅掁掑掍捰敓旍晥晡晛晙晜晢朘桹梇梐梜桭桮梮梫楖桯梣梬梩桵桴梲梏桷梒桼桫桲梪梀桱桾梛梖梋梠梉梤桸桻梑梌梊桽欶欳欷欸殑殏殍殎殌氪淀涫涴涳湴涬淩淢涷淶淔渀淈淠淟淖涾淥淜淝淛淴淊涽淭淰涺淕淂淏淉"],["d640","淐淲淓淽淗淍淣涻烺焍烷焗烴焌烰焄烳焐烼烿焆焓焀烸烶焋焂焎牾牻牼牿猝猗猇猑猘猊猈狿猏猞玈珶珸珵琄琁珽琇琀珺珼珿琌琋珴琈畤畣痎痒痏"],["d6a1","痋痌痑痐皏皉盓眹眯眭眱眲眴眳眽眥眻眵硈硒硉硍硊硌砦硅硐祤祧祩祪祣祫祡离秺秸秶秷窏窔窐笵筇笴笥笰笢笤笳笘笪笝笱笫笭笯笲笸笚笣粔粘粖粣紵紽紸紶紺絅紬紩絁絇紾紿絊紻紨罣羕羜羝羛翊翋翍翐翑翇翏翉耟"],["d740","耞耛聇聃聈脘脥脙脛脭脟脬脞脡脕脧脝脢舑舸舳舺舴舲艴莐莣莨莍荺荳莤荴莏莁莕莙荵莔莩荽莃莌莝莛莪莋荾莥莯莈莗莰荿莦莇莮荶莚虙虖蚿蚷"],["d7a1","蛂蛁蛅蚺蚰蛈蚹蚳蚸蛌蚴蚻蚼蛃蚽蚾衒袉袕袨袢袪袚袑袡袟袘袧袙袛袗袤袬袌袓袎覂觖觙觕訰訧訬訞谹谻豜豝豽貥赽赻赹趼跂趹趿跁軘軞軝軜軗軠軡逤逋逑逜逌逡郯郪郰郴郲郳郔郫郬郩酖酘酚酓酕釬釴釱釳釸釤釹釪"],["d840","釫釷釨釮镺閆閈陼陭陫陱陯隿靪頄飥馗傛傕傔傞傋傣傃傌傎傝偨傜傒傂傇兟凔匒匑厤厧喑喨喥喭啷噅喢喓喈喏喵喁喣喒喤啽喌喦啿喕喡喎圌堩堷"],["d8a1","堙堞堧堣堨埵塈堥堜堛堳堿堶堮堹堸堭堬堻奡媯媔媟婺媢媞婸媦婼媥媬媕媮娷媄媊媗媃媋媩婻婽媌媜媏媓媝寪寍寋寔寑寊寎尌尰崷嵃嵫嵁嵋崿崵嵑嵎嵕崳崺嵒崽崱嵙嵂崹嵉崸崼崲崶嵀嵅幄幁彘徦徥徫惉悹惌惢惎惄愔"],["d940","惲愊愖愅惵愓惸惼惾惁愃愘愝愐惿愄愋扊掔掱掰揎揥揨揯揃撝揳揊揠揶揕揲揵摡揟掾揝揜揄揘揓揂揇揌揋揈揰揗揙攲敧敪敤敜敨敥斌斝斞斮旐旒"],["d9a1","晼晬晻暀晱晹晪晲朁椌棓椄棜椪棬棪棱椏棖棷棫棤棶椓椐棳棡椇棌椈楰梴椑棯棆椔棸棐棽棼棨椋椊椗棎棈棝棞棦棴棑椆棔棩椕椥棇欹欻欿欼殔殗殙殕殽毰毲毳氰淼湆湇渟湉溈渼渽湅湢渫渿湁湝湳渜渳湋湀湑渻渃渮湞"],["da40","湨湜湡渱渨湠湱湫渹渢渰湓湥渧湸湤湷湕湹湒湦渵渶湚焠焞焯烻焮焱焣焥焢焲焟焨焺焛牋牚犈犉犆犅犋猒猋猰猢猱猳猧猲猭猦猣猵猌琮琬琰琫琖"],["daa1","琚琡琭琱琤琣琝琩琠琲瓻甯畯畬痧痚痡痦痝痟痤痗皕皒盚睆睇睄睍睅睊睎睋睌矞矬硠硤硥硜硭硱硪确硰硩硨硞硢祴祳祲祰稂稊稃稌稄窙竦竤筊笻筄筈筌筎筀筘筅粢粞粨粡絘絯絣絓絖絧絪絏絭絜絫絒絔絩絑絟絎缾缿罥"],["db40","罦羢羠羡翗聑聏聐胾胔腃腊腒腏腇脽腍脺臦臮臷臸臹舄舼舽舿艵茻菏菹萣菀菨萒菧菤菼菶萐菆菈菫菣莿萁菝菥菘菿菡菋菎菖菵菉萉萏菞萑萆菂菳"],["dba1","菕菺菇菑菪萓菃菬菮菄菻菗菢萛菛菾蛘蛢蛦蛓蛣蛚蛪蛝蛫蛜蛬蛩蛗蛨蛑衈衖衕袺裗袹袸裀袾袶袼袷袽袲褁裉覕覘覗觝觚觛詎詍訹詙詀詗詘詄詅詒詈詑詊詌詏豟貁貀貺貾貰貹貵趄趀趉跘跓跍跇跖跜跏跕跙跈跗跅軯軷軺"],["dc40","軹軦軮軥軵軧軨軶軫軱軬軴軩逭逴逯鄆鄬鄄郿郼鄈郹郻鄁鄀鄇鄅鄃酡酤酟酢酠鈁鈊鈥鈃鈚鈦鈏鈌鈀鈒釿釽鈆鈄鈧鈂鈜鈤鈙鈗鈅鈖镻閍閌閐隇陾隈"],["dca1","隉隃隀雂雈雃雱雰靬靰靮頇颩飫鳦黹亃亄亶傽傿僆傮僄僊傴僈僂傰僁傺傱僋僉傶傸凗剺剸剻剼嗃嗛嗌嗐嗋嗊嗝嗀嗔嗄嗩喿嗒喍嗏嗕嗢嗖嗈嗲嗍嗙嗂圔塓塨塤塏塍塉塯塕塎塝塙塥塛堽塣塱壼嫇嫄嫋媺媸媱媵媰媿嫈媻嫆"],["dd40","媷嫀嫊媴媶嫍媹媐寖寘寙尟尳嵱嵣嵊嵥嵲嵬嵞嵨嵧嵢巰幏幎幊幍幋廅廌廆廋廇彀徯徭惷慉慊愫慅愶愲愮慆愯慏愩慀戠酨戣戥戤揅揱揫搐搒搉搠搤"],["dda1","搳摃搟搕搘搹搷搢搣搌搦搰搨摁搵搯搊搚摀搥搧搋揧搛搮搡搎敯斒旓暆暌暕暐暋暊暙暔晸朠楦楟椸楎楢楱椿楅楪椹楂楗楙楺楈楉椵楬椳椽楥棰楸椴楩楀楯楄楶楘楁楴楌椻楋椷楜楏楑椲楒椯楻椼歆歅歃歂歈歁殛嗀毻毼"],["de40","毹毷毸溛滖滈溏滀溟溓溔溠溱溹滆滒溽滁溞滉溷溰滍溦滏溲溾滃滜滘溙溒溎溍溤溡溿溳滐滊溗溮溣煇煔煒煣煠煁煝煢煲煸煪煡煂煘煃煋煰煟煐煓"],["dea1","煄煍煚牏犍犌犑犐犎猼獂猻猺獀獊獉瑄瑊瑋瑒瑑瑗瑀瑏瑐瑎瑂瑆瑍瑔瓡瓿瓾瓽甝畹畷榃痯瘏瘃痷痾痼痹痸瘐痻痶痭痵痽皙皵盝睕睟睠睒睖睚睩睧睔睙睭矠碇碚碔碏碄碕碅碆碡碃硹碙碀碖硻祼禂祽祹稑稘稙稒稗稕稢稓"],["df40","稛稐窣窢窞竫筦筤筭筴筩筲筥筳筱筰筡筸筶筣粲粴粯綈綆綀綍絿綅絺綎絻綃絼綌綔綄絽綒罭罫罧罨罬羦羥羧翛翜耡腤腠腷腜腩腛腢腲朡腞腶腧腯"],["dfa1","腄腡舝艉艄艀艂艅蓱萿葖葶葹蒏蒍葥葑葀蒆葧萰葍葽葚葙葴葳葝蔇葞萷萺萴葺葃葸萲葅萩菙葋萯葂萭葟葰萹葎葌葒葯蓅蒎萻葇萶萳葨葾葄萫葠葔葮葐蜋蜄蛷蜌蛺蛖蛵蝍蛸蜎蜉蜁蛶蜍蜅裖裋裍裎裞裛裚裌裐覅覛觟觥觤"],["e040","觡觠觢觜触詶誆詿詡訿詷誂誄詵誃誁詴詺谼豋豊豥豤豦貆貄貅賌赨赩趑趌趎趏趍趓趔趐趒跰跠跬跱跮跐跩跣跢跧跲跫跴輆軿輁輀輅輇輈輂輋遒逿"],["e0a1","遄遉逽鄐鄍鄏鄑鄖鄔鄋鄎酮酯鉈鉒鈰鈺鉦鈳鉥鉞銃鈮鉊鉆鉭鉬鉏鉠鉧鉯鈶鉡鉰鈱鉔鉣鉐鉲鉎鉓鉌鉖鈲閟閜閞閛隒隓隑隗雎雺雽雸雵靳靷靸靲頏頍頎颬飶飹馯馲馰馵骭骫魛鳪鳭鳧麀黽僦僔僗僨僳僛僪僝僤僓僬僰僯僣僠"],["e140","凘劀劁勩勫匰厬嘧嘕嘌嘒嗼嘏嘜嘁嘓嘂嗺嘝嘄嗿嗹墉塼墐墘墆墁塿塴墋塺墇墑墎塶墂墈塻墔墏壾奫嫜嫮嫥嫕嫪嫚嫭嫫嫳嫢嫠嫛嫬嫞嫝嫙嫨嫟孷寠"],["e1a1","寣屣嶂嶀嵽嶆嵺嶁嵷嶊嶉嶈嵾嵼嶍嵹嵿幘幙幓廘廑廗廎廜廕廙廒廔彄彃彯徶愬愨慁慞慱慳慒慓慲慬憀慴慔慺慛慥愻慪慡慖戩戧戫搫摍摛摝摴摶摲摳摽摵摦撦摎撂摞摜摋摓摠摐摿搿摬摫摙摥摷敳斠暡暠暟朅朄朢榱榶槉"],["e240","榠槎榖榰榬榼榑榙榎榧榍榩榾榯榿槄榽榤槔榹槊榚槏榳榓榪榡榞槙榗榐槂榵榥槆歊歍歋殞殟殠毃毄毾滎滵滱漃漥滸漷滻漮漉潎漙漚漧漘漻漒滭漊"],["e2a1","漶潳滹滮漭潀漰漼漵滫漇漎潃漅滽滶漹漜滼漺漟漍漞漈漡熇熐熉熀熅熂熏煻熆熁熗牄牓犗犕犓獃獍獑獌瑢瑳瑱瑵瑲瑧瑮甀甂甃畽疐瘖瘈瘌瘕瘑瘊瘔皸瞁睼瞅瞂睮瞀睯睾瞃碲碪碴碭碨硾碫碞碥碠碬碢碤禘禊禋禖禕禔禓"],["e340","禗禈禒禐稫穊稰稯稨稦窨窫窬竮箈箜箊箑箐箖箍箌箛箎箅箘劄箙箤箂粻粿粼粺綧綷緂綣綪緁緀緅綝緎緄緆緋緌綯綹綖綼綟綦綮綩綡緉罳翢翣翥翞"],["e3a1","耤聝聜膉膆膃膇膍膌膋舕蒗蒤蒡蒟蒺蓎蓂蒬蒮蒫蒹蒴蓁蓍蒪蒚蒱蓐蒝蒧蒻蒢蒔蓇蓌蒛蒩蒯蒨蓖蒘蒶蓏蒠蓗蓔蓒蓛蒰蒑虡蜳蜣蜨蝫蝀蜮蜞蜡蜙蜛蝃蜬蝁蜾蝆蜠蜲蜪蜭蜼蜒蜺蜱蜵蝂蜦蜧蜸蜤蜚蜰蜑裷裧裱裲裺裾裮裼裶裻"],["e440","裰裬裫覝覡覟覞觩觫觨誫誙誋誒誏誖谽豨豩賕賏賗趖踉踂跿踍跽踊踃踇踆踅跾踀踄輐輑輎輍鄣鄜鄠鄢鄟鄝鄚鄤鄡鄛酺酲酹酳銥銤鉶銛鉺銠銔銪銍"],["e4a1","銦銚銫鉹銗鉿銣鋮銎銂銕銢鉽銈銡銊銆銌銙銧鉾銇銩銝銋鈭隞隡雿靘靽靺靾鞃鞀鞂靻鞄鞁靿韎韍頖颭颮餂餀餇馝馜駃馹馻馺駂馽駇骱髣髧鬾鬿魠魡魟鳱鳲鳵麧僿儃儰僸儆儇僶僾儋儌僽儊劋劌勱勯噈噂噌嘵噁噊噉噆噘"],["e540","噚噀嘳嘽嘬嘾嘸嘪嘺圚墫墝墱墠墣墯墬墥墡壿嫿嫴嫽嫷嫶嬃嫸嬂嫹嬁嬇嬅嬏屧嶙嶗嶟嶒嶢嶓嶕嶠嶜嶡嶚嶞幩幝幠幜緳廛廞廡彉徲憋憃慹憱憰憢憉"],["e5a1","憛憓憯憭憟憒憪憡憍慦憳戭摮摰撖撠撅撗撜撏撋撊撌撣撟摨撱撘敶敺敹敻斲斳暵暰暩暲暷暪暯樀樆樗槥槸樕槱槤樠槿槬槢樛樝槾樧槲槮樔槷槧橀樈槦槻樍槼槫樉樄樘樥樏槶樦樇槴樖歑殥殣殢殦氁氀毿氂潁漦潾澇濆澒"],["e640","澍澉澌潢潏澅潚澖潶潬澂潕潲潒潐潗澔澓潝漀潡潫潽潧澐潓澋潩潿澕潣潷潪潻熲熯熛熰熠熚熩熵熝熥熞熤熡熪熜熧熳犘犚獘獒獞獟獠獝獛獡獚獙"],["e6a1","獢璇璉璊璆璁瑽璅璈瑼瑹甈甇畾瘥瘞瘙瘝瘜瘣瘚瘨瘛皜皝皞皛瞍瞏瞉瞈磍碻磏磌磑磎磔磈磃磄磉禚禡禠禜禢禛歶稹窲窴窳箷篋箾箬篎箯箹篊箵糅糈糌糋緷緛緪緧緗緡縃緺緦緶緱緰緮緟罶羬羰羭翭翫翪翬翦翨聤聧膣膟"],["e740","膞膕膢膙膗舖艏艓艒艐艎艑蔤蔻蔏蔀蔩蔎蔉蔍蔟蔊蔧蔜蓻蔫蓺蔈蔌蓴蔪蓲蔕蓷蓫蓳蓼蔒蓪蓩蔖蓾蔨蔝蔮蔂蓽蔞蓶蔱蔦蓧蓨蓰蓯蓹蔘蔠蔰蔋蔙蔯虢"],["e7a1","蝖蝣蝤蝷蟡蝳蝘蝔蝛蝒蝡蝚蝑蝞蝭蝪蝐蝎蝟蝝蝯蝬蝺蝮蝜蝥蝏蝻蝵蝢蝧蝩衚褅褌褔褋褗褘褙褆褖褑褎褉覢覤覣觭觰觬諏諆誸諓諑諔諕誻諗誾諀諅諘諃誺誽諙谾豍貏賥賟賙賨賚賝賧趠趜趡趛踠踣踥踤踮踕踛踖踑踙踦踧"],["e840","踔踒踘踓踜踗踚輬輤輘輚輠輣輖輗遳遰遯遧遫鄯鄫鄩鄪鄲鄦鄮醅醆醊醁醂醄醀鋐鋃鋄鋀鋙銶鋏鋱鋟鋘鋩鋗鋝鋌鋯鋂鋨鋊鋈鋎鋦鋍鋕鋉鋠鋞鋧鋑鋓"],["e8a1","銵鋡鋆銴镼閬閫閮閰隤隢雓霅霈霂靚鞊鞎鞈韐韏頞頝頦頩頨頠頛頧颲餈飺餑餔餖餗餕駜駍駏駓駔駎駉駖駘駋駗駌骳髬髫髳髲髱魆魃魧魴魱魦魶魵魰魨魤魬鳼鳺鳽鳿鳷鴇鴀鳹鳻鴈鴅鴄麃黓鼏鼐儜儓儗儚儑凞匴叡噰噠噮"],["e940","噳噦噣噭噲噞噷圜圛壈墽壉墿墺壂墼壆嬗嬙嬛嬡嬔嬓嬐嬖嬨嬚嬠嬞寯嶬嶱嶩嶧嶵嶰嶮嶪嶨嶲嶭嶯嶴幧幨幦幯廩廧廦廨廥彋徼憝憨憖懅憴懆懁懌憺"],["e9a1","憿憸憌擗擖擐擏擉撽撉擃擛擳擙攳敿敼斢曈暾曀曊曋曏暽暻暺曌朣樴橦橉橧樲橨樾橝橭橶橛橑樨橚樻樿橁橪橤橐橏橔橯橩橠樼橞橖橕橍橎橆歕歔歖殧殪殫毈毇氄氃氆澭濋澣濇澼濎濈潞濄澽澞濊澨瀄澥澮澺澬澪濏澿澸"],["ea40","澢濉澫濍澯澲澰燅燂熿熸燖燀燁燋燔燊燇燏熽燘熼燆燚燛犝犞獩獦獧獬獥獫獪瑿璚璠璔璒璕璡甋疀瘯瘭瘱瘽瘳瘼瘵瘲瘰皻盦瞚瞝瞡瞜瞛瞢瞣瞕瞙"],["eaa1","瞗磝磩磥磪磞磣磛磡磢磭磟磠禤穄穈穇窶窸窵窱窷篞篣篧篝篕篥篚篨篹篔篪篢篜篫篘篟糒糔糗糐糑縒縡縗縌縟縠縓縎縜縕縚縢縋縏縖縍縔縥縤罃罻罼罺羱翯耪耩聬膱膦膮膹膵膫膰膬膴膲膷膧臲艕艖艗蕖蕅蕫蕍蕓蕡蕘"],["eb40","蕀蕆蕤蕁蕢蕄蕑蕇蕣蔾蕛蕱蕎蕮蕵蕕蕧蕠薌蕦蕝蕔蕥蕬虣虥虤螛螏螗螓螒螈螁螖螘蝹螇螣螅螐螑螝螄螔螜螚螉褞褦褰褭褮褧褱褢褩褣褯褬褟觱諠"],["eba1","諢諲諴諵諝謔諤諟諰諈諞諡諨諿諯諻貑貒貐賵賮賱賰賳赬赮趥趧踳踾踸蹀蹅踶踼踽蹁踰踿躽輶輮輵輲輹輷輴遶遹遻邆郺鄳鄵鄶醓醐醑醍醏錧錞錈錟錆錏鍺錸錼錛錣錒錁鍆錭錎錍鋋錝鋺錥錓鋹鋷錴錂錤鋿錩錹錵錪錔錌"],["ec40","錋鋾錉錀鋻錖閼闍閾閹閺閶閿閵閽隩雔霋霒霐鞙鞗鞔韰韸頵頯頲餤餟餧餩馞駮駬駥駤駰駣駪駩駧骹骿骴骻髶髺髹髷鬳鮀鮅鮇魼魾魻鮂鮓鮒鮐魺鮕"],["eca1","魽鮈鴥鴗鴠鴞鴔鴩鴝鴘鴢鴐鴙鴟麈麆麇麮麭黕黖黺鼒鼽儦儥儢儤儠儩勴嚓嚌嚍嚆嚄嚃噾嚂噿嚁壖壔壏壒嬭嬥嬲嬣嬬嬧嬦嬯嬮孻寱寲嶷幬幪徾徻懃憵憼懧懠懥懤懨懞擯擩擣擫擤擨斁斀斶旚曒檍檖檁檥檉檟檛檡檞檇檓檎"],["ed40","檕檃檨檤檑橿檦檚檅檌檒歛殭氉濌澩濴濔濣濜濭濧濦濞濲濝濢濨燡燱燨燲燤燰燢獳獮獯璗璲璫璐璪璭璱璥璯甐甑甒甏疄癃癈癉癇皤盩瞵瞫瞲瞷瞶"],["eda1","瞴瞱瞨矰磳磽礂磻磼磲礅磹磾礄禫禨穜穛穖穘穔穚窾竀竁簅簏篲簀篿篻簎篴簋篳簂簉簃簁篸篽簆篰篱簐簊糨縭縼繂縳顈縸縪繉繀繇縩繌縰縻縶繄縺罅罿罾罽翴翲耬膻臄臌臊臅臇膼臩艛艚艜薃薀薏薧薕薠薋薣蕻薤薚薞"],["ee40","蕷蕼薉薡蕺蕸蕗薎薖薆薍薙薝薁薢薂薈薅蕹蕶薘薐薟虨螾螪螭蟅螰螬螹螵螼螮蟉蟃蟂蟌螷螯蟄蟊螴螶螿螸螽蟞螲褵褳褼褾襁襒褷襂覭覯覮觲觳謞"],["eea1","謘謖謑謅謋謢謏謒謕謇謍謈謆謜謓謚豏豰豲豱豯貕貔賹赯蹎蹍蹓蹐蹌蹇轃轀邅遾鄸醚醢醛醙醟醡醝醠鎡鎃鎯鍤鍖鍇鍼鍘鍜鍶鍉鍐鍑鍠鍭鎏鍌鍪鍹鍗鍕鍒鍏鍱鍷鍻鍡鍞鍣鍧鎀鍎鍙闇闀闉闃闅閷隮隰隬霠霟霘霝霙鞚鞡鞜"],["ef40","鞞鞝韕韔韱顁顄顊顉顅顃餥餫餬餪餳餲餯餭餱餰馘馣馡騂駺駴駷駹駸駶駻駽駾駼騃骾髾髽鬁髼魈鮚鮨鮞鮛鮦鮡鮥鮤鮆鮢鮠鮯鴳鵁鵧鴶鴮鴯鴱鴸鴰"],["efa1","鵅鵂鵃鴾鴷鵀鴽翵鴭麊麉麍麰黈黚黻黿鼤鼣鼢齔龠儱儭儮嚘嚜嚗嚚嚝嚙奰嬼屩屪巀幭幮懘懟懭懮懱懪懰懫懖懩擿攄擽擸攁攃擼斔旛曚曛曘櫅檹檽櫡櫆檺檶檷櫇檴檭歞毉氋瀇瀌瀍瀁瀅瀔瀎濿瀀濻瀦濼濷瀊爁燿燹爃燽獶"],["f040","璸瓀璵瓁璾璶璻瓂甔甓癜癤癙癐癓癗癚皦皽盬矂瞺磿礌礓礔礉礐礒礑禭禬穟簜簩簙簠簟簭簝簦簨簢簥簰繜繐繖繣繘繢繟繑繠繗繓羵羳翷翸聵臑臒"],["f0a1","臐艟艞薴藆藀藃藂薳薵薽藇藄薿藋藎藈藅薱薶藒蘤薸薷薾虩蟧蟦蟢蟛蟫蟪蟥蟟蟳蟤蟔蟜蟓蟭蟘蟣螤蟗蟙蠁蟴蟨蟝襓襋襏襌襆襐襑襉謪謧謣謳謰謵譇謯謼謾謱謥謷謦謶謮謤謻謽謺豂豵貙貘貗賾贄贂贀蹜蹢蹠蹗蹖蹞蹥蹧"],["f140","蹛蹚蹡蹝蹩蹔轆轇轈轋鄨鄺鄻鄾醨醥醧醯醪鎵鎌鎒鎷鎛鎝鎉鎧鎎鎪鎞鎦鎕鎈鎙鎟鎍鎱鎑鎲鎤鎨鎴鎣鎥闒闓闑隳雗雚巂雟雘雝霣霢霥鞬鞮鞨鞫鞤鞪"],["f1a1","鞢鞥韗韙韖韘韺顐顑顒颸饁餼餺騏騋騉騍騄騑騊騅騇騆髀髜鬈鬄鬅鬩鬵魊魌魋鯇鯆鯃鮿鯁鮵鮸鯓鮶鯄鮹鮽鵜鵓鵏鵊鵛鵋鵙鵖鵌鵗鵒鵔鵟鵘鵚麎麌黟鼁鼀鼖鼥鼫鼪鼩鼨齌齕儴儵劖勷厴嚫嚭嚦嚧嚪嚬壚壝壛夒嬽嬾嬿巃幰"],["f240","徿懻攇攐攍攉攌攎斄旞旝曞櫧櫠櫌櫑櫙櫋櫟櫜櫐櫫櫏櫍櫞歠殰氌瀙瀧瀠瀖瀫瀡瀢瀣瀩瀗瀤瀜瀪爌爊爇爂爅犥犦犤犣犡瓋瓅璷瓃甖癠矉矊矄矱礝礛"],["f2a1","礡礜礗礞禰穧穨簳簼簹簬簻糬糪繶繵繸繰繷繯繺繲繴繨罋罊羃羆羷翽翾聸臗臕艤艡艣藫藱藭藙藡藨藚藗藬藲藸藘藟藣藜藑藰藦藯藞藢蠀蟺蠃蟶蟷蠉蠌蠋蠆蟼蠈蟿蠊蠂襢襚襛襗襡襜襘襝襙覈覷覶觶譐譈譊譀譓譖譔譋譕"],["f340","譑譂譒譗豃豷豶貚贆贇贉趬趪趭趫蹭蹸蹳蹪蹯蹻軂轒轑轏轐轓辴酀鄿醰醭鏞鏇鏏鏂鏚鏐鏹鏬鏌鏙鎩鏦鏊鏔鏮鏣鏕鏄鏎鏀鏒鏧镽闚闛雡霩霫霬霨霦"],["f3a1","鞳鞷鞶韝韞韟顜顙顝顗颿颽颻颾饈饇饃馦馧騚騕騥騝騤騛騢騠騧騣騞騜騔髂鬋鬊鬎鬌鬷鯪鯫鯠鯞鯤鯦鯢鯰鯔鯗鯬鯜鯙鯥鯕鯡鯚鵷鶁鶊鶄鶈鵱鶀鵸鶆鶋鶌鵽鵫鵴鵵鵰鵩鶅鵳鵻鶂鵯鵹鵿鶇鵨麔麑黀黼鼭齀齁齍齖齗齘匷嚲"],["f440","嚵嚳壣孅巆巇廮廯忀忁懹攗攖攕攓旟曨曣曤櫳櫰櫪櫨櫹櫱櫮櫯瀼瀵瀯瀷瀴瀱灂瀸瀿瀺瀹灀瀻瀳灁爓爔犨獽獼璺皫皪皾盭矌矎矏矍矲礥礣礧礨礤礩"],["f4a1","禲穮穬穭竷籉籈籊籇籅糮繻繾纁纀羺翿聹臛臙舋艨艩蘢藿蘁藾蘛蘀藶蘄蘉蘅蘌藽蠙蠐蠑蠗蠓蠖襣襦覹觷譠譪譝譨譣譥譧譭趮躆躈躄轙轖轗轕轘轚邍酃酁醷醵醲醳鐋鐓鏻鐠鐏鐔鏾鐕鐐鐨鐙鐍鏵鐀鏷鐇鐎鐖鐒鏺鐉鏸鐊鏿"],["f540","鏼鐌鏶鐑鐆闞闠闟霮霯鞹鞻韽韾顠顢顣顟飁飂饐饎饙饌饋饓騲騴騱騬騪騶騩騮騸騭髇髊髆鬐鬒鬑鰋鰈鯷鰅鰒鯸鱀鰇鰎鰆鰗鰔鰉鶟鶙鶤鶝鶒鶘鶐鶛"],["f5a1","鶠鶔鶜鶪鶗鶡鶚鶢鶨鶞鶣鶿鶩鶖鶦鶧麙麛麚黥黤黧黦鼰鼮齛齠齞齝齙龑儺儹劘劗囃嚽嚾孈孇巋巏廱懽攛欂櫼欃櫸欀灃灄灊灈灉灅灆爝爚爙獾甗癪矐礭礱礯籔籓糲纊纇纈纋纆纍罍羻耰臝蘘蘪蘦蘟蘣蘜蘙蘧蘮蘡蘠蘩蘞蘥"],["f640","蠩蠝蠛蠠蠤蠜蠫衊襭襩襮襫觺譹譸譅譺譻贐贔趯躎躌轞轛轝酆酄酅醹鐿鐻鐶鐩鐽鐼鐰鐹鐪鐷鐬鑀鐱闥闤闣霵霺鞿韡顤飉飆飀饘饖騹騽驆驄驂驁騺"],["f6a1","騿髍鬕鬗鬘鬖鬺魒鰫鰝鰜鰬鰣鰨鰩鰤鰡鶷鶶鶼鷁鷇鷊鷏鶾鷅鷃鶻鶵鷎鶹鶺鶬鷈鶱鶭鷌鶳鷍鶲鹺麜黫黮黭鼛鼘鼚鼱齎齥齤龒亹囆囅囋奱孋孌巕巑廲攡攠攦攢欋欈欉氍灕灖灗灒爞爟犩獿瓘瓕瓙瓗癭皭礵禴穰穱籗籜籙籛籚"],["f740","糴糱纑罏羇臞艫蘴蘵蘳蘬蘲蘶蠬蠨蠦蠪蠥襱覿覾觻譾讄讂讆讅譿贕躕躔躚躒躐躖躗轠轢酇鑌鑐鑊鑋鑏鑇鑅鑈鑉鑆霿韣顪顩飋饔饛驎驓驔驌驏驈驊"],["f7a1","驉驒驐髐鬙鬫鬻魖魕鱆鱈鰿鱄鰹鰳鱁鰼鰷鰴鰲鰽鰶鷛鷒鷞鷚鷋鷐鷜鷑鷟鷩鷙鷘鷖鷵鷕鷝麶黰鼵鼳鼲齂齫龕龢儽劙壨壧奲孍巘蠯彏戁戃戄攩攥斖曫欑欒欏毊灛灚爢玂玁玃癰矔籧籦纕艬蘺虀蘹蘼蘱蘻蘾蠰蠲蠮蠳襶襴襳觾"],["f840","讌讎讋讈豅贙躘轤轣醼鑢鑕鑝鑗鑞韄韅頀驖驙鬞鬟鬠鱒鱘鱐鱊鱍鱋鱕鱙鱌鱎鷻鷷鷯鷣鷫鷸鷤鷶鷡鷮鷦鷲鷰鷢鷬鷴鷳鷨鷭黂黐黲黳鼆鼜鼸鼷鼶齃齏"],["f8a1","齱齰齮齯囓囍孎屭攭曭曮欓灟灡灝灠爣瓛瓥矕礸禷禶籪纗羉艭虃蠸蠷蠵衋讔讕躞躟躠躝醾醽釂鑫鑨鑩雥靆靃靇韇韥驞髕魙鱣鱧鱦鱢鱞鱠鸂鷾鸇鸃鸆鸅鸀鸁鸉鷿鷽鸄麠鼞齆齴齵齶囔攮斸欘欙欗欚灢爦犪矘矙礹籩籫糶纚"],["f940","纘纛纙臠臡虆虇虈襹襺襼襻觿讘讙躥躤躣鑮鑭鑯鑱鑳靉顲饟鱨鱮鱭鸋鸍鸐鸏鸒鸑麡黵鼉齇齸齻齺齹圞灦籯蠼趲躦釃鑴鑸鑶鑵驠鱴鱳鱱鱵鸔鸓黶鼊"],["f9a1","龤灨灥糷虪蠾蠽蠿讞貜躩軉靋顳顴飌饡馫驤驦驧鬤鸕鸗齈戇欞爧虌躨钂钀钁驩驨鬮鸙爩虋讟钃鱹麷癵驫鱺鸝灩灪麤齾齉龘碁銹裏墻恒粧嫺╔╦╗╠╬╣╚╩╝╒╤╕╞╪╡╘╧╛╓╥╖╟╫╢╙╨╜║═╭╮╰╯▓"]]
 
 /***/ }),
-/* 385 */
+/* 386 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
@@ -57679,7 +57694,7 @@ __webpack_require__(4).inherits(FetchError, Error);
 
 
 /***/ }),
-/* 386 */
+/* 387 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*!
@@ -57692,8 +57707,8 @@ __webpack_require__(4).inherits(FetchError, Error);
  * Module dependencies.
  */
 
-var callSiteToString = __webpack_require__(387).callSiteToString
-var eventListenerCount = __webpack_require__(387).eventListenerCount
+var callSiteToString = __webpack_require__(388).callSiteToString
+var eventListenerCount = __webpack_require__(388).eventListenerCount
 var relative = __webpack_require__(16).relative
 
 /**
@@ -58207,7 +58222,7 @@ function DeprecationError (namespace, message, stack) {
 
 
 /***/ }),
-/* 387 */
+/* 388 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -58293,7 +58308,7 @@ function toString (obj) {
 
 
 /***/ }),
-/* 388 */
+/* 389 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -58379,7 +58394,7 @@ function toString (obj) {
 
 
 /***/ }),
-/* 389 */
+/* 390 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
@@ -58587,14 +58602,14 @@ function coerce(val) {
 
 
 /***/ }),
-/* 390 */
+/* 391 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 // Import dependencies
-const DynamoDB = __webpack_require__(391);
-const { DynamoBotStorage } = __webpack_require__(558);
+const DynamoDB = __webpack_require__(392);
+const { DynamoBotStorage } = __webpack_require__(559);
 
 // Instantiate the bot with a connector instance
 // const bot = new UniversalBot(connector);
@@ -58623,15 +58638,15 @@ const settings = {
 const adapter = new DynamoBotStorage(client, settings)
 
 
-var config = __webpack_require__(561);
+var config = __webpack_require__(195);
 // console.log("config", config)
 
 var bot_dailog = __webpack_require__(562)
-var botbuilder_linebot_connector_1 = __webpack_require__(382);
+var botbuilder_linebot_connector_1 = __webpack_require__(383);
 // var botbuilder_mongodb_storage_1 = require("botbuilder-mongodb-storage");
 var builder = __webpack_require__(118);
 var connector = new botbuilder_linebot_connector_1.LineConnector({
-  hasPushApi: true,
+  hasPushApi: false,
   // your line
   channelId: process.env.channelId || config.channelId,
   channelSecret: process.env.channelSecret || config.channelSecret,
@@ -58662,7 +58677,7 @@ module.exports.notify = (event, context, callback) => {
   let LineId = body.LineId;
   let title = body.title
   let description = body.description;
-  let startTime = body.startTime;
+  // let startTime = body.startTime;graph
   let item = {
     TableName: process.env.DYNAMODB_TABLE,
     Key: { ["id"]: { S: LineId } },
@@ -58678,7 +58693,7 @@ module.exports.notify = (event, context, callback) => {
       // console.log("addressString", addressString)
 
       var msg = new builder.Message().address(addressString);
-      msg.text(title + description);
+      msg.text(title + " " + description);
       bot.send(msg);
     }
   })
@@ -58697,7 +58712,7 @@ module.exports.notify = (event, context, callback) => {
 
 
 /***/ }),
-/* 391 */
+/* 392 */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(99);
@@ -58707,12 +58722,12 @@ var apiLoader = AWS.apiLoader;
 
 apiLoader.services['dynamodb'] = {};
 AWS.DynamoDB = Service.defineService('dynamodb', ['2011-12-05', '2012-08-10']);
-__webpack_require__(547);
+__webpack_require__(548);
 Object.defineProperty(apiLoader.services['dynamodb'], '2011-12-05', {
   get: function get() {
-    var model = __webpack_require__(552);
-    model.paginators = __webpack_require__(553).pagination;
-    model.waiters = __webpack_require__(554).waiters;
+    var model = __webpack_require__(553);
+    model.paginators = __webpack_require__(554).pagination;
+    model.waiters = __webpack_require__(555).waiters;
     return model;
   },
   enumerable: true,
@@ -58720,9 +58735,9 @@ Object.defineProperty(apiLoader.services['dynamodb'], '2011-12-05', {
 });
 Object.defineProperty(apiLoader.services['dynamodb'], '2012-08-10', {
   get: function get() {
-    var model = __webpack_require__(555);
-    model.paginators = __webpack_require__(556).pagination;
-    model.waiters = __webpack_require__(557).waiters;
+    var model = __webpack_require__(556);
+    model.paginators = __webpack_require__(557).pagination;
+    model.waiters = __webpack_require__(558).waiters;
     return model;
   },
   enumerable: true,
@@ -58733,7 +58748,7 @@ module.exports = AWS.DynamoDB;
 
 
 /***/ }),
-/* 392 */
+/* 393 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var util = __webpack_require__(8);
@@ -58820,7 +58835,7 @@ module.exports = QueryParamSerializer;
 
 
 /***/ }),
-/* 393 */
+/* 394 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var util = __webpack_require__(8);
@@ -58912,12 +58927,12 @@ module.exports = XmlBuilder;
 
 
 /***/ }),
-/* 394 */
+/* 395 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var assignValue = __webpack_require__(159),
     copyObject = __webpack_require__(164),
-    createAssigner = __webpack_require__(401),
+    createAssigner = __webpack_require__(402),
     isArrayLike = __webpack_require__(51),
     isPrototype = __webpack_require__(106),
     keys = __webpack_require__(52);
@@ -58976,11 +58991,11 @@ module.exports = assign;
 
 
 /***/ }),
-/* 395 */
+/* 396 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var isFunction = __webpack_require__(70),
-    isMasked = __webpack_require__(398),
+    isMasked = __webpack_require__(399),
     isObject = __webpack_require__(22),
     toSource = __webpack_require__(163);
 
@@ -59029,7 +59044,7 @@ module.exports = baseIsNative;
 
 
 /***/ }),
-/* 396 */
+/* 397 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var Symbol = __webpack_require__(71);
@@ -59081,7 +59096,7 @@ module.exports = getRawTag;
 
 
 /***/ }),
-/* 397 */
+/* 398 */
 /***/ (function(module, exports) {
 
 /** Used for built-in method references. */
@@ -59109,10 +59124,10 @@ module.exports = objectToString;
 
 
 /***/ }),
-/* 398 */
+/* 399 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var coreJsData = __webpack_require__(399);
+var coreJsData = __webpack_require__(400);
 
 /** Used to detect methods masquerading as native. */
 var maskSrcKey = (function() {
@@ -59135,7 +59150,7 @@ module.exports = isMasked;
 
 
 /***/ }),
-/* 399 */
+/* 400 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var root = __webpack_require__(27);
@@ -59147,7 +59162,7 @@ module.exports = coreJsData;
 
 
 /***/ }),
-/* 400 */
+/* 401 */
 /***/ (function(module, exports) {
 
 /**
@@ -59166,10 +59181,10 @@ module.exports = getValue;
 
 
 /***/ }),
-/* 401 */
+/* 402 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseRest = __webpack_require__(402),
+var baseRest = __webpack_require__(403),
     isIterateeCall = __webpack_require__(165);
 
 /**
@@ -59209,12 +59224,12 @@ module.exports = createAssigner;
 
 
 /***/ }),
-/* 402 */
+/* 403 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var identity = __webpack_require__(103),
-    overRest = __webpack_require__(403),
-    setToString = __webpack_require__(405);
+    overRest = __webpack_require__(404),
+    setToString = __webpack_require__(406);
 
 /**
  * The base implementation of `_.rest` which doesn't validate or coerce arguments.
@@ -59232,10 +59247,10 @@ module.exports = baseRest;
 
 
 /***/ }),
-/* 403 */
+/* 404 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var apply = __webpack_require__(404);
+var apply = __webpack_require__(405);
 
 /* Built-in method references for those with the same name as other `lodash` methods. */
 var nativeMax = Math.max;
@@ -59274,7 +59289,7 @@ module.exports = overRest;
 
 
 /***/ }),
-/* 404 */
+/* 405 */
 /***/ (function(module, exports) {
 
 /**
@@ -59301,11 +59316,11 @@ module.exports = apply;
 
 
 /***/ }),
-/* 405 */
+/* 406 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseSetToString = __webpack_require__(406),
-    shortOut = __webpack_require__(408);
+var baseSetToString = __webpack_require__(407),
+    shortOut = __webpack_require__(409);
 
 /**
  * Sets the `toString` method of `func` to return `string`.
@@ -59321,10 +59336,10 @@ module.exports = setToString;
 
 
 /***/ }),
-/* 406 */
+/* 407 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var constant = __webpack_require__(407),
+var constant = __webpack_require__(408),
     defineProperty = __webpack_require__(161),
     identity = __webpack_require__(103);
 
@@ -59349,7 +59364,7 @@ module.exports = baseSetToString;
 
 
 /***/ }),
-/* 407 */
+/* 408 */
 /***/ (function(module, exports) {
 
 /**
@@ -59381,7 +59396,7 @@ module.exports = constant;
 
 
 /***/ }),
-/* 408 */
+/* 409 */
 /***/ (function(module, exports) {
 
 /** Used to detect hot functions by number of calls within a span of milliseconds. */
@@ -59424,10 +59439,10 @@ module.exports = shortOut;
 
 
 /***/ }),
-/* 409 */
+/* 410 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseTimes = __webpack_require__(410),
+var baseTimes = __webpack_require__(411),
     isArguments = __webpack_require__(107),
     isArray = __webpack_require__(23),
     isBuffer = __webpack_require__(108),
@@ -59479,7 +59494,7 @@ module.exports = arrayLikeKeys;
 
 
 /***/ }),
-/* 410 */
+/* 411 */
 /***/ (function(module, exports) {
 
 /**
@@ -59505,7 +59520,7 @@ module.exports = baseTimes;
 
 
 /***/ }),
-/* 411 */
+/* 412 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var baseGetTag = __webpack_require__(50),
@@ -59529,7 +59544,7 @@ module.exports = baseIsArguments;
 
 
 /***/ }),
-/* 412 */
+/* 413 */
 /***/ (function(module, exports) {
 
 /**
@@ -59553,7 +59568,7 @@ module.exports = stubFalse;
 
 
 /***/ }),
-/* 413 */
+/* 414 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var baseGetTag = __webpack_require__(50),
@@ -59619,7 +59634,7 @@ module.exports = baseIsTypedArray;
 
 
 /***/ }),
-/* 414 */
+/* 415 */
 /***/ (function(module, exports) {
 
 /**
@@ -59639,7 +59654,7 @@ module.exports = baseUnary;
 
 
 /***/ }),
-/* 415 */
+/* 416 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(module) {var freeGlobal = __webpack_require__(162);
@@ -59668,10 +59683,10 @@ module.exports = nodeUtil;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(109)(module)))
 
 /***/ }),
-/* 416 */
+/* 417 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var overArg = __webpack_require__(417);
+var overArg = __webpack_require__(418);
 
 /* Built-in method references for those with the same name as other `lodash` methods. */
 var nativeKeys = overArg(Object.keys, Object);
@@ -59680,7 +59695,7 @@ module.exports = nativeKeys;
 
 
 /***/ }),
-/* 417 */
+/* 418 */
 /***/ (function(module, exports) {
 
 /**
@@ -59701,14 +59716,14 @@ module.exports = overArg;
 
 
 /***/ }),
-/* 418 */
+/* 419 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // Generated by CoffeeScript 1.9.1
 (function() {
   var XMLBuilder, XMLDeclaration, XMLDocType, XMLElement, XMLStringifier;
 
-  XMLStringifier = __webpack_require__(419);
+  XMLStringifier = __webpack_require__(420);
 
   XMLDeclaration = __webpack_require__(167);
 
@@ -59776,7 +59791,7 @@ module.exports = overArg;
 
 
 /***/ }),
-/* 419 */
+/* 420 */
 /***/ (function(module, exports) {
 
 // Generated by CoffeeScript 1.9.1
@@ -59952,7 +59967,7 @@ module.exports = overArg;
 
 
 /***/ }),
-/* 420 */
+/* 421 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var copyObject = __webpack_require__(164),
@@ -59975,7 +59990,7 @@ module.exports = baseAssign;
 
 
 /***/ }),
-/* 421 */
+/* 422 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var isObject = __webpack_require__(22);
@@ -60011,7 +60026,7 @@ module.exports = baseCreate;
 
 
 /***/ }),
-/* 422 */
+/* 423 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var baseKeys = __webpack_require__(166),
@@ -60094,7 +60109,7 @@ module.exports = isEmpty;
 
 
 /***/ }),
-/* 423 */
+/* 424 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var getNative = __webpack_require__(36),
@@ -60107,7 +60122,7 @@ module.exports = DataView;
 
 
 /***/ }),
-/* 424 */
+/* 425 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var getNative = __webpack_require__(36),
@@ -60120,7 +60135,7 @@ module.exports = Promise;
 
 
 /***/ }),
-/* 425 */
+/* 426 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var getNative = __webpack_require__(36),
@@ -60133,7 +60148,7 @@ module.exports = Set;
 
 
 /***/ }),
-/* 426 */
+/* 427 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var getNative = __webpack_require__(36),
@@ -60146,12 +60161,12 @@ module.exports = WeakMap;
 
 
 /***/ }),
-/* 427 */
+/* 428 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var arrayEvery = __webpack_require__(428),
-    baseEvery = __webpack_require__(429),
-    baseIteratee = __webpack_require__(435),
+var arrayEvery = __webpack_require__(429),
+    baseEvery = __webpack_require__(430),
+    baseIteratee = __webpack_require__(436),
     isArray = __webpack_require__(23),
     isIterateeCall = __webpack_require__(165);
 
@@ -60208,7 +60223,7 @@ module.exports = every;
 
 
 /***/ }),
-/* 428 */
+/* 429 */
 /***/ (function(module, exports) {
 
 /**
@@ -60237,10 +60252,10 @@ module.exports = arrayEvery;
 
 
 /***/ }),
-/* 429 */
+/* 430 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseEach = __webpack_require__(430);
+var baseEach = __webpack_require__(431);
 
 /**
  * The base implementation of `_.every` without support for iteratee shorthands.
@@ -60264,11 +60279,11 @@ module.exports = baseEvery;
 
 
 /***/ }),
-/* 430 */
+/* 431 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseForOwn = __webpack_require__(431),
-    createBaseEach = __webpack_require__(434);
+var baseForOwn = __webpack_require__(432),
+    createBaseEach = __webpack_require__(435);
 
 /**
  * The base implementation of `_.forEach` without support for iteratee shorthands.
@@ -60284,10 +60299,10 @@ module.exports = baseEach;
 
 
 /***/ }),
-/* 431 */
+/* 432 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseFor = __webpack_require__(432),
+var baseFor = __webpack_require__(433),
     keys = __webpack_require__(52);
 
 /**
@@ -60306,10 +60321,10 @@ module.exports = baseForOwn;
 
 
 /***/ }),
-/* 432 */
+/* 433 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var createBaseFor = __webpack_require__(433);
+var createBaseFor = __webpack_require__(434);
 
 /**
  * The base implementation of `baseForOwn` which iterates over `object`
@@ -60328,7 +60343,7 @@ module.exports = baseFor;
 
 
 /***/ }),
-/* 433 */
+/* 434 */
 /***/ (function(module, exports) {
 
 /**
@@ -60359,7 +60374,7 @@ module.exports = createBaseFor;
 
 
 /***/ }),
-/* 434 */
+/* 435 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var isArrayLike = __webpack_require__(51);
@@ -60397,14 +60412,14 @@ module.exports = createBaseEach;
 
 
 /***/ }),
-/* 435 */
+/* 436 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseMatches = __webpack_require__(436),
-    baseMatchesProperty = __webpack_require__(478),
+var baseMatches = __webpack_require__(437),
+    baseMatchesProperty = __webpack_require__(479),
     identity = __webpack_require__(103),
     isArray = __webpack_require__(23),
-    property = __webpack_require__(489);
+    property = __webpack_require__(490);
 
 /**
  * The base implementation of `_.iteratee`.
@@ -60434,11 +60449,11 @@ module.exports = baseIteratee;
 
 
 /***/ }),
-/* 436 */
+/* 437 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseIsMatch = __webpack_require__(437),
-    getMatchData = __webpack_require__(477),
+var baseIsMatch = __webpack_require__(438),
+    getMatchData = __webpack_require__(478),
     matchesStrictComparable = __webpack_require__(174);
 
 /**
@@ -60462,7 +60477,7 @@ module.exports = baseMatches;
 
 
 /***/ }),
-/* 437 */
+/* 438 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var Stack = __webpack_require__(170),
@@ -60530,7 +60545,7 @@ module.exports = baseIsMatch;
 
 
 /***/ }),
-/* 438 */
+/* 439 */
 /***/ (function(module, exports) {
 
 /**
@@ -60549,7 +60564,7 @@ module.exports = listCacheClear;
 
 
 /***/ }),
-/* 439 */
+/* 440 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var assocIndexOf = __webpack_require__(74);
@@ -60590,7 +60605,7 @@ module.exports = listCacheDelete;
 
 
 /***/ }),
-/* 440 */
+/* 441 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var assocIndexOf = __webpack_require__(74);
@@ -60615,7 +60630,7 @@ module.exports = listCacheGet;
 
 
 /***/ }),
-/* 441 */
+/* 442 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var assocIndexOf = __webpack_require__(74);
@@ -60637,7 +60652,7 @@ module.exports = listCacheHas;
 
 
 /***/ }),
-/* 442 */
+/* 443 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var assocIndexOf = __webpack_require__(74);
@@ -60669,7 +60684,7 @@ module.exports = listCacheSet;
 
 
 /***/ }),
-/* 443 */
+/* 444 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var ListCache = __webpack_require__(73);
@@ -60690,7 +60705,7 @@ module.exports = stackClear;
 
 
 /***/ }),
-/* 444 */
+/* 445 */
 /***/ (function(module, exports) {
 
 /**
@@ -60714,7 +60729,7 @@ module.exports = stackDelete;
 
 
 /***/ }),
-/* 445 */
+/* 446 */
 /***/ (function(module, exports) {
 
 /**
@@ -60734,7 +60749,7 @@ module.exports = stackGet;
 
 
 /***/ }),
-/* 446 */
+/* 447 */
 /***/ (function(module, exports) {
 
 /**
@@ -60754,7 +60769,7 @@ module.exports = stackHas;
 
 
 /***/ }),
-/* 447 */
+/* 448 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var ListCache = __webpack_require__(73),
@@ -60794,10 +60809,10 @@ module.exports = stackSet;
 
 
 /***/ }),
-/* 448 */
+/* 449 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var Hash = __webpack_require__(449),
+var Hash = __webpack_require__(450),
     ListCache = __webpack_require__(73),
     Map = __webpack_require__(111);
 
@@ -60821,14 +60836,14 @@ module.exports = mapCacheClear;
 
 
 /***/ }),
-/* 449 */
+/* 450 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var hashClear = __webpack_require__(450),
-    hashDelete = __webpack_require__(451),
-    hashGet = __webpack_require__(452),
-    hashHas = __webpack_require__(453),
-    hashSet = __webpack_require__(454);
+var hashClear = __webpack_require__(451),
+    hashDelete = __webpack_require__(452),
+    hashGet = __webpack_require__(453),
+    hashHas = __webpack_require__(454),
+    hashSet = __webpack_require__(455);
 
 /**
  * Creates a hash object.
@@ -60859,7 +60874,7 @@ module.exports = Hash;
 
 
 /***/ }),
-/* 450 */
+/* 451 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var nativeCreate = __webpack_require__(75);
@@ -60880,7 +60895,7 @@ module.exports = hashClear;
 
 
 /***/ }),
-/* 451 */
+/* 452 */
 /***/ (function(module, exports) {
 
 /**
@@ -60903,7 +60918,7 @@ module.exports = hashDelete;
 
 
 /***/ }),
-/* 452 */
+/* 453 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var nativeCreate = __webpack_require__(75);
@@ -60939,7 +60954,7 @@ module.exports = hashGet;
 
 
 /***/ }),
-/* 453 */
+/* 454 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var nativeCreate = __webpack_require__(75);
@@ -60968,7 +60983,7 @@ module.exports = hashHas;
 
 
 /***/ }),
-/* 454 */
+/* 455 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var nativeCreate = __webpack_require__(75);
@@ -60997,7 +61012,7 @@ module.exports = hashSet;
 
 
 /***/ }),
-/* 455 */
+/* 456 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var getMapData = __webpack_require__(76);
@@ -61021,7 +61036,7 @@ module.exports = mapCacheDelete;
 
 
 /***/ }),
-/* 456 */
+/* 457 */
 /***/ (function(module, exports) {
 
 /**
@@ -61042,7 +61057,7 @@ module.exports = isKeyable;
 
 
 /***/ }),
-/* 457 */
+/* 458 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var getMapData = __webpack_require__(76);
@@ -61064,7 +61079,7 @@ module.exports = mapCacheGet;
 
 
 /***/ }),
-/* 458 */
+/* 459 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var getMapData = __webpack_require__(76);
@@ -61086,7 +61101,7 @@ module.exports = mapCacheHas;
 
 
 /***/ }),
-/* 459 */
+/* 460 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var getMapData = __webpack_require__(76);
@@ -61114,13 +61129,13 @@ module.exports = mapCacheSet;
 
 
 /***/ }),
-/* 460 */
+/* 461 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var Stack = __webpack_require__(170),
     equalArrays = __webpack_require__(172),
-    equalByTag = __webpack_require__(466),
-    equalObjects = __webpack_require__(470),
+    equalByTag = __webpack_require__(467),
+    equalObjects = __webpack_require__(471),
     getTag = __webpack_require__(168),
     isArray = __webpack_require__(23),
     isBuffer = __webpack_require__(108),
@@ -61203,12 +61218,12 @@ module.exports = baseIsEqualDeep;
 
 
 /***/ }),
-/* 461 */
+/* 462 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var MapCache = __webpack_require__(112),
-    setCacheAdd = __webpack_require__(462),
-    setCacheHas = __webpack_require__(463);
+    setCacheAdd = __webpack_require__(463),
+    setCacheHas = __webpack_require__(464);
 
 /**
  *
@@ -61236,7 +61251,7 @@ module.exports = SetCache;
 
 
 /***/ }),
-/* 462 */
+/* 463 */
 /***/ (function(module, exports) {
 
 /** Used to stand-in for `undefined` hash values. */
@@ -61261,7 +61276,7 @@ module.exports = setCacheAdd;
 
 
 /***/ }),
-/* 463 */
+/* 464 */
 /***/ (function(module, exports) {
 
 /**
@@ -61281,7 +61296,7 @@ module.exports = setCacheHas;
 
 
 /***/ }),
-/* 464 */
+/* 465 */
 /***/ (function(module, exports) {
 
 /**
@@ -61310,7 +61325,7 @@ module.exports = arraySome;
 
 
 /***/ }),
-/* 465 */
+/* 466 */
 /***/ (function(module, exports) {
 
 /**
@@ -61329,15 +61344,15 @@ module.exports = cacheHas;
 
 
 /***/ }),
-/* 466 */
+/* 467 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var Symbol = __webpack_require__(71),
-    Uint8Array = __webpack_require__(467),
+    Uint8Array = __webpack_require__(468),
     eq = __webpack_require__(72),
     equalArrays = __webpack_require__(172),
-    mapToArray = __webpack_require__(468),
-    setToArray = __webpack_require__(469);
+    mapToArray = __webpack_require__(469),
+    setToArray = __webpack_require__(470);
 
 /** Used to compose bitmasks for value comparisons. */
 var COMPARE_PARTIAL_FLAG = 1,
@@ -61447,7 +61462,7 @@ module.exports = equalByTag;
 
 
 /***/ }),
-/* 467 */
+/* 468 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var root = __webpack_require__(27);
@@ -61459,7 +61474,7 @@ module.exports = Uint8Array;
 
 
 /***/ }),
-/* 468 */
+/* 469 */
 /***/ (function(module, exports) {
 
 /**
@@ -61483,7 +61498,7 @@ module.exports = mapToArray;
 
 
 /***/ }),
-/* 469 */
+/* 470 */
 /***/ (function(module, exports) {
 
 /**
@@ -61507,10 +61522,10 @@ module.exports = setToArray;
 
 
 /***/ }),
-/* 470 */
+/* 471 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var getAllKeys = __webpack_require__(471);
+var getAllKeys = __webpack_require__(472);
 
 /** Used to compose bitmasks for value comparisons. */
 var COMPARE_PARTIAL_FLAG = 1;
@@ -61602,11 +61617,11 @@ module.exports = equalObjects;
 
 
 /***/ }),
-/* 471 */
+/* 472 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseGetAllKeys = __webpack_require__(472),
-    getSymbols = __webpack_require__(474),
+var baseGetAllKeys = __webpack_require__(473),
+    getSymbols = __webpack_require__(475),
     keys = __webpack_require__(52);
 
 /**
@@ -61624,10 +61639,10 @@ module.exports = getAllKeys;
 
 
 /***/ }),
-/* 472 */
+/* 473 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var arrayPush = __webpack_require__(473),
+var arrayPush = __webpack_require__(474),
     isArray = __webpack_require__(23);
 
 /**
@@ -61650,7 +61665,7 @@ module.exports = baseGetAllKeys;
 
 
 /***/ }),
-/* 473 */
+/* 474 */
 /***/ (function(module, exports) {
 
 /**
@@ -61676,11 +61691,11 @@ module.exports = arrayPush;
 
 
 /***/ }),
-/* 474 */
+/* 475 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var arrayFilter = __webpack_require__(475),
-    stubArray = __webpack_require__(476);
+var arrayFilter = __webpack_require__(476),
+    stubArray = __webpack_require__(477);
 
 /** Used for built-in method references. */
 var objectProto = Object.prototype;
@@ -61712,7 +61727,7 @@ module.exports = getSymbols;
 
 
 /***/ }),
-/* 475 */
+/* 476 */
 /***/ (function(module, exports) {
 
 /**
@@ -61743,7 +61758,7 @@ module.exports = arrayFilter;
 
 
 /***/ }),
-/* 476 */
+/* 477 */
 /***/ (function(module, exports) {
 
 /**
@@ -61772,7 +61787,7 @@ module.exports = stubArray;
 
 
 /***/ }),
-/* 477 */
+/* 478 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var isStrictComparable = __webpack_require__(173),
@@ -61802,12 +61817,12 @@ module.exports = getMatchData;
 
 
 /***/ }),
-/* 478 */
+/* 479 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var baseIsEqual = __webpack_require__(171),
-    get = __webpack_require__(479),
-    hasIn = __webpack_require__(486),
+    get = __webpack_require__(480),
+    hasIn = __webpack_require__(487),
     isKey = __webpack_require__(113),
     isStrictComparable = __webpack_require__(173),
     matchesStrictComparable = __webpack_require__(174),
@@ -61841,7 +61856,7 @@ module.exports = baseMatchesProperty;
 
 
 /***/ }),
-/* 479 */
+/* 480 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var baseGet = __webpack_require__(175);
@@ -61880,10 +61895,10 @@ module.exports = get;
 
 
 /***/ }),
-/* 480 */
+/* 481 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var memoizeCapped = __webpack_require__(481);
+var memoizeCapped = __webpack_require__(482);
 
 /** Used to match property names within property paths. */
 var rePropName = /[^.[\]]+|\[(?:(-?\d+(?:\.\d+)?)|(["'])((?:(?!\2)[^\\]|\\.)*?)\2)\]|(?=(?:\.|\[\])(?:\.|\[\]|$))/g;
@@ -61913,10 +61928,10 @@ module.exports = stringToPath;
 
 
 /***/ }),
-/* 481 */
+/* 482 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var memoize = __webpack_require__(482);
+var memoize = __webpack_require__(483);
 
 /** Used as the maximum memoize cache size. */
 var MAX_MEMOIZE_SIZE = 500;
@@ -61945,7 +61960,7 @@ module.exports = memoizeCapped;
 
 
 /***/ }),
-/* 482 */
+/* 483 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var MapCache = __webpack_require__(112);
@@ -62024,10 +62039,10 @@ module.exports = memoize;
 
 
 /***/ }),
-/* 483 */
+/* 484 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseToString = __webpack_require__(484);
+var baseToString = __webpack_require__(485);
 
 /**
  * Converts `value` to a string. An empty string is returned for `null`
@@ -62058,11 +62073,11 @@ module.exports = toString;
 
 
 /***/ }),
-/* 484 */
+/* 485 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var Symbol = __webpack_require__(71),
-    arrayMap = __webpack_require__(485),
+    arrayMap = __webpack_require__(486),
     isArray = __webpack_require__(23),
     isSymbol = __webpack_require__(114);
 
@@ -62101,7 +62116,7 @@ module.exports = baseToString;
 
 
 /***/ }),
-/* 485 */
+/* 486 */
 /***/ (function(module, exports) {
 
 /**
@@ -62128,11 +62143,11 @@ module.exports = arrayMap;
 
 
 /***/ }),
-/* 486 */
+/* 487 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseHasIn = __webpack_require__(487),
-    hasPath = __webpack_require__(488);
+var baseHasIn = __webpack_require__(488),
+    hasPath = __webpack_require__(489);
 
 /**
  * Checks if `path` is a direct or inherited property of `object`.
@@ -62168,7 +62183,7 @@ module.exports = hasIn;
 
 
 /***/ }),
-/* 487 */
+/* 488 */
 /***/ (function(module, exports) {
 
 /**
@@ -62187,7 +62202,7 @@ module.exports = baseHasIn;
 
 
 /***/ }),
-/* 488 */
+/* 489 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var castPath = __webpack_require__(176),
@@ -62232,11 +62247,11 @@ module.exports = hasPath;
 
 
 /***/ }),
-/* 489 */
+/* 490 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseProperty = __webpack_require__(490),
-    basePropertyDeep = __webpack_require__(491),
+var baseProperty = __webpack_require__(491),
+    basePropertyDeep = __webpack_require__(492),
     isKey = __webpack_require__(113),
     toKey = __webpack_require__(77);
 
@@ -62270,7 +62285,7 @@ module.exports = property;
 
 
 /***/ }),
-/* 490 */
+/* 491 */
 /***/ (function(module, exports) {
 
 /**
@@ -62290,7 +62305,7 @@ module.exports = baseProperty;
 
 
 /***/ }),
-/* 491 */
+/* 492 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var baseGet = __webpack_require__(175);
@@ -62312,7 +62327,7 @@ module.exports = basePropertyDeep;
 
 
 /***/ }),
-/* 492 */
+/* 493 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // Generated by CoffeeScript 1.9.1
@@ -62350,7 +62365,7 @@ module.exports = basePropertyDeep;
 
 
 /***/ }),
-/* 493 */
+/* 494 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // Generated by CoffeeScript 1.9.1
@@ -62424,7 +62439,7 @@ module.exports = basePropertyDeep;
 
 
 /***/ }),
-/* 494 */
+/* 495 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // Generated by CoffeeScript 1.9.1
@@ -62514,7 +62529,7 @@ module.exports = basePropertyDeep;
 
 
 /***/ }),
-/* 495 */
+/* 496 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // Generated by CoffeeScript 1.9.1
@@ -62566,7 +62581,7 @@ module.exports = basePropertyDeep;
 
 
 /***/ }),
-/* 496 */
+/* 497 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // Generated by CoffeeScript 1.9.1
@@ -62628,7 +62643,7 @@ module.exports = basePropertyDeep;
 
 
 /***/ }),
-/* 497 */
+/* 498 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // Generated by CoffeeScript 1.9.1
@@ -62683,7 +62698,7 @@ module.exports = basePropertyDeep;
 
 
 /***/ }),
-/* 498 */
+/* 499 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // Generated by CoffeeScript 1.9.1
@@ -62738,7 +62753,7 @@ module.exports = basePropertyDeep;
 
 
 /***/ }),
-/* 499 */
+/* 500 */
 /***/ (function(module, exports) {
 
 function apiLoader(svc, version) {
@@ -62759,12 +62774,12 @@ module.exports = apiLoader;
 
 
 /***/ }),
-/* 500 */
+/* 501 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var AWS = __webpack_require__(2);
 var Api = __webpack_require__(181);
-var regionConfig = __webpack_require__(501);
+var regionConfig = __webpack_require__(502);
 var inherit = AWS.util.inherit;
 var clientCount = 0;
 
@@ -63373,11 +63388,11 @@ module.exports = AWS.Service;
 
 
 /***/ }),
-/* 501 */
+/* 502 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var util = __webpack_require__(8);
-var regionConfig = __webpack_require__(502);
+var regionConfig = __webpack_require__(503);
 
 function generateRegionPrefix(region) {
   if (!region) return null;
@@ -63448,13 +63463,13 @@ module.exports = configureEndpoint;
 
 
 /***/ }),
-/* 502 */
+/* 503 */
 /***/ (function(module, exports) {
 
 module.exports = {"rules":{"*/*":{"endpoint":"{service}.{region}.amazonaws.com"},"cn-*/*":{"endpoint":"{service}.{region}.amazonaws.com.cn"},"*/budgets":"globalSSL","*/cloudfront":"globalSSL","*/iam":"globalSSL","*/sts":"globalSSL","*/importexport":{"endpoint":"{service}.amazonaws.com","signatureVersion":"v2","globalEndpoint":true},"*/route53":{"endpoint":"https://{service}.amazonaws.com","signatureVersion":"v3https","globalEndpoint":true},"*/waf":"globalSSL","us-gov-*/iam":"globalGovCloud","us-gov-*/sts":{"endpoint":"{service}.{region}.amazonaws.com"},"us-gov-west-1/s3":"s3signature","us-west-1/s3":"s3signature","us-west-2/s3":"s3signature","eu-west-1/s3":"s3signature","ap-southeast-1/s3":"s3signature","ap-southeast-2/s3":"s3signature","ap-northeast-1/s3":"s3signature","sa-east-1/s3":"s3signature","us-east-1/s3":{"endpoint":"{service}.amazonaws.com","signatureVersion":"s3"},"us-east-1/sdb":{"endpoint":"{service}.amazonaws.com","signatureVersion":"v2"},"*/sdb":{"endpoint":"{service}.{region}.amazonaws.com","signatureVersion":"v2"}},"patterns":{"globalSSL":{"endpoint":"https://{service}.amazonaws.com","globalEndpoint":true},"globalGovCloud":{"endpoint":"{service}.us-gov.amazonaws.com"},"s3signature":{"endpoint":"{service}.{region}.amazonaws.com","signatureVersion":"s3"}}}
 
 /***/ }),
-/* 503 */
+/* 504 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var AWS = __webpack_require__(2);
@@ -64000,7 +64015,7 @@ AWS.config = new AWS.Config();
 
 
 /***/ }),
-/* 504 */
+/* 505 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var AWS = __webpack_require__(2);
@@ -64583,11 +64598,11 @@ AWS.EventListeners = {
 
 
 /***/ }),
-/* 505 */
+/* 506 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var AWS = __webpack_require__(2);
-var AcceptorStateMachine = __webpack_require__(506);
+var AcceptorStateMachine = __webpack_require__(507);
 var inherit = AWS.util.inherit;
 var domain = AWS.util.domain;
 var jmespath = __webpack_require__(116);
@@ -65394,7 +65409,7 @@ AWS.util.mixin(AWS.Request, AWS.SequentialExecutor);
 
 
 /***/ }),
-/* 506 */
+/* 507 */
 /***/ (function(module, exports) {
 
 function AcceptorStateMachine(states, state) {
@@ -65442,7 +65457,7 @@ module.exports = AcceptorStateMachine;
 
 
 /***/ }),
-/* 507 */
+/* 508 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var AWS = __webpack_require__(2);
@@ -65649,7 +65664,7 @@ AWS.Response = inherit({
 
 
 /***/ }),
-/* 508 */
+/* 509 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /**
@@ -65859,7 +65874,7 @@ AWS.ResourceWaiter = inherit({
 
 
 /***/ }),
-/* 509 */
+/* 510 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var AWS = __webpack_require__(2);
@@ -65894,16 +65909,16 @@ AWS.Signers.RequestSigner.getVersion = function getVersion(version) {
   throw new Error('Unknown signing version ' + version);
 };
 
-__webpack_require__(510);
-__webpack_require__(188);
 __webpack_require__(511);
+__webpack_require__(188);
 __webpack_require__(512);
-__webpack_require__(514);
+__webpack_require__(513);
 __webpack_require__(515);
+__webpack_require__(516);
 
 
 /***/ }),
-/* 510 */
+/* 511 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var AWS = __webpack_require__(2);
@@ -65954,7 +65969,7 @@ module.exports = AWS.Signers.V2;
 
 
 /***/ }),
-/* 511 */
+/* 512 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var AWS = __webpack_require__(2);
@@ -65982,11 +65997,11 @@ module.exports = AWS.Signers.V3Https;
 
 
 /***/ }),
-/* 512 */
+/* 513 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var AWS = __webpack_require__(2);
-var v4Credentials = __webpack_require__(513);
+var v4Credentials = __webpack_require__(514);
 var inherit = AWS.util.inherit;
 
 /**
@@ -66199,7 +66214,7 @@ module.exports = AWS.Signers.V4;
 
 
 /***/ }),
-/* 513 */
+/* 514 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var AWS = __webpack_require__(2);
@@ -66302,7 +66317,7 @@ module.exports = {
 
 
 /***/ }),
-/* 514 */
+/* 515 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var AWS = __webpack_require__(2);
@@ -66480,7 +66495,7 @@ module.exports = AWS.Signers.S3;
 
 
 /***/ }),
-/* 515 */
+/* 516 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var AWS = __webpack_require__(2);
@@ -66602,7 +66617,7 @@ module.exports = AWS.Signers.Presign;
 
 
 /***/ }),
-/* 516 */
+/* 517 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var AWS = __webpack_require__(2);
@@ -66866,17 +66881,17 @@ AWS.ParamValidator = AWS.util.inherit({
 
 
 /***/ }),
-/* 517 */
+/* 518 */
 /***/ (function(module, exports) {
 
 module.exports = {"acm":{"name":"ACM","cors":true},"apigateway":{"name":"APIGateway","cors":true},"applicationautoscaling":{"prefix":"application-autoscaling","name":"ApplicationAutoScaling","cors":true},"appstream":{"name":"AppStream"},"autoscaling":{"name":"AutoScaling","cors":true},"batch":{"name":"Batch"},"budgets":{"name":"Budgets"},"clouddirectory":{"name":"CloudDirectory"},"cloudformation":{"name":"CloudFormation","cors":true},"cloudfront":{"name":"CloudFront","versions":["2013-05-12*","2013-11-11*","2014-05-31*","2014-10-21*","2014-11-06*","2015-04-17*","2015-07-27*","2015-09-17*","2016-01-13*","2016-01-28*","2016-08-01*","2016-08-20*","2016-09-07*","2016-09-29*","2016-11-25*"],"cors":true},"cloudhsm":{"name":"CloudHSM","cors":true},"cloudsearch":{"name":"CloudSearch"},"cloudsearchdomain":{"name":"CloudSearchDomain"},"cloudtrail":{"name":"CloudTrail","cors":true},"cloudwatch":{"prefix":"monitoring","name":"CloudWatch","cors":true},"cloudwatchevents":{"prefix":"events","name":"CloudWatchEvents","versions":["2014-02-03*"],"cors":true},"cloudwatchlogs":{"prefix":"logs","name":"CloudWatchLogs","cors":true},"codebuild":{"name":"CodeBuild"},"codecommit":{"name":"CodeCommit","cors":true},"codedeploy":{"name":"CodeDeploy","cors":true},"codepipeline":{"name":"CodePipeline","cors":true},"cognitoidentity":{"prefix":"cognito-identity","name":"CognitoIdentity","cors":true},"cognitoidentityserviceprovider":{"prefix":"cognito-idp","name":"CognitoIdentityServiceProvider","cors":true},"cognitosync":{"prefix":"cognito-sync","name":"CognitoSync","cors":true},"configservice":{"prefix":"config","name":"ConfigService","cors":true},"cur":{"name":"CUR","cors":true},"datapipeline":{"name":"DataPipeline"},"devicefarm":{"name":"DeviceFarm","cors":true},"directconnect":{"name":"DirectConnect","cors":true},"directoryservice":{"prefix":"ds","name":"DirectoryService"},"discovery":{"name":"Discovery"},"dms":{"name":"DMS"},"dynamodb":{"name":"DynamoDB","cors":true},"dynamodbstreams":{"prefix":"streams.dynamodb","name":"DynamoDBStreams","cors":true},"ec2":{"name":"EC2","versions":["2013-06-15*","2013-10-15*","2014-02-01*","2014-05-01*","2014-06-15*","2014-09-01*","2014-10-01*","2015-03-01*","2015-04-15*","2015-10-01*","2016-04-01*","2016-09-15*"],"cors":true},"ecr":{"name":"ECR","cors":true},"ecs":{"name":"ECS","cors":true},"efs":{"prefix":"elasticfilesystem","name":"EFS","cors":true},"elasticache":{"name":"ElastiCache","versions":["2012-11-15*","2014-03-24*","2014-07-15*","2014-09-30*"],"cors":true},"elasticbeanstalk":{"name":"ElasticBeanstalk","cors":true},"elb":{"prefix":"elasticloadbalancing","name":"ELB","cors":true},"elbv2":{"prefix":"elasticloadbalancingv2","name":"ELBv2","cors":true},"emr":{"prefix":"elasticmapreduce","name":"EMR","cors":true},"es":{"name":"ES"},"elastictranscoder":{"name":"ElasticTranscoder","cors":true},"firehose":{"name":"Firehose","cors":true},"gamelift":{"name":"GameLift","cors":true},"glacier":{"name":"Glacier"},"health":{"name":"Health"},"iam":{"name":"IAM"},"importexport":{"name":"ImportExport"},"inspector":{"name":"Inspector","versions":["2015-08-18*"],"cors":true},"iot":{"name":"Iot","cors":true},"iotdata":{"prefix":"iot-data","name":"IotData","cors":true},"kinesis":{"name":"Kinesis","cors":true},"kinesisanalytics":{"name":"KinesisAnalytics"},"kms":{"name":"KMS","cors":true},"lambda":{"name":"Lambda","cors":true},"lexruntime":{"prefix":"runtime.lex","name":"LexRuntime","cors":true},"lightsail":{"name":"Lightsail"},"machinelearning":{"name":"MachineLearning","cors":true},"marketplacecommerceanalytics":{"name":"MarketplaceCommerceAnalytics","cors":true},"marketplacemetering":{"prefix":"meteringmarketplace","name":"MarketplaceMetering"},"mturk":{"prefix":"mturk-requester","name":"MTurk","cors":true},"mobileanalytics":{"name":"MobileAnalytics","cors":true},"opsworks":{"name":"OpsWorks","cors":true},"opsworkscm":{"name":"OpsWorksCM"},"organizations":{"name":"Organizations"},"pinpoint":{"name":"Pinpoint"},"polly":{"name":"Polly","cors":true},"rds":{"name":"RDS","versions":["2014-09-01*"],"cors":true},"redshift":{"name":"Redshift","cors":true},"rekognition":{"name":"Rekognition","cors":true},"resourcegroupstaggingapi":{"name":"ResourceGroupsTaggingAPI"},"route53":{"name":"Route53","cors":true},"route53domains":{"name":"Route53Domains","cors":true},"s3":{"name":"S3","dualstackAvailable":true,"cors":true},"servicecatalog":{"name":"ServiceCatalog","cors":true},"ses":{"prefix":"email","name":"SES","cors":true},"shield":{"name":"Shield"},"simpledb":{"prefix":"sdb","name":"SimpleDB"},"sms":{"name":"SMS"},"snowball":{"name":"Snowball"},"sns":{"name":"SNS","cors":true},"sqs":{"name":"SQS","cors":true},"ssm":{"name":"SSM","cors":true},"storagegateway":{"name":"StorageGateway","cors":true},"stepfunctions":{"prefix":"states","name":"StepFunctions"},"sts":{"name":"STS","cors":true},"support":{"name":"Support"},"swf":{"name":"SWF"},"xray":{"name":"XRay"},"waf":{"name":"WAF","cors":true},"wafregional":{"prefix":"waf-regional","name":"WAFRegional"},"workdocs":{"name":"WorkDocs","cors":true},"workspaces":{"name":"WorkSpaces"},"codestar":{"name":"CodeStar"},"lexmodelbuildingservice":{"prefix":"lex-models","name":"LexModelBuildingService","cors":true},"marketplaceentitlementservice":{"prefix":"entitlement.marketplace","name":"MarketplaceEntitlementService"},"athena":{"name":"Athena"},"greengrass":{"name":"Greengrass"},"dax":{"name":"DAX"},"migrationhub":{"prefix":"AWSMigrationHub","name":"MigrationHub"},"cloudhsmv2":{"name":"CloudHSMV2"},"glue":{"name":"Glue"},"mobile":{"name":"Mobile"},"pricing":{"name":"Pricing"},"costexplorer":{"prefix":"ce","name":"CostExplorer"},"mediaconvert":{"name":"MediaConvert"},"medialive":{"name":"MediaLive"},"mediapackage":{"name":"MediaPackage"},"mediastore":{"name":"MediaStore"},"mediastoredata":{"prefix":"mediastore-data","name":"MediaStoreData"},"appsync":{"name":"AppSync"},"guardduty":{"name":"GuardDuty"},"mq":{"name":"MQ"},"comprehend":{"name":"Comprehend"},"iotjobsdataplane":{"prefix":"iot-jobs-data","name":"IoTJobsDataPlane"},"kinesisvideoarchivedmedia":{"prefix":"kinesis-video-archived-media","name":"KinesisVideoArchivedMedia"},"kinesisvideomedia":{"prefix":"kinesis-video-media","name":"KinesisVideoMedia"},"kinesisvideo":{"name":"KinesisVideo"},"sagemakerruntime":{"prefix":"runtime.sagemaker","name":"SageMakerRuntime"},"sagemaker":{"name":"SageMaker"},"translate":{"name":"Translate"},"resourcegroups":{"prefix":"resource-groups","name":"ResourceGroups"},"alexaforbusiness":{"name":"AlexaForBusiness"},"cloud9":{"name":"Cloud9"},"serverlessapplicationrepository":{"prefix":"serverlessrepo","name":"ServerlessApplicationRepository"},"servicediscovery":{"name":"ServiceDiscovery"},"workmail":{"name":"WorkMail"},"autoscalingplans":{"prefix":"autoscaling-plans","name":"AutoScalingPlans"},"transcribeservice":{"prefix":"transcribe","name":"TranscribeService"}}
 
 /***/ }),
-/* 518 */
+/* 519 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var v1 = __webpack_require__(519);
-var v4 = __webpack_require__(520);
+var v1 = __webpack_require__(520);
+var v4 = __webpack_require__(521);
 
 var uuid = v4;
 uuid.v1 = v1;
@@ -66886,7 +66901,7 @@ module.exports = uuid;
 
 
 /***/ }),
-/* 519 */
+/* 520 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var rng = __webpack_require__(189);
@@ -66992,7 +67007,7 @@ module.exports = v1;
 
 
 /***/ }),
-/* 520 */
+/* 521 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var rng = __webpack_require__(189);
@@ -67027,7 +67042,7 @@ module.exports = v4;
 
 
 /***/ }),
-/* 521 */
+/* 522 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var AWS = __webpack_require__(2);
@@ -67153,7 +67168,7 @@ AWS.TemporaryCredentials = AWS.util.inherit(AWS.Credentials, {
 
 
 /***/ }),
-/* 522 */
+/* 523 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var AWS = __webpack_require__(2);
@@ -67206,19 +67221,19 @@ AWS.util.update(AWS.STS.prototype, {
 
 
 /***/ }),
-/* 523 */
+/* 524 */
 /***/ (function(module, exports) {
 
 module.exports = {"version":"2.0","metadata":{"apiVersion":"2011-06-15","endpointPrefix":"sts","globalEndpoint":"sts.amazonaws.com","protocol":"query","serviceAbbreviation":"AWS STS","serviceFullName":"AWS Security Token Service","serviceId":"STS","signatureVersion":"v4","uid":"sts-2011-06-15","xmlNamespace":"https://sts.amazonaws.com/doc/2011-06-15/"},"operations":{"AssumeRole":{"input":{"type":"structure","required":["RoleArn","RoleSessionName"],"members":{"RoleArn":{},"RoleSessionName":{},"Policy":{},"DurationSeconds":{"type":"integer"},"ExternalId":{},"SerialNumber":{},"TokenCode":{}}},"output":{"resultWrapper":"AssumeRoleResult","type":"structure","members":{"Credentials":{"shape":"Sa"},"AssumedRoleUser":{"shape":"Sf"},"PackedPolicySize":{"type":"integer"}}}},"AssumeRoleWithSAML":{"input":{"type":"structure","required":["RoleArn","PrincipalArn","SAMLAssertion"],"members":{"RoleArn":{},"PrincipalArn":{},"SAMLAssertion":{},"Policy":{},"DurationSeconds":{"type":"integer"}}},"output":{"resultWrapper":"AssumeRoleWithSAMLResult","type":"structure","members":{"Credentials":{"shape":"Sa"},"AssumedRoleUser":{"shape":"Sf"},"PackedPolicySize":{"type":"integer"},"Subject":{},"SubjectType":{},"Issuer":{},"Audience":{},"NameQualifier":{}}}},"AssumeRoleWithWebIdentity":{"input":{"type":"structure","required":["RoleArn","RoleSessionName","WebIdentityToken"],"members":{"RoleArn":{},"RoleSessionName":{},"WebIdentityToken":{},"ProviderId":{},"Policy":{},"DurationSeconds":{"type":"integer"}}},"output":{"resultWrapper":"AssumeRoleWithWebIdentityResult","type":"structure","members":{"Credentials":{"shape":"Sa"},"SubjectFromWebIdentityToken":{},"AssumedRoleUser":{"shape":"Sf"},"PackedPolicySize":{"type":"integer"},"Provider":{},"Audience":{}}}},"DecodeAuthorizationMessage":{"input":{"type":"structure","required":["EncodedMessage"],"members":{"EncodedMessage":{}}},"output":{"resultWrapper":"DecodeAuthorizationMessageResult","type":"structure","members":{"DecodedMessage":{}}}},"GetCallerIdentity":{"input":{"type":"structure","members":{}},"output":{"resultWrapper":"GetCallerIdentityResult","type":"structure","members":{"UserId":{},"Account":{},"Arn":{}}}},"GetFederationToken":{"input":{"type":"structure","required":["Name"],"members":{"Name":{},"Policy":{},"DurationSeconds":{"type":"integer"}}},"output":{"resultWrapper":"GetFederationTokenResult","type":"structure","members":{"Credentials":{"shape":"Sa"},"FederatedUser":{"type":"structure","required":["FederatedUserId","Arn"],"members":{"FederatedUserId":{},"Arn":{}}},"PackedPolicySize":{"type":"integer"}}}},"GetSessionToken":{"input":{"type":"structure","members":{"DurationSeconds":{"type":"integer"},"SerialNumber":{},"TokenCode":{}}},"output":{"resultWrapper":"GetSessionTokenResult","type":"structure","members":{"Credentials":{"shape":"Sa"}}}}},"shapes":{"Sa":{"type":"structure","required":["AccessKeyId","SecretAccessKey","SessionToken","Expiration"],"members":{"AccessKeyId":{},"SecretAccessKey":{},"SessionToken":{},"Expiration":{"type":"timestamp"}}},"Sf":{"type":"structure","required":["AssumedRoleId","Arn"],"members":{"AssumedRoleId":{},"Arn":{}}}}}
 
 /***/ }),
-/* 524 */
+/* 525 */
 /***/ (function(module, exports) {
 
 module.exports = {"pagination":{}}
 
 /***/ }),
-/* 525 */
+/* 526 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var AWS = __webpack_require__(2);
@@ -67334,11 +67349,11 @@ AWS.WebIdentityCredentials = AWS.util.inherit(AWS.Credentials, {
 
 
 /***/ }),
-/* 526 */
+/* 527 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var AWS = __webpack_require__(2);
-var CognitoIdentity = __webpack_require__(527);
+var CognitoIdentity = __webpack_require__(528);
 var STS = __webpack_require__(54);
 
 /**
@@ -67717,7 +67732,7 @@ AWS.CognitoIdentityCredentials = AWS.util.inherit(AWS.Credentials, {
 
 
 /***/ }),
-/* 527 */
+/* 528 */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(99);
@@ -67727,11 +67742,11 @@ var apiLoader = AWS.apiLoader;
 
 apiLoader.services['cognitoidentity'] = {};
 AWS.CognitoIdentity = Service.defineService('cognitoidentity', ['2014-06-30']);
-__webpack_require__(528);
+__webpack_require__(529);
 Object.defineProperty(apiLoader.services['cognitoidentity'], '2014-06-30', {
   get: function get() {
-    var model = __webpack_require__(529);
-    model.paginators = __webpack_require__(530).pagination;
+    var model = __webpack_require__(530);
+    model.paginators = __webpack_require__(531).pagination;
     return model;
   },
   enumerable: true,
@@ -67742,7 +67757,7 @@ module.exports = AWS.CognitoIdentity;
 
 
 /***/ }),
-/* 528 */
+/* 529 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var AWS = __webpack_require__(2);
@@ -67763,19 +67778,19 @@ AWS.util.update(AWS.CognitoIdentity.prototype, {
 
 
 /***/ }),
-/* 529 */
+/* 530 */
 /***/ (function(module, exports) {
 
 module.exports = {"version":"2.0","metadata":{"apiVersion":"2014-06-30","endpointPrefix":"cognito-identity","jsonVersion":"1.1","protocol":"json","serviceFullName":"Amazon Cognito Identity","signatureVersion":"v4","targetPrefix":"AWSCognitoIdentityService","uid":"cognito-identity-2014-06-30"},"operations":{"CreateIdentityPool":{"input":{"type":"structure","required":["IdentityPoolName","AllowUnauthenticatedIdentities"],"members":{"IdentityPoolName":{},"AllowUnauthenticatedIdentities":{"type":"boolean"},"SupportedLoginProviders":{"shape":"S4"},"DeveloperProviderName":{},"OpenIdConnectProviderARNs":{"shape":"S8"},"CognitoIdentityProviders":{"shape":"Sa"},"SamlProviderARNs":{"shape":"Sf"}}},"output":{"shape":"Sg"}},"DeleteIdentities":{"input":{"type":"structure","required":["IdentityIdsToDelete"],"members":{"IdentityIdsToDelete":{"type":"list","member":{}}}},"output":{"type":"structure","members":{"UnprocessedIdentityIds":{"type":"list","member":{"type":"structure","members":{"IdentityId":{},"ErrorCode":{}}}}}}},"DeleteIdentityPool":{"input":{"type":"structure","required":["IdentityPoolId"],"members":{"IdentityPoolId":{}}}},"DescribeIdentity":{"input":{"type":"structure","required":["IdentityId"],"members":{"IdentityId":{}}},"output":{"shape":"Sr"}},"DescribeIdentityPool":{"input":{"type":"structure","required":["IdentityPoolId"],"members":{"IdentityPoolId":{}}},"output":{"shape":"Sg"}},"GetCredentialsForIdentity":{"input":{"type":"structure","required":["IdentityId"],"members":{"IdentityId":{},"Logins":{"shape":"Sw"},"CustomRoleArn":{}}},"output":{"type":"structure","members":{"IdentityId":{},"Credentials":{"type":"structure","members":{"AccessKeyId":{},"SecretKey":{},"SessionToken":{},"Expiration":{"type":"timestamp"}}}}}},"GetId":{"input":{"type":"structure","required":["IdentityPoolId"],"members":{"AccountId":{},"IdentityPoolId":{},"Logins":{"shape":"Sw"}}},"output":{"type":"structure","members":{"IdentityId":{}}}},"GetIdentityPoolRoles":{"input":{"type":"structure","required":["IdentityPoolId"],"members":{"IdentityPoolId":{}}},"output":{"type":"structure","members":{"IdentityPoolId":{},"Roles":{"shape":"S18"},"RoleMappings":{"shape":"S1a"}}}},"GetOpenIdToken":{"input":{"type":"structure","required":["IdentityId"],"members":{"IdentityId":{},"Logins":{"shape":"Sw"}}},"output":{"type":"structure","members":{"IdentityId":{},"Token":{}}}},"GetOpenIdTokenForDeveloperIdentity":{"input":{"type":"structure","required":["IdentityPoolId","Logins"],"members":{"IdentityPoolId":{},"IdentityId":{},"Logins":{"shape":"Sw"},"TokenDuration":{"type":"long"}}},"output":{"type":"structure","members":{"IdentityId":{},"Token":{}}}},"ListIdentities":{"input":{"type":"structure","required":["IdentityPoolId","MaxResults"],"members":{"IdentityPoolId":{},"MaxResults":{"type":"integer"},"NextToken":{},"HideDisabled":{"type":"boolean"}}},"output":{"type":"structure","members":{"IdentityPoolId":{},"Identities":{"type":"list","member":{"shape":"Sr"}},"NextToken":{}}}},"ListIdentityPools":{"input":{"type":"structure","required":["MaxResults"],"members":{"MaxResults":{"type":"integer"},"NextToken":{}}},"output":{"type":"structure","members":{"IdentityPools":{"type":"list","member":{"type":"structure","members":{"IdentityPoolId":{},"IdentityPoolName":{}}}},"NextToken":{}}}},"LookupDeveloperIdentity":{"input":{"type":"structure","required":["IdentityPoolId"],"members":{"IdentityPoolId":{},"IdentityId":{},"DeveloperUserIdentifier":{},"MaxResults":{"type":"integer"},"NextToken":{}}},"output":{"type":"structure","members":{"IdentityId":{},"DeveloperUserIdentifierList":{"type":"list","member":{}},"NextToken":{}}}},"MergeDeveloperIdentities":{"input":{"type":"structure","required":["SourceUserIdentifier","DestinationUserIdentifier","DeveloperProviderName","IdentityPoolId"],"members":{"SourceUserIdentifier":{},"DestinationUserIdentifier":{},"DeveloperProviderName":{},"IdentityPoolId":{}}},"output":{"type":"structure","members":{"IdentityId":{}}}},"SetIdentityPoolRoles":{"input":{"type":"structure","required":["IdentityPoolId","Roles"],"members":{"IdentityPoolId":{},"Roles":{"shape":"S18"},"RoleMappings":{"shape":"S1a"}}}},"UnlinkDeveloperIdentity":{"input":{"type":"structure","required":["IdentityId","IdentityPoolId","DeveloperProviderName","DeveloperUserIdentifier"],"members":{"IdentityId":{},"IdentityPoolId":{},"DeveloperProviderName":{},"DeveloperUserIdentifier":{}}}},"UnlinkIdentity":{"input":{"type":"structure","required":["IdentityId","Logins","LoginsToRemove"],"members":{"IdentityId":{},"Logins":{"shape":"Sw"},"LoginsToRemove":{"shape":"Ss"}}}},"UpdateIdentityPool":{"input":{"shape":"Sg"},"output":{"shape":"Sg"}}},"shapes":{"S4":{"type":"map","key":{},"value":{}},"S8":{"type":"list","member":{}},"Sa":{"type":"list","member":{"type":"structure","members":{"ProviderName":{},"ClientId":{},"ServerSideTokenCheck":{"type":"boolean"}}}},"Sf":{"type":"list","member":{}},"Sg":{"type":"structure","required":["IdentityPoolId","IdentityPoolName","AllowUnauthenticatedIdentities"],"members":{"IdentityPoolId":{},"IdentityPoolName":{},"AllowUnauthenticatedIdentities":{"type":"boolean"},"SupportedLoginProviders":{"shape":"S4"},"DeveloperProviderName":{},"OpenIdConnectProviderARNs":{"shape":"S8"},"CognitoIdentityProviders":{"shape":"Sa"},"SamlProviderARNs":{"shape":"Sf"}}},"Sr":{"type":"structure","members":{"IdentityId":{},"Logins":{"shape":"Ss"},"CreationDate":{"type":"timestamp"},"LastModifiedDate":{"type":"timestamp"}}},"Ss":{"type":"list","member":{}},"Sw":{"type":"map","key":{},"value":{}},"S18":{"type":"map","key":{},"value":{}},"S1a":{"type":"map","key":{},"value":{"type":"structure","required":["Type"],"members":{"Type":{},"AmbiguousRoleResolution":{},"RulesConfiguration":{"type":"structure","required":["Rules"],"members":{"Rules":{"type":"list","member":{"type":"structure","required":["Claim","MatchType","Value","RoleARN"],"members":{"Claim":{},"MatchType":{},"Value":{},"RoleARN":{}}}}}}}}}}}
 
 /***/ }),
-/* 530 */
+/* 531 */
 /***/ (function(module, exports) {
 
 module.exports = {"pagination":{}}
 
 /***/ }),
-/* 531 */
+/* 532 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var AWS = __webpack_require__(2);
@@ -67870,14 +67885,14 @@ AWS.SAMLCredentials = AWS.util.inherit(AWS.Credentials, {
 
 
 /***/ }),
-/* 532 */
+/* 533 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var AWS = __webpack_require__(2);
 var util = AWS.util;
 var Shape = AWS.Model.Shape;
 
-var xml2js = __webpack_require__(533);
+var xml2js = __webpack_require__(534);
 
 /**
  * @api private
@@ -68036,7 +68051,7 @@ module.exports = NodeXmlParser;
 
 
 /***/ }),
-/* 533 */
+/* 534 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // Generated by CoffeeScript 1.10.0
@@ -68047,17 +68062,17 @@ module.exports = NodeXmlParser;
     hasProp = {}.hasOwnProperty,
     bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; };
 
-  sax = __webpack_require__(534);
+  sax = __webpack_require__(535);
 
   events = __webpack_require__(46);
 
   builder = __webpack_require__(158);
 
-  bom = __webpack_require__(535);
+  bom = __webpack_require__(536);
 
-  processors = __webpack_require__(536);
+  processors = __webpack_require__(537);
 
-  setImmediate = __webpack_require__(537).setImmediate;
+  setImmediate = __webpack_require__(538).setImmediate;
 
   isEmpty = function(thing) {
     return typeof thing === "object" && (thing != null) && Object.keys(thing).length === 0;
@@ -68585,7 +68600,7 @@ module.exports = NodeXmlParser;
 
 
 /***/ }),
-/* 534 */
+/* 535 */
 /***/ (function(module, exports, __webpack_require__) {
 
 ;(function (sax) { // wrapper for non-node envs
@@ -70167,7 +70182,7 @@ module.exports = NodeXmlParser;
 
 
 /***/ }),
-/* 535 */
+/* 536 */
 /***/ (function(module, exports) {
 
 // Generated by CoffeeScript 1.10.0
@@ -70185,7 +70200,7 @@ module.exports = NodeXmlParser;
 
 
 /***/ }),
-/* 536 */
+/* 537 */
 /***/ (function(module, exports) {
 
 // Generated by CoffeeScript 1.10.0
@@ -70225,13 +70240,13 @@ module.exports = NodeXmlParser;
 
 
 /***/ }),
-/* 537 */
+/* 538 */
 /***/ (function(module, exports) {
 
 module.exports = require("timers");
 
 /***/ }),
-/* 538 */
+/* 539 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var AWS = __webpack_require__(2);
@@ -70433,11 +70448,11 @@ AWS.HttpClient.streamsApiVersion = ReadableStream ? 2 : 1;
 
 
 /***/ }),
-/* 539 */
+/* 540 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var AWS = __webpack_require__(2);
-__webpack_require__(540);
+__webpack_require__(541);
 
 /**
  * Represents credentials received from the metadata service on an EC2 instance.
@@ -70520,7 +70535,7 @@ AWS.EC2MetadataCredentials = AWS.util.inherit(AWS.Credentials, {
 
 
 /***/ }),
-/* 540 */
+/* 541 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var AWS = __webpack_require__(2);
@@ -70655,7 +70670,7 @@ module.exports = AWS.MetadataService;
 
 
 /***/ }),
-/* 541 */
+/* 542 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var AWS = __webpack_require__(2),
@@ -70880,7 +70895,7 @@ AWS.RemoteCredentials = AWS.util.inherit(AWS.Credentials, {
 
 
 /***/ }),
-/* 542 */
+/* 543 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var AWS = __webpack_require__(2);
@@ -70914,7 +70929,7 @@ AWS.ECSCredentials = AWS.RemoteCredentials;
 
 
 /***/ }),
-/* 543 */
+/* 544 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var AWS = __webpack_require__(2);
@@ -71011,7 +71026,7 @@ AWS.EnvironmentCredentials = AWS.util.inherit(AWS.Credentials, {
 
 
 /***/ }),
-/* 544 */
+/* 545 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var AWS = __webpack_require__(2);
@@ -71085,7 +71100,7 @@ AWS.FileSystemCredentials = AWS.util.inherit(AWS.Credentials, {
 
 
 /***/ }),
-/* 545 */
+/* 546 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var AWS = __webpack_require__(2);
@@ -71305,17 +71320,17 @@ AWS.SharedIniFileCredentials = AWS.util.inherit(AWS.Credentials, {
 
 
 /***/ }),
-/* 546 */
+/* 547 */
 /***/ (function(module, exports) {
 
 module.exports = require("os");
 
 /***/ }),
-/* 547 */
+/* 548 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var AWS = __webpack_require__(2);
-__webpack_require__(548);
+__webpack_require__(549);
 
 AWS.util.update(AWS.DynamoDB.prototype, {
   /**
@@ -71375,11 +71390,11 @@ AWS.util.update(AWS.DynamoDB.prototype, {
 
 
 /***/ }),
-/* 548 */
+/* 549 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var AWS = __webpack_require__(2);
-var Translator = __webpack_require__(549);
+var Translator = __webpack_require__(550);
 var DynamoDBSet = __webpack_require__(194);
 
 /**
@@ -71904,11 +71919,11 @@ module.exports = AWS.DynamoDB.DocumentClient;
 
 
 /***/ }),
-/* 549 */
+/* 550 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var util = __webpack_require__(2).util;
-var convert = __webpack_require__(550);
+var convert = __webpack_require__(551);
 
 var Translator = function(options) {
   options = options || {};
@@ -71994,14 +72009,14 @@ module.exports = Translator;
 
 
 /***/ }),
-/* 550 */
+/* 551 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var AWS = __webpack_require__(2);
 var util = AWS.util;
 var typeOf = __webpack_require__(193).typeOf;
 var DynamoDBSet = __webpack_require__(194);
-var NumberValue = __webpack_require__(551);
+var NumberValue = __webpack_require__(552);
 
 AWS.DynamoDB.Converter = {
   /**
@@ -72291,7 +72306,7 @@ module.exports = AWS.DynamoDB.Converter;
 
 
 /***/ }),
-/* 551 */
+/* 552 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var util = __webpack_require__(2).util;
@@ -72335,51 +72350,40 @@ var DynamoDBNumberValue = util.inherit({
 module.exports = DynamoDBNumberValue;
 
 /***/ }),
-/* 552 */
+/* 553 */
 /***/ (function(module, exports) {
 
 module.exports = {"version":"2.0","metadata":{"apiVersion":"2011-12-05","endpointPrefix":"dynamodb","jsonVersion":"1.0","protocol":"json","serviceAbbreviation":"DynamoDB","serviceFullName":"Amazon DynamoDB","serviceId":"DynamoDB","signatureVersion":"v4","targetPrefix":"DynamoDB_20111205","uid":"dynamodb-2011-12-05"},"operations":{"BatchGetItem":{"input":{"type":"structure","required":["RequestItems"],"members":{"RequestItems":{"shape":"S2"}}},"output":{"type":"structure","members":{"Responses":{"type":"map","key":{},"value":{"type":"structure","members":{"Items":{"shape":"Sk"},"ConsumedCapacityUnits":{"type":"double"}}}},"UnprocessedKeys":{"shape":"S2"}}}},"BatchWriteItem":{"input":{"type":"structure","required":["RequestItems"],"members":{"RequestItems":{"shape":"So"}}},"output":{"type":"structure","members":{"Responses":{"type":"map","key":{},"value":{"type":"structure","members":{"ConsumedCapacityUnits":{"type":"double"}}}},"UnprocessedItems":{"shape":"So"}}}},"CreateTable":{"input":{"type":"structure","required":["TableName","KeySchema","ProvisionedThroughput"],"members":{"TableName":{},"KeySchema":{"shape":"Sy"},"ProvisionedThroughput":{"shape":"S12"}}},"output":{"type":"structure","members":{"TableDescription":{"shape":"S15"}}}},"DeleteItem":{"input":{"type":"structure","required":["TableName","Key"],"members":{"TableName":{},"Key":{"shape":"S6"},"Expected":{"shape":"S1b"},"ReturnValues":{}}},"output":{"type":"structure","members":{"Attributes":{"shape":"Sl"},"ConsumedCapacityUnits":{"type":"double"}}}},"DeleteTable":{"input":{"type":"structure","required":["TableName"],"members":{"TableName":{}}},"output":{"type":"structure","members":{"TableDescription":{"shape":"S15"}}}},"DescribeTable":{"input":{"type":"structure","required":["TableName"],"members":{"TableName":{}}},"output":{"type":"structure","members":{"Table":{"shape":"S15"}}}},"GetItem":{"input":{"type":"structure","required":["TableName","Key"],"members":{"TableName":{},"Key":{"shape":"S6"},"AttributesToGet":{"shape":"Se"},"ConsistentRead":{"type":"boolean"}}},"output":{"type":"structure","members":{"Item":{"shape":"Sl"},"ConsumedCapacityUnits":{"type":"double"}}}},"ListTables":{"input":{"type":"structure","members":{"ExclusiveStartTableName":{},"Limit":{"type":"integer"}}},"output":{"type":"structure","members":{"TableNames":{"type":"list","member":{}},"LastEvaluatedTableName":{}}}},"PutItem":{"input":{"type":"structure","required":["TableName","Item"],"members":{"TableName":{},"Item":{"shape":"Ss"},"Expected":{"shape":"S1b"},"ReturnValues":{}}},"output":{"type":"structure","members":{"Attributes":{"shape":"Sl"},"ConsumedCapacityUnits":{"type":"double"}}}},"Query":{"input":{"type":"structure","required":["TableName","HashKeyValue"],"members":{"TableName":{},"AttributesToGet":{"shape":"Se"},"Limit":{"type":"integer"},"ConsistentRead":{"type":"boolean"},"Count":{"type":"boolean"},"HashKeyValue":{"shape":"S7"},"RangeKeyCondition":{"shape":"S1u"},"ScanIndexForward":{"type":"boolean"},"ExclusiveStartKey":{"shape":"S6"}}},"output":{"type":"structure","members":{"Items":{"shape":"Sk"},"Count":{"type":"integer"},"LastEvaluatedKey":{"shape":"S6"},"ConsumedCapacityUnits":{"type":"double"}}}},"Scan":{"input":{"type":"structure","required":["TableName"],"members":{"TableName":{},"AttributesToGet":{"shape":"Se"},"Limit":{"type":"integer"},"Count":{"type":"boolean"},"ScanFilter":{"type":"map","key":{},"value":{"shape":"S1u"}},"ExclusiveStartKey":{"shape":"S6"}}},"output":{"type":"structure","members":{"Items":{"shape":"Sk"},"Count":{"type":"integer"},"ScannedCount":{"type":"integer"},"LastEvaluatedKey":{"shape":"S6"},"ConsumedCapacityUnits":{"type":"double"}}}},"UpdateItem":{"input":{"type":"structure","required":["TableName","Key","AttributeUpdates"],"members":{"TableName":{},"Key":{"shape":"S6"},"AttributeUpdates":{"type":"map","key":{},"value":{"type":"structure","members":{"Value":{"shape":"S7"},"Action":{}}}},"Expected":{"shape":"S1b"},"ReturnValues":{}}},"output":{"type":"structure","members":{"Attributes":{"shape":"Sl"},"ConsumedCapacityUnits":{"type":"double"}}}},"UpdateTable":{"input":{"type":"structure","required":["TableName","ProvisionedThroughput"],"members":{"TableName":{},"ProvisionedThroughput":{"shape":"S12"}}},"output":{"type":"structure","members":{"TableDescription":{"shape":"S15"}}}}},"shapes":{"S2":{"type":"map","key":{},"value":{"type":"structure","required":["Keys"],"members":{"Keys":{"type":"list","member":{"shape":"S6"}},"AttributesToGet":{"shape":"Se"},"ConsistentRead":{"type":"boolean"}}}},"S6":{"type":"structure","required":["HashKeyElement"],"members":{"HashKeyElement":{"shape":"S7"},"RangeKeyElement":{"shape":"S7"}}},"S7":{"type":"structure","members":{"S":{},"N":{},"B":{"type":"blob"},"SS":{"type":"list","member":{}},"NS":{"type":"list","member":{}},"BS":{"type":"list","member":{"type":"blob"}}}},"Se":{"type":"list","member":{}},"Sk":{"type":"list","member":{"shape":"Sl"}},"Sl":{"type":"map","key":{},"value":{"shape":"S7"}},"So":{"type":"map","key":{},"value":{"type":"list","member":{"type":"structure","members":{"PutRequest":{"type":"structure","required":["Item"],"members":{"Item":{"shape":"Ss"}}},"DeleteRequest":{"type":"structure","required":["Key"],"members":{"Key":{"shape":"S6"}}}}}}},"Ss":{"type":"map","key":{},"value":{"shape":"S7"}},"Sy":{"type":"structure","required":["HashKeyElement"],"members":{"HashKeyElement":{"shape":"Sz"},"RangeKeyElement":{"shape":"Sz"}}},"Sz":{"type":"structure","required":["AttributeName","AttributeType"],"members":{"AttributeName":{},"AttributeType":{}}},"S12":{"type":"structure","required":["ReadCapacityUnits","WriteCapacityUnits"],"members":{"ReadCapacityUnits":{"type":"long"},"WriteCapacityUnits":{"type":"long"}}},"S15":{"type":"structure","members":{"TableName":{},"KeySchema":{"shape":"Sy"},"TableStatus":{},"CreationDateTime":{"type":"timestamp"},"ProvisionedThroughput":{"type":"structure","members":{"LastIncreaseDateTime":{"type":"timestamp"},"LastDecreaseDateTime":{"type":"timestamp"},"NumberOfDecreasesToday":{"type":"long"},"ReadCapacityUnits":{"type":"long"},"WriteCapacityUnits":{"type":"long"}}},"TableSizeBytes":{"type":"long"},"ItemCount":{"type":"long"}}},"S1b":{"type":"map","key":{},"value":{"type":"structure","members":{"Value":{"shape":"S7"},"Exists":{"type":"boolean"}}}},"S1u":{"type":"structure","required":["ComparisonOperator"],"members":{"AttributeValueList":{"type":"list","member":{"shape":"S7"}},"ComparisonOperator":{}}}}}
 
 /***/ }),
-/* 553 */
-/***/ (function(module, exports) {
-
-module.exports = {"pagination":{"BatchGetItem":{"input_token":"RequestItems","output_token":"UnprocessedKeys"},"ListTables":{"input_token":"ExclusiveStartTableName","limit_key":"Limit","output_token":"LastEvaluatedTableName","result_key":"TableNames"},"Query":{"input_token":"ExclusiveStartKey","limit_key":"Limit","output_token":"LastEvaluatedKey","result_key":"Items"},"Scan":{"input_token":"ExclusiveStartKey","limit_key":"Limit","output_token":"LastEvaluatedKey","result_key":"Items"}}}
-
-/***/ }),
 /* 554 */
 /***/ (function(module, exports) {
 
-module.exports = {"version":2,"waiters":{"TableExists":{"delay":20,"operation":"DescribeTable","maxAttempts":25,"acceptors":[{"expected":"ACTIVE","matcher":"path","state":"success","argument":"Table.TableStatus"},{"expected":"ResourceNotFoundException","matcher":"error","state":"retry"}]},"TableNotExists":{"delay":20,"operation":"DescribeTable","maxAttempts":25,"acceptors":[{"expected":"ResourceNotFoundException","matcher":"error","state":"success"}]}}}
+module.exports = {"pagination":{"BatchGetItem":{"input_token":"RequestItems","output_token":"UnprocessedKeys"},"ListTables":{"input_token":"ExclusiveStartTableName","limit_key":"Limit","output_token":"LastEvaluatedTableName","result_key":"TableNames"},"Query":{"input_token":"ExclusiveStartKey","limit_key":"Limit","output_token":"LastEvaluatedKey","result_key":"Items"},"Scan":{"input_token":"ExclusiveStartKey","limit_key":"Limit","output_token":"LastEvaluatedKey","result_key":"Items"}}}
 
 /***/ }),
 /* 555 */
 /***/ (function(module, exports) {
 
-module.exports = {"version":"2.0","metadata":{"apiVersion":"2012-08-10","endpointPrefix":"dynamodb","jsonVersion":"1.0","protocol":"json","serviceAbbreviation":"DynamoDB","serviceFullName":"Amazon DynamoDB","serviceId":"DynamoDB","signatureVersion":"v4","targetPrefix":"DynamoDB_20120810","uid":"dynamodb-2012-08-10"},"operations":{"BatchGetItem":{"input":{"type":"structure","required":["RequestItems"],"members":{"RequestItems":{"shape":"S2"},"ReturnConsumedCapacity":{}}},"output":{"type":"structure","members":{"Responses":{"type":"map","key":{},"value":{"shape":"Sr"}},"UnprocessedKeys":{"shape":"S2"},"ConsumedCapacity":{"shape":"St"}}}},"BatchWriteItem":{"input":{"type":"structure","required":["RequestItems"],"members":{"RequestItems":{"shape":"S10"},"ReturnConsumedCapacity":{},"ReturnItemCollectionMetrics":{}}},"output":{"type":"structure","members":{"UnprocessedItems":{"shape":"S10"},"ItemCollectionMetrics":{"type":"map","key":{},"value":{"type":"list","member":{"shape":"S1a"}}},"ConsumedCapacity":{"shape":"St"}}}},"CreateBackup":{"input":{"type":"structure","required":["TableName","BackupName"],"members":{"TableName":{},"BackupName":{}}},"output":{"type":"structure","members":{"BackupDetails":{"shape":"S1h"}}}},"CreateGlobalTable":{"input":{"type":"structure","required":["GlobalTableName","ReplicationGroup"],"members":{"GlobalTableName":{},"ReplicationGroup":{"shape":"S1n"}}},"output":{"type":"structure","members":{"GlobalTableDescription":{"shape":"S1r"}}}},"CreateTable":{"input":{"type":"structure","required":["AttributeDefinitions","TableName","KeySchema","ProvisionedThroughput"],"members":{"AttributeDefinitions":{"shape":"S1y"},"TableName":{},"KeySchema":{"shape":"S22"},"LocalSecondaryIndexes":{"type":"list","member":{"type":"structure","required":["IndexName","KeySchema","Projection"],"members":{"IndexName":{},"KeySchema":{"shape":"S22"},"Projection":{"shape":"S27"}}}},"GlobalSecondaryIndexes":{"type":"list","member":{"type":"structure","required":["IndexName","KeySchema","Projection","ProvisionedThroughput"],"members":{"IndexName":{},"KeySchema":{"shape":"S22"},"Projection":{"shape":"S27"},"ProvisionedThroughput":{"shape":"S2d"}}}},"ProvisionedThroughput":{"shape":"S2d"},"StreamSpecification":{"shape":"S2f"},"SSESpecification":{"type":"structure","required":["Enabled"],"members":{"Enabled":{"type":"boolean"}}}}},"output":{"type":"structure","members":{"TableDescription":{"shape":"S2l"}}}},"DeleteBackup":{"input":{"type":"structure","required":["BackupArn"],"members":{"BackupArn":{}}},"output":{"type":"structure","members":{"BackupDescription":{"shape":"S36"}}}},"DeleteItem":{"input":{"type":"structure","required":["TableName","Key"],"members":{"TableName":{},"Key":{"shape":"S6"},"Expected":{"shape":"S3j"},"ConditionalOperator":{},"ReturnValues":{},"ReturnConsumedCapacity":{},"ReturnItemCollectionMetrics":{},"ConditionExpression":{},"ExpressionAttributeNames":{"shape":"Sm"},"ExpressionAttributeValues":{"shape":"S3r"}}},"output":{"type":"structure","members":{"Attributes":{"shape":"Ss"},"ConsumedCapacity":{"shape":"Su"},"ItemCollectionMetrics":{"shape":"S1a"}}}},"DeleteTable":{"input":{"type":"structure","required":["TableName"],"members":{"TableName":{}}},"output":{"type":"structure","members":{"TableDescription":{"shape":"S2l"}}}},"DescribeBackup":{"input":{"type":"structure","required":["BackupArn"],"members":{"BackupArn":{}}},"output":{"type":"structure","members":{"BackupDescription":{"shape":"S36"}}}},"DescribeContinuousBackups":{"input":{"type":"structure","required":["TableName"],"members":{"TableName":{}}},"output":{"type":"structure","members":{"ContinuousBackupsDescription":{"type":"structure","required":["ContinuousBackupsStatus"],"members":{"ContinuousBackupsStatus":{}}}}}},"DescribeGlobalTable":{"input":{"type":"structure","required":["GlobalTableName"],"members":{"GlobalTableName":{}}},"output":{"type":"structure","members":{"GlobalTableDescription":{"shape":"S1r"}}}},"DescribeLimits":{"input":{"type":"structure","members":{}},"output":{"type":"structure","members":{"AccountMaxReadCapacityUnits":{"type":"long"},"AccountMaxWriteCapacityUnits":{"type":"long"},"TableMaxReadCapacityUnits":{"type":"long"},"TableMaxWriteCapacityUnits":{"type":"long"}}}},"DescribeTable":{"input":{"type":"structure","required":["TableName"],"members":{"TableName":{}}},"output":{"type":"structure","members":{"Table":{"shape":"S2l"}}}},"DescribeTimeToLive":{"input":{"type":"structure","required":["TableName"],"members":{"TableName":{}}},"output":{"type":"structure","members":{"TimeToLiveDescription":{"shape":"S3f"}}}},"GetItem":{"input":{"type":"structure","required":["TableName","Key"],"members":{"TableName":{},"Key":{"shape":"S6"},"AttributesToGet":{"shape":"Sj"},"ConsistentRead":{"type":"boolean"},"ReturnConsumedCapacity":{},"ProjectionExpression":{},"ExpressionAttributeNames":{"shape":"Sm"}}},"output":{"type":"structure","members":{"Item":{"shape":"Ss"},"ConsumedCapacity":{"shape":"Su"}}}},"ListBackups":{"input":{"type":"structure","members":{"TableName":{},"Limit":{"type":"integer"},"TimeRangeLowerBound":{"type":"timestamp"},"TimeRangeUpperBound":{"type":"timestamp"},"ExclusiveStartBackupArn":{}}},"output":{"type":"structure","members":{"BackupSummaries":{"type":"list","member":{"type":"structure","members":{"TableName":{},"TableId":{},"TableArn":{},"BackupArn":{},"BackupName":{},"BackupCreationDateTime":{"type":"timestamp"},"BackupStatus":{},"BackupSizeBytes":{"type":"long"}}}},"LastEvaluatedBackupArn":{}}}},"ListGlobalTables":{"input":{"type":"structure","members":{"ExclusiveStartGlobalTableName":{},"Limit":{"type":"integer"},"RegionName":{}}},"output":{"type":"structure","members":{"GlobalTables":{"type":"list","member":{"type":"structure","members":{"GlobalTableName":{},"ReplicationGroup":{"shape":"S1n"}}}},"LastEvaluatedGlobalTableName":{}}}},"ListTables":{"input":{"type":"structure","members":{"ExclusiveStartTableName":{},"Limit":{"type":"integer"}}},"output":{"type":"structure","members":{"TableNames":{"type":"list","member":{}},"LastEvaluatedTableName":{}}}},"ListTagsOfResource":{"input":{"type":"structure","required":["ResourceArn"],"members":{"ResourceArn":{},"NextToken":{}}},"output":{"type":"structure","members":{"Tags":{"shape":"S4w"},"NextToken":{}}}},"PutItem":{"input":{"type":"structure","required":["TableName","Item"],"members":{"TableName":{},"Item":{"shape":"S14"},"Expected":{"shape":"S3j"},"ReturnValues":{},"ReturnConsumedCapacity":{},"ReturnItemCollectionMetrics":{},"ConditionalOperator":{},"ConditionExpression":{},"ExpressionAttributeNames":{"shape":"Sm"},"ExpressionAttributeValues":{"shape":"S3r"}}},"output":{"type":"structure","members":{"Attributes":{"shape":"Ss"},"ConsumedCapacity":{"shape":"Su"},"ItemCollectionMetrics":{"shape":"S1a"}}}},"Query":{"input":{"type":"structure","required":["TableName"],"members":{"TableName":{},"IndexName":{},"Select":{},"AttributesToGet":{"shape":"Sj"},"Limit":{"type":"integer"},"ConsistentRead":{"type":"boolean"},"KeyConditions":{"type":"map","key":{},"value":{"shape":"S55"}},"QueryFilter":{"shape":"S56"},"ConditionalOperator":{},"ScanIndexForward":{"type":"boolean"},"ExclusiveStartKey":{"shape":"S6"},"ReturnConsumedCapacity":{},"ProjectionExpression":{},"FilterExpression":{},"KeyConditionExpression":{},"ExpressionAttributeNames":{"shape":"Sm"},"ExpressionAttributeValues":{"shape":"S3r"}}},"output":{"type":"structure","members":{"Items":{"shape":"Sr"},"Count":{"type":"integer"},"ScannedCount":{"type":"integer"},"LastEvaluatedKey":{"shape":"S6"},"ConsumedCapacity":{"shape":"Su"}}}},"RestoreTableFromBackup":{"input":{"type":"structure","required":["TargetTableName","BackupArn"],"members":{"TargetTableName":{},"BackupArn":{}}},"output":{"type":"structure","members":{"TableDescription":{"shape":"S2l"}}}},"Scan":{"input":{"type":"structure","required":["TableName"],"members":{"TableName":{},"IndexName":{},"AttributesToGet":{"shape":"Sj"},"Limit":{"type":"integer"},"Select":{},"ScanFilter":{"shape":"S56"},"ConditionalOperator":{},"ExclusiveStartKey":{"shape":"S6"},"ReturnConsumedCapacity":{},"TotalSegments":{"type":"integer"},"Segment":{"type":"integer"},"ProjectionExpression":{},"FilterExpression":{},"ExpressionAttributeNames":{"shape":"Sm"},"ExpressionAttributeValues":{"shape":"S3r"},"ConsistentRead":{"type":"boolean"}}},"output":{"type":"structure","members":{"Items":{"shape":"Sr"},"Count":{"type":"integer"},"ScannedCount":{"type":"integer"},"LastEvaluatedKey":{"shape":"S6"},"ConsumedCapacity":{"shape":"Su"}}}},"TagResource":{"input":{"type":"structure","required":["ResourceArn","Tags"],"members":{"ResourceArn":{},"Tags":{"shape":"S4w"}}}},"UntagResource":{"input":{"type":"structure","required":["ResourceArn","TagKeys"],"members":{"ResourceArn":{},"TagKeys":{"type":"list","member":{}}}}},"UpdateGlobalTable":{"input":{"type":"structure","required":["GlobalTableName","ReplicaUpdates"],"members":{"GlobalTableName":{},"ReplicaUpdates":{"type":"list","member":{"type":"structure","members":{"Create":{"type":"structure","required":["RegionName"],"members":{"RegionName":{}}},"Delete":{"type":"structure","required":["RegionName"],"members":{"RegionName":{}}}}}}}},"output":{"type":"structure","members":{"GlobalTableDescription":{"shape":"S1r"}}}},"UpdateItem":{"input":{"type":"structure","required":["TableName","Key"],"members":{"TableName":{},"Key":{"shape":"S6"},"AttributeUpdates":{"type":"map","key":{},"value":{"type":"structure","members":{"Value":{"shape":"S8"},"Action":{}}}},"Expected":{"shape":"S3j"},"ConditionalOperator":{},"ReturnValues":{},"ReturnConsumedCapacity":{},"ReturnItemCollectionMetrics":{},"UpdateExpression":{},"ConditionExpression":{},"ExpressionAttributeNames":{"shape":"Sm"},"ExpressionAttributeValues":{"shape":"S3r"}}},"output":{"type":"structure","members":{"Attributes":{"shape":"Ss"},"ConsumedCapacity":{"shape":"Su"},"ItemCollectionMetrics":{"shape":"S1a"}}}},"UpdateTable":{"input":{"type":"structure","required":["TableName"],"members":{"AttributeDefinitions":{"shape":"S1y"},"TableName":{},"ProvisionedThroughput":{"shape":"S2d"},"GlobalSecondaryIndexUpdates":{"type":"list","member":{"type":"structure","members":{"Update":{"type":"structure","required":["IndexName","ProvisionedThroughput"],"members":{"IndexName":{},"ProvisionedThroughput":{"shape":"S2d"}}},"Create":{"type":"structure","required":["IndexName","KeySchema","Projection","ProvisionedThroughput"],"members":{"IndexName":{},"KeySchema":{"shape":"S22"},"Projection":{"shape":"S27"},"ProvisionedThroughput":{"shape":"S2d"}}},"Delete":{"type":"structure","required":["IndexName"],"members":{"IndexName":{}}}}}},"StreamSpecification":{"shape":"S2f"}}},"output":{"type":"structure","members":{"TableDescription":{"shape":"S2l"}}}},"UpdateTimeToLive":{"input":{"type":"structure","required":["TableName","TimeToLiveSpecification"],"members":{"TableName":{},"TimeToLiveSpecification":{"shape":"S63"}}},"output":{"type":"structure","members":{"TimeToLiveSpecification":{"shape":"S63"}}}}},"shapes":{"S2":{"type":"map","key":{},"value":{"type":"structure","required":["Keys"],"members":{"Keys":{"type":"list","member":{"shape":"S6"}},"AttributesToGet":{"shape":"Sj"},"ConsistentRead":{"type":"boolean"},"ProjectionExpression":{},"ExpressionAttributeNames":{"shape":"Sm"}}}},"S6":{"type":"map","key":{},"value":{"shape":"S8"}},"S8":{"type":"structure","members":{"S":{},"N":{},"B":{"type":"blob"},"SS":{"type":"list","member":{}},"NS":{"type":"list","member":{}},"BS":{"type":"list","member":{"type":"blob"}},"M":{"type":"map","key":{},"value":{"shape":"S8"}},"L":{"type":"list","member":{"shape":"S8"}},"NULL":{"type":"boolean"},"BOOL":{"type":"boolean"}}},"Sj":{"type":"list","member":{}},"Sm":{"type":"map","key":{},"value":{}},"Sr":{"type":"list","member":{"shape":"Ss"}},"Ss":{"type":"map","key":{},"value":{"shape":"S8"}},"St":{"type":"list","member":{"shape":"Su"}},"Su":{"type":"structure","members":{"TableName":{},"CapacityUnits":{"type":"double"},"Table":{"shape":"Sw"},"LocalSecondaryIndexes":{"shape":"Sx"},"GlobalSecondaryIndexes":{"shape":"Sx"}}},"Sw":{"type":"structure","members":{"CapacityUnits":{"type":"double"}}},"Sx":{"type":"map","key":{},"value":{"shape":"Sw"}},"S10":{"type":"map","key":{},"value":{"type":"list","member":{"type":"structure","members":{"PutRequest":{"type":"structure","required":["Item"],"members":{"Item":{"shape":"S14"}}},"DeleteRequest":{"type":"structure","required":["Key"],"members":{"Key":{"shape":"S6"}}}}}}},"S14":{"type":"map","key":{},"value":{"shape":"S8"}},"S1a":{"type":"structure","members":{"ItemCollectionKey":{"type":"map","key":{},"value":{"shape":"S8"}},"SizeEstimateRangeGB":{"type":"list","member":{"type":"double"}}}},"S1h":{"type":"structure","required":["BackupArn","BackupName","BackupStatus","BackupCreationDateTime"],"members":{"BackupArn":{},"BackupName":{},"BackupSizeBytes":{"type":"long"},"BackupStatus":{},"BackupCreationDateTime":{"type":"timestamp"}}},"S1n":{"type":"list","member":{"type":"structure","members":{"RegionName":{}}}},"S1r":{"type":"structure","members":{"ReplicationGroup":{"type":"list","member":{"type":"structure","members":{"RegionName":{}}}},"GlobalTableArn":{},"CreationDateTime":{"type":"timestamp"},"GlobalTableStatus":{},"GlobalTableName":{}}},"S1y":{"type":"list","member":{"type":"structure","required":["AttributeName","AttributeType"],"members":{"AttributeName":{},"AttributeType":{}}}},"S22":{"type":"list","member":{"type":"structure","required":["AttributeName","KeyType"],"members":{"AttributeName":{},"KeyType":{}}}},"S27":{"type":"structure","members":{"ProjectionType":{},"NonKeyAttributes":{"type":"list","member":{}}}},"S2d":{"type":"structure","required":["ReadCapacityUnits","WriteCapacityUnits"],"members":{"ReadCapacityUnits":{"type":"long"},"WriteCapacityUnits":{"type":"long"}}},"S2f":{"type":"structure","members":{"StreamEnabled":{"type":"boolean"},"StreamViewType":{}}},"S2l":{"type":"structure","members":{"AttributeDefinitions":{"shape":"S1y"},"TableName":{},"KeySchema":{"shape":"S22"},"TableStatus":{},"CreationDateTime":{"type":"timestamp"},"ProvisionedThroughput":{"shape":"S2n"},"TableSizeBytes":{"type":"long"},"ItemCount":{"type":"long"},"TableArn":{},"TableId":{},"LocalSecondaryIndexes":{"type":"list","member":{"type":"structure","members":{"IndexName":{},"KeySchema":{"shape":"S22"},"Projection":{"shape":"S27"},"IndexSizeBytes":{"type":"long"},"ItemCount":{"type":"long"},"IndexArn":{}}}},"GlobalSecondaryIndexes":{"type":"list","member":{"type":"structure","members":{"IndexName":{},"KeySchema":{"shape":"S22"},"Projection":{"shape":"S27"},"IndexStatus":{},"Backfilling":{"type":"boolean"},"ProvisionedThroughput":{"shape":"S2n"},"IndexSizeBytes":{"type":"long"},"ItemCount":{"type":"long"},"IndexArn":{}}}},"StreamSpecification":{"shape":"S2f"},"LatestStreamLabel":{},"LatestStreamArn":{},"RestoreSummary":{"type":"structure","required":["RestoreDateTime","RestoreInProgress"],"members":{"SourceBackupArn":{},"SourceTableArn":{},"RestoreDateTime":{"type":"timestamp"},"RestoreInProgress":{"type":"boolean"}}},"SSEDescription":{"shape":"S32"}}},"S2n":{"type":"structure","members":{"LastIncreaseDateTime":{"type":"timestamp"},"LastDecreaseDateTime":{"type":"timestamp"},"NumberOfDecreasesToday":{"type":"long"},"ReadCapacityUnits":{"type":"long"},"WriteCapacityUnits":{"type":"long"}}},"S32":{"type":"structure","members":{"Status":{}}},"S36":{"type":"structure","members":{"BackupDetails":{"shape":"S1h"},"SourceTableDetails":{"type":"structure","required":["TableName","TableId","KeySchema","TableCreationDateTime","ProvisionedThroughput"],"members":{"TableName":{},"TableId":{},"TableArn":{},"TableSizeBytes":{"type":"long"},"KeySchema":{"shape":"S22"},"TableCreationDateTime":{"type":"timestamp"},"ProvisionedThroughput":{"shape":"S2d"},"ItemCount":{"type":"long"}}},"SourceTableFeatureDetails":{"type":"structure","members":{"LocalSecondaryIndexes":{"type":"list","member":{"type":"structure","members":{"IndexName":{},"KeySchema":{"shape":"S22"},"Projection":{"shape":"S27"}}}},"GlobalSecondaryIndexes":{"type":"list","member":{"type":"structure","members":{"IndexName":{},"KeySchema":{"shape":"S22"},"Projection":{"shape":"S27"},"ProvisionedThroughput":{"shape":"S2d"}}}},"StreamDescription":{"shape":"S2f"},"TimeToLiveDescription":{"shape":"S3f"},"SSEDescription":{"shape":"S32"}}}}},"S3f":{"type":"structure","members":{"TimeToLiveStatus":{},"AttributeName":{}}},"S3j":{"type":"map","key":{},"value":{"type":"structure","members":{"Value":{"shape":"S8"},"Exists":{"type":"boolean"},"ComparisonOperator":{},"AttributeValueList":{"shape":"S3n"}}}},"S3n":{"type":"list","member":{"shape":"S8"}},"S3r":{"type":"map","key":{},"value":{"shape":"S8"}},"S4w":{"type":"list","member":{"type":"structure","required":["Key","Value"],"members":{"Key":{},"Value":{}}}},"S55":{"type":"structure","required":["ComparisonOperator"],"members":{"AttributeValueList":{"shape":"S3n"},"ComparisonOperator":{}}},"S56":{"type":"map","key":{},"value":{"shape":"S55"}},"S63":{"type":"structure","required":["Enabled","AttributeName"],"members":{"Enabled":{"type":"boolean"},"AttributeName":{}}}}}
+module.exports = {"version":2,"waiters":{"TableExists":{"delay":20,"operation":"DescribeTable","maxAttempts":25,"acceptors":[{"expected":"ACTIVE","matcher":"path","state":"success","argument":"Table.TableStatus"},{"expected":"ResourceNotFoundException","matcher":"error","state":"retry"}]},"TableNotExists":{"delay":20,"operation":"DescribeTable","maxAttempts":25,"acceptors":[{"expected":"ResourceNotFoundException","matcher":"error","state":"success"}]}}}
 
 /***/ }),
 /* 556 */
 /***/ (function(module, exports) {
 
-module.exports = {"pagination":{"BatchGetItem":{"input_token":"RequestItems","output_token":"UnprocessedKeys"},"ListTables":{"input_token":"ExclusiveStartTableName","limit_key":"Limit","output_token":"LastEvaluatedTableName","result_key":"TableNames"},"Query":{"input_token":"ExclusiveStartKey","limit_key":"Limit","output_token":"LastEvaluatedKey","result_key":"Items"},"Scan":{"input_token":"ExclusiveStartKey","limit_key":"Limit","output_token":"LastEvaluatedKey","result_key":"Items"}}}
+module.exports = {"version":"2.0","metadata":{"apiVersion":"2012-08-10","endpointPrefix":"dynamodb","jsonVersion":"1.0","protocol":"json","serviceAbbreviation":"DynamoDB","serviceFullName":"Amazon DynamoDB","serviceId":"DynamoDB","signatureVersion":"v4","targetPrefix":"DynamoDB_20120810","uid":"dynamodb-2012-08-10"},"operations":{"BatchGetItem":{"input":{"type":"structure","required":["RequestItems"],"members":{"RequestItems":{"shape":"S2"},"ReturnConsumedCapacity":{}}},"output":{"type":"structure","members":{"Responses":{"type":"map","key":{},"value":{"shape":"Sr"}},"UnprocessedKeys":{"shape":"S2"},"ConsumedCapacity":{"shape":"St"}}}},"BatchWriteItem":{"input":{"type":"structure","required":["RequestItems"],"members":{"RequestItems":{"shape":"S10"},"ReturnConsumedCapacity":{},"ReturnItemCollectionMetrics":{}}},"output":{"type":"structure","members":{"UnprocessedItems":{"shape":"S10"},"ItemCollectionMetrics":{"type":"map","key":{},"value":{"type":"list","member":{"shape":"S1a"}}},"ConsumedCapacity":{"shape":"St"}}}},"CreateBackup":{"input":{"type":"structure","required":["TableName","BackupName"],"members":{"TableName":{},"BackupName":{}}},"output":{"type":"structure","members":{"BackupDetails":{"shape":"S1h"}}}},"CreateGlobalTable":{"input":{"type":"structure","required":["GlobalTableName","ReplicationGroup"],"members":{"GlobalTableName":{},"ReplicationGroup":{"shape":"S1n"}}},"output":{"type":"structure","members":{"GlobalTableDescription":{"shape":"S1r"}}}},"CreateTable":{"input":{"type":"structure","required":["AttributeDefinitions","TableName","KeySchema","ProvisionedThroughput"],"members":{"AttributeDefinitions":{"shape":"S1y"},"TableName":{},"KeySchema":{"shape":"S22"},"LocalSecondaryIndexes":{"type":"list","member":{"type":"structure","required":["IndexName","KeySchema","Projection"],"members":{"IndexName":{},"KeySchema":{"shape":"S22"},"Projection":{"shape":"S27"}}}},"GlobalSecondaryIndexes":{"type":"list","member":{"type":"structure","required":["IndexName","KeySchema","Projection","ProvisionedThroughput"],"members":{"IndexName":{},"KeySchema":{"shape":"S22"},"Projection":{"shape":"S27"},"ProvisionedThroughput":{"shape":"S2d"}}}},"ProvisionedThroughput":{"shape":"S2d"},"StreamSpecification":{"shape":"S2f"},"SSESpecification":{"type":"structure","required":["Enabled"],"members":{"Enabled":{"type":"boolean"}}}}},"output":{"type":"structure","members":{"TableDescription":{"shape":"S2l"}}}},"DeleteBackup":{"input":{"type":"structure","required":["BackupArn"],"members":{"BackupArn":{}}},"output":{"type":"structure","members":{"BackupDescription":{"shape":"S36"}}}},"DeleteItem":{"input":{"type":"structure","required":["TableName","Key"],"members":{"TableName":{},"Key":{"shape":"S6"},"Expected":{"shape":"S3j"},"ConditionalOperator":{},"ReturnValues":{},"ReturnConsumedCapacity":{},"ReturnItemCollectionMetrics":{},"ConditionExpression":{},"ExpressionAttributeNames":{"shape":"Sm"},"ExpressionAttributeValues":{"shape":"S3r"}}},"output":{"type":"structure","members":{"Attributes":{"shape":"Ss"},"ConsumedCapacity":{"shape":"Su"},"ItemCollectionMetrics":{"shape":"S1a"}}}},"DeleteTable":{"input":{"type":"structure","required":["TableName"],"members":{"TableName":{}}},"output":{"type":"structure","members":{"TableDescription":{"shape":"S2l"}}}},"DescribeBackup":{"input":{"type":"structure","required":["BackupArn"],"members":{"BackupArn":{}}},"output":{"type":"structure","members":{"BackupDescription":{"shape":"S36"}}}},"DescribeContinuousBackups":{"input":{"type":"structure","required":["TableName"],"members":{"TableName":{}}},"output":{"type":"structure","members":{"ContinuousBackupsDescription":{"type":"structure","required":["ContinuousBackupsStatus"],"members":{"ContinuousBackupsStatus":{}}}}}},"DescribeGlobalTable":{"input":{"type":"structure","required":["GlobalTableName"],"members":{"GlobalTableName":{}}},"output":{"type":"structure","members":{"GlobalTableDescription":{"shape":"S1r"}}}},"DescribeLimits":{"input":{"type":"structure","members":{}},"output":{"type":"structure","members":{"AccountMaxReadCapacityUnits":{"type":"long"},"AccountMaxWriteCapacityUnits":{"type":"long"},"TableMaxReadCapacityUnits":{"type":"long"},"TableMaxWriteCapacityUnits":{"type":"long"}}}},"DescribeTable":{"input":{"type":"structure","required":["TableName"],"members":{"TableName":{}}},"output":{"type":"structure","members":{"Table":{"shape":"S2l"}}}},"DescribeTimeToLive":{"input":{"type":"structure","required":["TableName"],"members":{"TableName":{}}},"output":{"type":"structure","members":{"TimeToLiveDescription":{"shape":"S3f"}}}},"GetItem":{"input":{"type":"structure","required":["TableName","Key"],"members":{"TableName":{},"Key":{"shape":"S6"},"AttributesToGet":{"shape":"Sj"},"ConsistentRead":{"type":"boolean"},"ReturnConsumedCapacity":{},"ProjectionExpression":{},"ExpressionAttributeNames":{"shape":"Sm"}}},"output":{"type":"structure","members":{"Item":{"shape":"Ss"},"ConsumedCapacity":{"shape":"Su"}}}},"ListBackups":{"input":{"type":"structure","members":{"TableName":{},"Limit":{"type":"integer"},"TimeRangeLowerBound":{"type":"timestamp"},"TimeRangeUpperBound":{"type":"timestamp"},"ExclusiveStartBackupArn":{}}},"output":{"type":"structure","members":{"BackupSummaries":{"type":"list","member":{"type":"structure","members":{"TableName":{},"TableId":{},"TableArn":{},"BackupArn":{},"BackupName":{},"BackupCreationDateTime":{"type":"timestamp"},"BackupStatus":{},"BackupSizeBytes":{"type":"long"}}}},"LastEvaluatedBackupArn":{}}}},"ListGlobalTables":{"input":{"type":"structure","members":{"ExclusiveStartGlobalTableName":{},"Limit":{"type":"integer"},"RegionName":{}}},"output":{"type":"structure","members":{"GlobalTables":{"type":"list","member":{"type":"structure","members":{"GlobalTableName":{},"ReplicationGroup":{"shape":"S1n"}}}},"LastEvaluatedGlobalTableName":{}}}},"ListTables":{"input":{"type":"structure","members":{"ExclusiveStartTableName":{},"Limit":{"type":"integer"}}},"output":{"type":"structure","members":{"TableNames":{"type":"list","member":{}},"LastEvaluatedTableName":{}}}},"ListTagsOfResource":{"input":{"type":"structure","required":["ResourceArn"],"members":{"ResourceArn":{},"NextToken":{}}},"output":{"type":"structure","members":{"Tags":{"shape":"S4w"},"NextToken":{}}}},"PutItem":{"input":{"type":"structure","required":["TableName","Item"],"members":{"TableName":{},"Item":{"shape":"S14"},"Expected":{"shape":"S3j"},"ReturnValues":{},"ReturnConsumedCapacity":{},"ReturnItemCollectionMetrics":{},"ConditionalOperator":{},"ConditionExpression":{},"ExpressionAttributeNames":{"shape":"Sm"},"ExpressionAttributeValues":{"shape":"S3r"}}},"output":{"type":"structure","members":{"Attributes":{"shape":"Ss"},"ConsumedCapacity":{"shape":"Su"},"ItemCollectionMetrics":{"shape":"S1a"}}}},"Query":{"input":{"type":"structure","required":["TableName"],"members":{"TableName":{},"IndexName":{},"Select":{},"AttributesToGet":{"shape":"Sj"},"Limit":{"type":"integer"},"ConsistentRead":{"type":"boolean"},"KeyConditions":{"type":"map","key":{},"value":{"shape":"S55"}},"QueryFilter":{"shape":"S56"},"ConditionalOperator":{},"ScanIndexForward":{"type":"boolean"},"ExclusiveStartKey":{"shape":"S6"},"ReturnConsumedCapacity":{},"ProjectionExpression":{},"FilterExpression":{},"KeyConditionExpression":{},"ExpressionAttributeNames":{"shape":"Sm"},"ExpressionAttributeValues":{"shape":"S3r"}}},"output":{"type":"structure","members":{"Items":{"shape":"Sr"},"Count":{"type":"integer"},"ScannedCount":{"type":"integer"},"LastEvaluatedKey":{"shape":"S6"},"ConsumedCapacity":{"shape":"Su"}}}},"RestoreTableFromBackup":{"input":{"type":"structure","required":["TargetTableName","BackupArn"],"members":{"TargetTableName":{},"BackupArn":{}}},"output":{"type":"structure","members":{"TableDescription":{"shape":"S2l"}}}},"Scan":{"input":{"type":"structure","required":["TableName"],"members":{"TableName":{},"IndexName":{},"AttributesToGet":{"shape":"Sj"},"Limit":{"type":"integer"},"Select":{},"ScanFilter":{"shape":"S56"},"ConditionalOperator":{},"ExclusiveStartKey":{"shape":"S6"},"ReturnConsumedCapacity":{},"TotalSegments":{"type":"integer"},"Segment":{"type":"integer"},"ProjectionExpression":{},"FilterExpression":{},"ExpressionAttributeNames":{"shape":"Sm"},"ExpressionAttributeValues":{"shape":"S3r"},"ConsistentRead":{"type":"boolean"}}},"output":{"type":"structure","members":{"Items":{"shape":"Sr"},"Count":{"type":"integer"},"ScannedCount":{"type":"integer"},"LastEvaluatedKey":{"shape":"S6"},"ConsumedCapacity":{"shape":"Su"}}}},"TagResource":{"input":{"type":"structure","required":["ResourceArn","Tags"],"members":{"ResourceArn":{},"Tags":{"shape":"S4w"}}}},"UntagResource":{"input":{"type":"structure","required":["ResourceArn","TagKeys"],"members":{"ResourceArn":{},"TagKeys":{"type":"list","member":{}}}}},"UpdateGlobalTable":{"input":{"type":"structure","required":["GlobalTableName","ReplicaUpdates"],"members":{"GlobalTableName":{},"ReplicaUpdates":{"type":"list","member":{"type":"structure","members":{"Create":{"type":"structure","required":["RegionName"],"members":{"RegionName":{}}},"Delete":{"type":"structure","required":["RegionName"],"members":{"RegionName":{}}}}}}}},"output":{"type":"structure","members":{"GlobalTableDescription":{"shape":"S1r"}}}},"UpdateItem":{"input":{"type":"structure","required":["TableName","Key"],"members":{"TableName":{},"Key":{"shape":"S6"},"AttributeUpdates":{"type":"map","key":{},"value":{"type":"structure","members":{"Value":{"shape":"S8"},"Action":{}}}},"Expected":{"shape":"S3j"},"ConditionalOperator":{},"ReturnValues":{},"ReturnConsumedCapacity":{},"ReturnItemCollectionMetrics":{},"UpdateExpression":{},"ConditionExpression":{},"ExpressionAttributeNames":{"shape":"Sm"},"ExpressionAttributeValues":{"shape":"S3r"}}},"output":{"type":"structure","members":{"Attributes":{"shape":"Ss"},"ConsumedCapacity":{"shape":"Su"},"ItemCollectionMetrics":{"shape":"S1a"}}}},"UpdateTable":{"input":{"type":"structure","required":["TableName"],"members":{"AttributeDefinitions":{"shape":"S1y"},"TableName":{},"ProvisionedThroughput":{"shape":"S2d"},"GlobalSecondaryIndexUpdates":{"type":"list","member":{"type":"structure","members":{"Update":{"type":"structure","required":["IndexName","ProvisionedThroughput"],"members":{"IndexName":{},"ProvisionedThroughput":{"shape":"S2d"}}},"Create":{"type":"structure","required":["IndexName","KeySchema","Projection","ProvisionedThroughput"],"members":{"IndexName":{},"KeySchema":{"shape":"S22"},"Projection":{"shape":"S27"},"ProvisionedThroughput":{"shape":"S2d"}}},"Delete":{"type":"structure","required":["IndexName"],"members":{"IndexName":{}}}}}},"StreamSpecification":{"shape":"S2f"}}},"output":{"type":"structure","members":{"TableDescription":{"shape":"S2l"}}}},"UpdateTimeToLive":{"input":{"type":"structure","required":["TableName","TimeToLiveSpecification"],"members":{"TableName":{},"TimeToLiveSpecification":{"shape":"S63"}}},"output":{"type":"structure","members":{"TimeToLiveSpecification":{"shape":"S63"}}}}},"shapes":{"S2":{"type":"map","key":{},"value":{"type":"structure","required":["Keys"],"members":{"Keys":{"type":"list","member":{"shape":"S6"}},"AttributesToGet":{"shape":"Sj"},"ConsistentRead":{"type":"boolean"},"ProjectionExpression":{},"ExpressionAttributeNames":{"shape":"Sm"}}}},"S6":{"type":"map","key":{},"value":{"shape":"S8"}},"S8":{"type":"structure","members":{"S":{},"N":{},"B":{"type":"blob"},"SS":{"type":"list","member":{}},"NS":{"type":"list","member":{}},"BS":{"type":"list","member":{"type":"blob"}},"M":{"type":"map","key":{},"value":{"shape":"S8"}},"L":{"type":"list","member":{"shape":"S8"}},"NULL":{"type":"boolean"},"BOOL":{"type":"boolean"}}},"Sj":{"type":"list","member":{}},"Sm":{"type":"map","key":{},"value":{}},"Sr":{"type":"list","member":{"shape":"Ss"}},"Ss":{"type":"map","key":{},"value":{"shape":"S8"}},"St":{"type":"list","member":{"shape":"Su"}},"Su":{"type":"structure","members":{"TableName":{},"CapacityUnits":{"type":"double"},"Table":{"shape":"Sw"},"LocalSecondaryIndexes":{"shape":"Sx"},"GlobalSecondaryIndexes":{"shape":"Sx"}}},"Sw":{"type":"structure","members":{"CapacityUnits":{"type":"double"}}},"Sx":{"type":"map","key":{},"value":{"shape":"Sw"}},"S10":{"type":"map","key":{},"value":{"type":"list","member":{"type":"structure","members":{"PutRequest":{"type":"structure","required":["Item"],"members":{"Item":{"shape":"S14"}}},"DeleteRequest":{"type":"structure","required":["Key"],"members":{"Key":{"shape":"S6"}}}}}}},"S14":{"type":"map","key":{},"value":{"shape":"S8"}},"S1a":{"type":"structure","members":{"ItemCollectionKey":{"type":"map","key":{},"value":{"shape":"S8"}},"SizeEstimateRangeGB":{"type":"list","member":{"type":"double"}}}},"S1h":{"type":"structure","required":["BackupArn","BackupName","BackupStatus","BackupCreationDateTime"],"members":{"BackupArn":{},"BackupName":{},"BackupSizeBytes":{"type":"long"},"BackupStatus":{},"BackupCreationDateTime":{"type":"timestamp"}}},"S1n":{"type":"list","member":{"type":"structure","members":{"RegionName":{}}}},"S1r":{"type":"structure","members":{"ReplicationGroup":{"type":"list","member":{"type":"structure","members":{"RegionName":{}}}},"GlobalTableArn":{},"CreationDateTime":{"type":"timestamp"},"GlobalTableStatus":{},"GlobalTableName":{}}},"S1y":{"type":"list","member":{"type":"structure","required":["AttributeName","AttributeType"],"members":{"AttributeName":{},"AttributeType":{}}}},"S22":{"type":"list","member":{"type":"structure","required":["AttributeName","KeyType"],"members":{"AttributeName":{},"KeyType":{}}}},"S27":{"type":"structure","members":{"ProjectionType":{},"NonKeyAttributes":{"type":"list","member":{}}}},"S2d":{"type":"structure","required":["ReadCapacityUnits","WriteCapacityUnits"],"members":{"ReadCapacityUnits":{"type":"long"},"WriteCapacityUnits":{"type":"long"}}},"S2f":{"type":"structure","members":{"StreamEnabled":{"type":"boolean"},"StreamViewType":{}}},"S2l":{"type":"structure","members":{"AttributeDefinitions":{"shape":"S1y"},"TableName":{},"KeySchema":{"shape":"S22"},"TableStatus":{},"CreationDateTime":{"type":"timestamp"},"ProvisionedThroughput":{"shape":"S2n"},"TableSizeBytes":{"type":"long"},"ItemCount":{"type":"long"},"TableArn":{},"TableId":{},"LocalSecondaryIndexes":{"type":"list","member":{"type":"structure","members":{"IndexName":{},"KeySchema":{"shape":"S22"},"Projection":{"shape":"S27"},"IndexSizeBytes":{"type":"long"},"ItemCount":{"type":"long"},"IndexArn":{}}}},"GlobalSecondaryIndexes":{"type":"list","member":{"type":"structure","members":{"IndexName":{},"KeySchema":{"shape":"S22"},"Projection":{"shape":"S27"},"IndexStatus":{},"Backfilling":{"type":"boolean"},"ProvisionedThroughput":{"shape":"S2n"},"IndexSizeBytes":{"type":"long"},"ItemCount":{"type":"long"},"IndexArn":{}}}},"StreamSpecification":{"shape":"S2f"},"LatestStreamLabel":{},"LatestStreamArn":{},"RestoreSummary":{"type":"structure","required":["RestoreDateTime","RestoreInProgress"],"members":{"SourceBackupArn":{},"SourceTableArn":{},"RestoreDateTime":{"type":"timestamp"},"RestoreInProgress":{"type":"boolean"}}},"SSEDescription":{"shape":"S32"}}},"S2n":{"type":"structure","members":{"LastIncreaseDateTime":{"type":"timestamp"},"LastDecreaseDateTime":{"type":"timestamp"},"NumberOfDecreasesToday":{"type":"long"},"ReadCapacityUnits":{"type":"long"},"WriteCapacityUnits":{"type":"long"}}},"S32":{"type":"structure","members":{"Status":{}}},"S36":{"type":"structure","members":{"BackupDetails":{"shape":"S1h"},"SourceTableDetails":{"type":"structure","required":["TableName","TableId","KeySchema","TableCreationDateTime","ProvisionedThroughput"],"members":{"TableName":{},"TableId":{},"TableArn":{},"TableSizeBytes":{"type":"long"},"KeySchema":{"shape":"S22"},"TableCreationDateTime":{"type":"timestamp"},"ProvisionedThroughput":{"shape":"S2d"},"ItemCount":{"type":"long"}}},"SourceTableFeatureDetails":{"type":"structure","members":{"LocalSecondaryIndexes":{"type":"list","member":{"type":"structure","members":{"IndexName":{},"KeySchema":{"shape":"S22"},"Projection":{"shape":"S27"}}}},"GlobalSecondaryIndexes":{"type":"list","member":{"type":"structure","members":{"IndexName":{},"KeySchema":{"shape":"S22"},"Projection":{"shape":"S27"},"ProvisionedThroughput":{"shape":"S2d"}}}},"StreamDescription":{"shape":"S2f"},"TimeToLiveDescription":{"shape":"S3f"},"SSEDescription":{"shape":"S32"}}}}},"S3f":{"type":"structure","members":{"TimeToLiveStatus":{},"AttributeName":{}}},"S3j":{"type":"map","key":{},"value":{"type":"structure","members":{"Value":{"shape":"S8"},"Exists":{"type":"boolean"},"ComparisonOperator":{},"AttributeValueList":{"shape":"S3n"}}}},"S3n":{"type":"list","member":{"shape":"S8"}},"S3r":{"type":"map","key":{},"value":{"shape":"S8"}},"S4w":{"type":"list","member":{"type":"structure","required":["Key","Value"],"members":{"Key":{},"Value":{}}}},"S55":{"type":"structure","required":["ComparisonOperator"],"members":{"AttributeValueList":{"shape":"S3n"},"ComparisonOperator":{}}},"S56":{"type":"map","key":{},"value":{"shape":"S55"}},"S63":{"type":"structure","required":["Enabled","AttributeName"],"members":{"Enabled":{"type":"boolean"},"AttributeName":{}}}}}
 
 /***/ }),
 /* 557 */
 /***/ (function(module, exports) {
 
-module.exports = {"version":2,"waiters":{"TableExists":{"delay":20,"operation":"DescribeTable","maxAttempts":25,"acceptors":[{"expected":"ACTIVE","matcher":"path","state":"success","argument":"Table.TableStatus"},{"expected":"ResourceNotFoundException","matcher":"error","state":"retry"}]},"TableNotExists":{"delay":20,"operation":"DescribeTable","maxAttempts":25,"acceptors":[{"expected":"ResourceNotFoundException","matcher":"error","state":"success"}]}}}
+module.exports = {"pagination":{"BatchGetItem":{"input_token":"RequestItems","output_token":"UnprocessedKeys"},"ListTables":{"input_token":"ExclusiveStartTableName","limit_key":"Limit","output_token":"LastEvaluatedTableName","result_key":"TableNames"},"Query":{"input_token":"ExclusiveStartKey","limit_key":"Limit","output_token":"LastEvaluatedKey","result_key":"Items"},"Scan":{"input_token":"ExclusiveStartKey","limit_key":"Limit","output_token":"LastEvaluatedKey","result_key":"Items"}}}
 
 /***/ }),
 /* 558 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, exports) {
 
-"use strict";
-
-Object.defineProperty(exports, "__esModule", { value: true });
-var DynamoBotStorage_1 = __webpack_require__(559);
-exports.DynamoBotStorage = DynamoBotStorage_1.DynamoBotStorage;
-//# sourceMappingURL=index.js.map
+module.exports = {"version":2,"waiters":{"TableExists":{"delay":20,"operation":"DescribeTable","maxAttempts":25,"acceptors":[{"expected":"ACTIVE","matcher":"path","state":"success","argument":"Table.TableStatus"},{"expected":"ResourceNotFoundException","matcher":"error","state":"retry"}]},"TableNotExists":{"delay":20,"operation":"DescribeTable","maxAttempts":25,"acceptors":[{"expected":"ResourceNotFoundException","matcher":"error","state":"success"}]}}}
 
 /***/ }),
 /* 559 */
@@ -72388,8 +72392,19 @@ exports.DynamoBotStorage = DynamoBotStorage_1.DynamoBotStorage;
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
+var DynamoBotStorage_1 = __webpack_require__(560);
+exports.DynamoBotStorage = DynamoBotStorage_1.DynamoBotStorage;
+//# sourceMappingURL=index.js.map
+
+/***/ }),
+/* 560 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
 const crypto_1 = __webpack_require__(5);
-const utils_1 = __webpack_require__(560);
+const utils_1 = __webpack_require__(561);
 class DynamoBotStorage {
     constructor(dynamoClient, settings) {
         this.dynamoClient = dynamoClient;
@@ -72536,7 +72551,7 @@ exports.DynamoBotStorage = DynamoBotStorage;
 //# sourceMappingURL=DynamoBotStorage.js.map
 
 /***/ }),
-/* 560 */
+/* 561 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -72556,29 +72571,30 @@ exports.validateTTLSettings = validateTTLSettings;
 //# sourceMappingURL=utils.js.map
 
 /***/ }),
-/* 561 */
-/***/ (function(module, exports) {
-
-module.exports = {
-    channelId: "1538409217",
-    channelSecret: "09eb20efa17e86cdc32e73125db35ff2",
-    channelAccessToken: "0d7vnHNmb2rbCOJe+Yihqkzf53S4FmuX/joTIfhRZToPS13+OOtb+X8X3WiNT9QDcMoSMxQk6Dcoj6WzdL+mInImFcemnBHHLXjqLb54tFpv9GpPPQ6nyBus8P7I8vIXIZxDPOv+/xg84s8UdzPTqAdB04t89/1O/w1cDnyilFU="
-}
-// module.exports = {
-//     channelId: "1568775940",
-//     channelSecret: "9a0be081372faa6a907bae96f276b746",
-//     channelAccessToken: "3lbbO2FMHaE6l3FOjK4Z2Yl1Xge4gdwTIKnbHUaBzLKl18d3aCL05bSXfDXVjEKEYkcpyQqTd5M+eaBeSuIdQxK8rgb9BlIPoB82ZCT/B/V/gcw0dtQ4cMEc79Lhmvzd+oDIEFahIWg63daZ20azHgdB04t89/1O/w1cDnyilFU="
-// }
-
-/***/ }),
 /* 562 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
 Object.defineProperty(exports, "__esModule", { value: true });
 const builder = __webpack_require__(118);
-var linebot = __webpack_require__(382);
+var config = __webpack_require__(195);
+var linebot = __webpack_require__(383);
+var connector = new linebot.LineConnector({
+    hasPushApi: true,
+    // your line
+    channelId: process.env.channelId || config.channelId,
+    channelSecret: process.env.channelSecret || config.channelSecret,
+    channelAccessToken: process.env.channelAccessToken || config.channelAccessToken
+});
 exports.default = (bot) => {
     function sendProactiveMessage(address) {
         var msg = new builder.Message().address(address);
@@ -72588,14 +72604,60 @@ exports.default = (bot) => {
     }
     bot.dialog("/", [
         function (s) {
-            var savedAddress = s.message.address;
-            // console.log("savedAddress", savedAddress)
-            s.send("我是小書");
-            setTimeout(() => {
-                sendProactiveMessage(savedAddress);
-            }, 5000);
+            // var savedAddress = s.message.address;
+            // // console.log("savedAddress", savedAddress)
+            // s.send("我是小書");
+            // setTimeout(() => {
+            //     sendProactiveMessage(savedAddress);
+            // }, 5000);
         }
     ]);
+    bot.dialog('help', function (session, args, next) {
+        session.endDialog("我是小書");
+    })
+        .triggerAction({
+        matches: /^help$/i,
+        onSelectAction: (session, args, next) => {
+            // Add the help dialog to the dialog stack 
+            // (override the default behavior of replacing the stack)
+            session.beginDialog(args.action, args);
+        }
+    });
+    bot.on('conversationUpdate', function (message) {
+        return __awaiter(this, void 0, void 0, function* () {
+            // detect event
+            console.log("conversationUpdate");
+            switch (message.text) {
+                case 'follow':
+                    break;
+                case 'unfollow':
+                    break;
+                case 'join':
+                    break;
+                case 'leave':
+                    break;
+            }
+            var isGroup = message.address.conversation.isGroup;
+            if (isGroup) {
+                bot.beginDialog(message.address, "helloGroup");
+            }
+            else {
+                bot.beginDialog(message.address, "helloUser");
+            }
+        });
+    });
+    bot.dialog("helloGroup", [(s) => __awaiter(this, void 0, void 0, function* () {
+            s.send("大家好！感謝將我加進群裡！");
+            s.send("要和我互動一定要加我為好友！");
+            s.send("不然我是收不到你的訊息的！");
+            s.endDialog("謝謝大家！");
+        })]);
+    bot.dialog("helloUser", [(s) => __awaiter(this, void 0, void 0, function* () {
+            // console.log(s.message)
+            let u = yield connector.getUserProfile(s.message.user.id);
+            s.send(u.displayName + "好！感謝將我加進群裡！");
+            s.endDialog("謝謝 " + u.displayName);
+        })]);
 };
 
 
@@ -72726,15 +72788,15 @@ exports.OpenIdMetadata = OpenIdMetadata;
 
 var net = __webpack_require__(57);
 var urlParse = __webpack_require__(10).parse;
-var pubsuffix = __webpack_require__(200);
-var Store = __webpack_require__(202).Store;
+var pubsuffix = __webpack_require__(201);
+var Store = __webpack_require__(203).Store;
 var MemoryCookieStore = __webpack_require__(565).MemoryCookieStore;
-var pathMatch = __webpack_require__(204).pathMatch;
+var pathMatch = __webpack_require__(205).pathMatch;
 var VERSION = __webpack_require__(566).version;
 
 var punycode;
 try {
-  punycode = __webpack_require__(201);
+  punycode = __webpack_require__(202);
 } catch(e) {
   console.warn("cookie: can't load punycode; won't use punycode for domain normalization");
 }
@@ -74030,7 +74092,7 @@ module.exports = {
   pathMatch: pathMatch,
   getPublicSuffix: pubsuffix.getPublicSuffix,
   cookieCompare: cookieCompare,
-  permuteDomain: __webpack_require__(203).permuteDomain,
+  permuteDomain: __webpack_require__(204).permuteDomain,
   permutePath: permutePath,
   canonicalDomain: canonicalDomain
 };
@@ -74072,9 +74134,9 @@ module.exports = {
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-var Store = __webpack_require__(202).Store;
-var permuteDomain = __webpack_require__(203).permuteDomain;
-var pathMatch = __webpack_require__(204).pathMatch;
+var Store = __webpack_require__(203).Store;
+var permuteDomain = __webpack_require__(204).permuteDomain;
+var pathMatch = __webpack_require__(205).pathMatch;
 var util = __webpack_require__(4);
 
 function MemoryCookieStore() {
@@ -74269,16 +74331,16 @@ var hawk = __webpack_require__(569)
 var aws2 = __webpack_require__(582)
 var aws4 = __webpack_require__(583)
 var httpSignature = __webpack_require__(585)
-var mime = __webpack_require__(217)
+var mime = __webpack_require__(218)
 var stringstream = __webpack_require__(601)
 var caseless = __webpack_require__(133)
 var ForeverAgent = __webpack_require__(602)
 var FormData = __webpack_require__(603)
 var extend = __webpack_require__(125)
-var isstream = __webpack_require__(226)
+var isstream = __webpack_require__(227)
 var isTypedArray = __webpack_require__(610).strict
 var helpers = __webpack_require__(126)
-var cookies = __webpack_require__(199)
+var cookies = __webpack_require__(200)
 var getProxyFromURI = __webpack_require__(611)
 var Querystring = __webpack_require__(612).Querystring
 var Har = __webpack_require__(615).Har
@@ -75821,7 +75883,7 @@ module.exports = Request
 // Export sub-modules
 
 exports.error = exports.Error = __webpack_require__(127);
-exports.sntp = __webpack_require__(205);
+exports.sntp = __webpack_require__(206);
 
 exports.server = __webpack_require__(575);
 exports.client = __webpack_require__(581);
@@ -78163,8 +78225,8 @@ internals.safeCharCodes = (function () {
 // Load modules
 
 const Boom = __webpack_require__(127);
-const Hoek = __webpack_require__(207);
-const Cryptiles = __webpack_require__(208);
+const Hoek = __webpack_require__(208);
+const Cryptiles = __webpack_require__(209);
 const Crypto = __webpack_require__(128);
 const Utils = __webpack_require__(85);
 
@@ -80521,8 +80583,8 @@ module.exports = {"_args":[["hawk@6.0.2","/Users/chienhunglin/Dropbox/linebot/on
 // Load modules
 
 const Url = __webpack_require__(10);
-const Hoek = __webpack_require__(207);
-const Cryptiles = __webpack_require__(208);
+const Hoek = __webpack_require__(208);
+const Cryptiles = __webpack_require__(209);
 const Crypto = __webpack_require__(128);
 const Utils = __webpack_require__(85);
 
@@ -83058,7 +83120,7 @@ function getCertType(key) {
 
 // Copyright 2016 Joyent, Inc.
 
-var x509 = __webpack_require__(215);
+var x509 = __webpack_require__(216);
 
 module.exports = {
 	read: read,
@@ -83553,7 +83615,7 @@ module.exports = {
 var mod_assert = __webpack_require__(6);
 var mod_util = __webpack_require__(4);
 
-var mod_extsprintf = __webpack_require__(216);
+var mod_extsprintf = __webpack_require__(217);
 var mod_verror = __webpack_require__(595);
 var mod_jsonschema = __webpack_require__(597);
 
@@ -84294,7 +84356,7 @@ function mergeObjects(provided, overrides, defaults)
 var mod_assertplus = __webpack_require__(6);
 var mod_util = __webpack_require__(4);
 
-var mod_extsprintf = __webpack_require__(216);
+var mod_extsprintf = __webpack_require__(217);
 var mod_isError = __webpack_require__(596).isError;
 var sprintf = mod_extsprintf.sprintf;
 
@@ -85368,7 +85430,7 @@ ForeverAgent.SSL = ForeverAgentSSL
 var util = __webpack_require__(4)
   , Agent = __webpack_require__(31).Agent
   , net = __webpack_require__(57)
-  , tls = __webpack_require__(218)
+  , tls = __webpack_require__(219)
   , AgentSSL = __webpack_require__(38).Agent
   
 function getConnectionName(host, port) {  
@@ -85506,14 +85568,14 @@ function createConnectionSSL (port, host, options) {
 /* 603 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var CombinedStream = __webpack_require__(219);
+var CombinedStream = __webpack_require__(220);
 var util = __webpack_require__(4);
 var path = __webpack_require__(16);
 var http = __webpack_require__(31);
 var https = __webpack_require__(38);
 var parseUrl = __webpack_require__(10).parse;
 var fs = __webpack_require__(37);
-var mime = __webpack_require__(217);
+var mime = __webpack_require__(218);
 var asynckit = __webpack_require__(605);
 var populate = __webpack_require__(609);
 
@@ -86086,7 +86148,7 @@ module.exports =
 {
   parallel      : __webpack_require__(606),
   serial        : __webpack_require__(608),
-  serialOrdered : __webpack_require__(225)
+  serialOrdered : __webpack_require__(226)
 };
 
 
@@ -86094,9 +86156,9 @@ module.exports =
 /* 606 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var iterate    = __webpack_require__(220)
-  , initState  = __webpack_require__(223)
-  , terminator = __webpack_require__(224)
+var iterate    = __webpack_require__(221)
+  , initState  = __webpack_require__(224)
+  , terminator = __webpack_require__(225)
   ;
 
 // Public API
@@ -86175,7 +86237,7 @@ function defer(fn)
 /* 608 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var serialOrdered = __webpack_require__(225);
+var serialOrdered = __webpack_require__(226);
 
 // Public API
 module.exports = serial;
@@ -86407,8 +86469,8 @@ exports.Querystring = Querystring
 "use strict";
 
 
-var utils = __webpack_require__(227);
-var formats = __webpack_require__(228);
+var utils = __webpack_require__(228);
+var formats = __webpack_require__(229);
 
 var arrayPrefixGenerators = {
     brackets: function brackets(prefix) { // eslint-disable-line func-name-matching
@@ -86624,7 +86686,7 @@ module.exports = function (object, opts) {
 "use strict";
 
 
-var utils = __webpack_require__(227);
+var utils = __webpack_require__(228);
 
 var has = Object.prototype.hasOwnProperty;
 
@@ -87121,14 +87183,14 @@ exports.timings = function (data) {
 var compileSchema = __webpack_require__(618)
   , resolve = __webpack_require__(135)
   , Cache = __webpack_require__(621)
-  , SchemaObject = __webpack_require__(229)
-  , stableStringify = __webpack_require__(230)
+  , SchemaObject = __webpack_require__(230)
+  , stableStringify = __webpack_require__(231)
   , formats = __webpack_require__(622)
   , rules = __webpack_require__(623)
   , $dataMetaSchema = __webpack_require__(642)
   , patternGroups = __webpack_require__(643)
   , util = __webpack_require__(47)
-  , co = __webpack_require__(232);
+  , co = __webpack_require__(233);
 
 module.exports = Ajv;
 
@@ -87630,15 +87692,15 @@ function noop() {}
 var resolve = __webpack_require__(135)
   , util = __webpack_require__(47)
   , errorClasses = __webpack_require__(137)
-  , stableStringify = __webpack_require__(230);
+  , stableStringify = __webpack_require__(231);
 
-var validateGenerator = __webpack_require__(231);
+var validateGenerator = __webpack_require__(232);
 
 /**
  * Functions below are used inside compiled validations function
  */
 
-var co = __webpack_require__(232);
+var co = __webpack_require__(233);
 var ucs2length = util.ucs2length;
 var equal = __webpack_require__(136);
 
@@ -88380,14 +88442,14 @@ module.exports = {
   'enum': __webpack_require__(631),
   format: __webpack_require__(632),
   items: __webpack_require__(633),
-  maximum: __webpack_require__(233),
-  minimum: __webpack_require__(233),
-  maxItems: __webpack_require__(234),
-  minItems: __webpack_require__(234),
-  maxLength: __webpack_require__(235),
-  minLength: __webpack_require__(235),
-  maxProperties: __webpack_require__(236),
-  minProperties: __webpack_require__(236),
+  maximum: __webpack_require__(234),
+  minimum: __webpack_require__(234),
+  maxItems: __webpack_require__(235),
+  minItems: __webpack_require__(235),
+  maxLength: __webpack_require__(236),
+  minLength: __webpack_require__(236),
+  maxProperties: __webpack_require__(237),
+  minProperties: __webpack_require__(237),
   multipleOf: __webpack_require__(634),
   not: __webpack_require__(635),
   oneOf: __webpack_require__(636),
@@ -88396,7 +88458,7 @@ module.exports = {
   propertyNames: __webpack_require__(639),
   required: __webpack_require__(640),
   uniqueItems: __webpack_require__(641),
-  validate: __webpack_require__(231)
+  validate: __webpack_require__(232)
 };
 
 
@@ -91527,8 +91589,8 @@ exports.Auth = Auth
 /* 670 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var rng = __webpack_require__(237);
-var bytesToUuid = __webpack_require__(238);
+var rng = __webpack_require__(238);
+var bytesToUuid = __webpack_require__(239);
 
 // **`v1()` - Generate time-based UUID**
 //
@@ -91642,8 +91704,8 @@ module.exports = v1;
 /* 671 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var rng = __webpack_require__(237);
-var bytesToUuid = __webpack_require__(238);
+var rng = __webpack_require__(238);
+var bytesToUuid = __webpack_require__(239);
 
 function v4(options, buf, offset) {
   var i = buf && offset || 0;
@@ -91978,8 +92040,8 @@ exports.generateBase = generateBase
 
 
 var uuid = __webpack_require__(138)
-var CombinedStream = __webpack_require__(219)
-var isstream = __webpack_require__(226)
+var CombinedStream = __webpack_require__(220)
+var isstream = __webpack_require__(227)
 var Buffer = __webpack_require__(33).Buffer
 
 function Multipart (request) {
@@ -92440,7 +92502,7 @@ exports.Tunnel = Tunnel
 
 
 var net = __webpack_require__(57)
-  , tls = __webpack_require__(218)
+  , tls = __webpack_require__(219)
   , http = __webpack_require__(31)
   , https = __webpack_require__(38)
   , events = __webpack_require__(46)
@@ -92871,12 +92933,12 @@ exports.default = padString;
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = {
-  decode: __webpack_require__(239),
+  decode: __webpack_require__(240),
   verify: __webpack_require__(688),
   sign: __webpack_require__(689),
   JsonWebTokenError: __webpack_require__(90),
-  NotBeforeError: __webpack_require__(243),
-  TokenExpiredError: __webpack_require__(244),
+  NotBeforeError: __webpack_require__(244),
+  TokenExpiredError: __webpack_require__(245),
 };
 
 
@@ -92886,10 +92948,10 @@ module.exports = {
 
 /*global module*/
 var base64url = __webpack_require__(63);
-var DataStream = __webpack_require__(240);
-var jwa = __webpack_require__(241);
+var DataStream = __webpack_require__(241);
+var jwa = __webpack_require__(242);
 var Stream = __webpack_require__(9);
-var toString = __webpack_require__(242);
+var toString = __webpack_require__(243);
 var util = __webpack_require__(4);
 
 function jwsSecuredInput(header, payload, encoding) {
@@ -93227,10 +93289,10 @@ module.exports = getParamBytesForAlg;
 
 /*global module*/
 var base64url = __webpack_require__(63);
-var DataStream = __webpack_require__(240);
-var jwa = __webpack_require__(241);
+var DataStream = __webpack_require__(241);
+var jwa = __webpack_require__(242);
 var Stream = __webpack_require__(9);
-var toString = __webpack_require__(242);
+var toString = __webpack_require__(243);
 var util = __webpack_require__(4);
 var JWS_REGEX = /^[a-zA-Z0-9\-_]+?\.[a-zA-Z0-9\-_]+?\.([a-zA-Z0-9\-_]+)?$/;
 
@@ -93352,12 +93414,12 @@ module.exports = VerifyStream;
 /***/ (function(module, exports, __webpack_require__) {
 
 var JsonWebTokenError = __webpack_require__(90);
-var NotBeforeError    = __webpack_require__(243);
-var TokenExpiredError = __webpack_require__(244);
-var decode            = __webpack_require__(239);
+var NotBeforeError    = __webpack_require__(244);
+var TokenExpiredError = __webpack_require__(245);
+var decode            = __webpack_require__(240);
 var jws               = __webpack_require__(139);
-var ms                = __webpack_require__(245);
-var xtend             = __webpack_require__(246);
+var ms                = __webpack_require__(246);
+var xtend             = __webpack_require__(247);
 
 module.exports = function (jwtString, secretOrPublicKey, options, callback) {
   if ((typeof options === 'function') && !callback) {
@@ -93540,7 +93602,7 @@ module.exports = function (jwtString, secretOrPublicKey, options, callback) {
 
 var Joi = __webpack_require__(690);
 var timespan = __webpack_require__(701);
-var xtend = __webpack_require__(246);
+var xtend = __webpack_require__(247);
 var jws = __webpack_require__(139);
 var once = __webpack_require__(702);
 
@@ -93712,12 +93774,12 @@ var Ref = __webpack_require__(42);
 var internals = {
     alternatives: __webpack_require__(142),
     array: __webpack_require__(699),
-    boolean: __webpack_require__(368),
+    boolean: __webpack_require__(369),
     binary: __webpack_require__(700),
     date: __webpack_require__(140),
-    number: __webpack_require__(367),
-    object: __webpack_require__(369),
-    string: __webpack_require__(365)
+    number: __webpack_require__(368),
+    object: __webpack_require__(370),
+    string: __webpack_require__(366)
 };
 
 
@@ -94128,244 +94190,244 @@ exports.errors = {
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
-	"./af": 247,
-	"./af.js": 247,
-	"./ar": 248,
-	"./ar-dz": 249,
-	"./ar-dz.js": 249,
-	"./ar-kw": 250,
-	"./ar-kw.js": 250,
-	"./ar-ly": 251,
-	"./ar-ly.js": 251,
-	"./ar-ma": 252,
-	"./ar-ma.js": 252,
-	"./ar-sa": 253,
-	"./ar-sa.js": 253,
-	"./ar-tn": 254,
-	"./ar-tn.js": 254,
-	"./ar.js": 248,
-	"./az": 255,
-	"./az.js": 255,
-	"./be": 256,
-	"./be.js": 256,
-	"./bg": 257,
-	"./bg.js": 257,
-	"./bm": 258,
-	"./bm.js": 258,
-	"./bn": 259,
-	"./bn.js": 259,
-	"./bo": 260,
-	"./bo.js": 260,
-	"./br": 261,
-	"./br.js": 261,
-	"./bs": 262,
-	"./bs.js": 262,
-	"./ca": 263,
-	"./ca.js": 263,
-	"./cs": 264,
-	"./cs.js": 264,
-	"./cv": 265,
-	"./cv.js": 265,
-	"./cy": 266,
-	"./cy.js": 266,
-	"./da": 267,
-	"./da.js": 267,
-	"./de": 268,
-	"./de-at": 269,
-	"./de-at.js": 269,
-	"./de-ch": 270,
-	"./de-ch.js": 270,
-	"./de.js": 268,
-	"./dv": 271,
-	"./dv.js": 271,
-	"./el": 272,
-	"./el.js": 272,
-	"./en-au": 273,
-	"./en-au.js": 273,
-	"./en-ca": 274,
-	"./en-ca.js": 274,
-	"./en-gb": 275,
-	"./en-gb.js": 275,
-	"./en-ie": 276,
-	"./en-ie.js": 276,
-	"./en-nz": 277,
-	"./en-nz.js": 277,
-	"./eo": 278,
-	"./eo.js": 278,
-	"./es": 279,
-	"./es-do": 280,
-	"./es-do.js": 280,
-	"./es-us": 281,
-	"./es-us.js": 281,
-	"./es.js": 279,
-	"./et": 282,
-	"./et.js": 282,
-	"./eu": 283,
-	"./eu.js": 283,
-	"./fa": 284,
-	"./fa.js": 284,
-	"./fi": 285,
-	"./fi.js": 285,
-	"./fo": 286,
-	"./fo.js": 286,
+	"./af": 248,
+	"./af.js": 248,
+	"./ar": 249,
+	"./ar-dz": 250,
+	"./ar-dz.js": 250,
+	"./ar-kw": 251,
+	"./ar-kw.js": 251,
+	"./ar-ly": 252,
+	"./ar-ly.js": 252,
+	"./ar-ma": 253,
+	"./ar-ma.js": 253,
+	"./ar-sa": 254,
+	"./ar-sa.js": 254,
+	"./ar-tn": 255,
+	"./ar-tn.js": 255,
+	"./ar.js": 249,
+	"./az": 256,
+	"./az.js": 256,
+	"./be": 257,
+	"./be.js": 257,
+	"./bg": 258,
+	"./bg.js": 258,
+	"./bm": 259,
+	"./bm.js": 259,
+	"./bn": 260,
+	"./bn.js": 260,
+	"./bo": 261,
+	"./bo.js": 261,
+	"./br": 262,
+	"./br.js": 262,
+	"./bs": 263,
+	"./bs.js": 263,
+	"./ca": 264,
+	"./ca.js": 264,
+	"./cs": 265,
+	"./cs.js": 265,
+	"./cv": 266,
+	"./cv.js": 266,
+	"./cy": 267,
+	"./cy.js": 267,
+	"./da": 268,
+	"./da.js": 268,
+	"./de": 269,
+	"./de-at": 270,
+	"./de-at.js": 270,
+	"./de-ch": 271,
+	"./de-ch.js": 271,
+	"./de.js": 269,
+	"./dv": 272,
+	"./dv.js": 272,
+	"./el": 273,
+	"./el.js": 273,
+	"./en-au": 274,
+	"./en-au.js": 274,
+	"./en-ca": 275,
+	"./en-ca.js": 275,
+	"./en-gb": 276,
+	"./en-gb.js": 276,
+	"./en-ie": 277,
+	"./en-ie.js": 277,
+	"./en-nz": 278,
+	"./en-nz.js": 278,
+	"./eo": 279,
+	"./eo.js": 279,
+	"./es": 280,
+	"./es-do": 281,
+	"./es-do.js": 281,
+	"./es-us": 282,
+	"./es-us.js": 282,
+	"./es.js": 280,
+	"./et": 283,
+	"./et.js": 283,
+	"./eu": 284,
+	"./eu.js": 284,
+	"./fa": 285,
+	"./fa.js": 285,
+	"./fi": 286,
+	"./fi.js": 286,
+	"./fo": 287,
+	"./fo.js": 287,
 	"./fr": 141,
-	"./fr-ca": 287,
-	"./fr-ca.js": 287,
-	"./fr-ch": 288,
-	"./fr-ch.js": 288,
+	"./fr-ca": 288,
+	"./fr-ca.js": 288,
+	"./fr-ch": 289,
+	"./fr-ch.js": 289,
 	"./fr.js": 141,
-	"./fy": 289,
-	"./fy.js": 289,
-	"./gd": 290,
-	"./gd.js": 290,
-	"./gl": 291,
-	"./gl.js": 291,
-	"./gom-latn": 292,
-	"./gom-latn.js": 292,
-	"./gu": 293,
-	"./gu.js": 293,
-	"./he": 294,
-	"./he.js": 294,
-	"./hi": 295,
-	"./hi.js": 295,
-	"./hr": 296,
-	"./hr.js": 296,
-	"./hu": 297,
-	"./hu.js": 297,
-	"./hy-am": 298,
-	"./hy-am.js": 298,
-	"./id": 299,
-	"./id.js": 299,
-	"./is": 300,
-	"./is.js": 300,
-	"./it": 301,
-	"./it.js": 301,
-	"./ja": 302,
-	"./ja.js": 302,
-	"./jv": 303,
-	"./jv.js": 303,
-	"./ka": 304,
-	"./ka.js": 304,
-	"./kk": 305,
-	"./kk.js": 305,
-	"./km": 306,
-	"./km.js": 306,
-	"./kn": 307,
-	"./kn.js": 307,
-	"./ko": 308,
-	"./ko.js": 308,
-	"./ky": 309,
-	"./ky.js": 309,
-	"./lb": 310,
-	"./lb.js": 310,
-	"./lo": 311,
-	"./lo.js": 311,
-	"./lt": 312,
-	"./lt.js": 312,
-	"./lv": 313,
-	"./lv.js": 313,
-	"./me": 314,
-	"./me.js": 314,
-	"./mi": 315,
-	"./mi.js": 315,
-	"./mk": 316,
-	"./mk.js": 316,
-	"./ml": 317,
-	"./ml.js": 317,
-	"./mr": 318,
-	"./mr.js": 318,
-	"./ms": 319,
-	"./ms-my": 320,
-	"./ms-my.js": 320,
-	"./ms.js": 319,
-	"./mt": 321,
-	"./mt.js": 321,
-	"./my": 322,
-	"./my.js": 322,
-	"./nb": 323,
-	"./nb.js": 323,
-	"./ne": 324,
-	"./ne.js": 324,
-	"./nl": 325,
-	"./nl-be": 326,
-	"./nl-be.js": 326,
-	"./nl.js": 325,
-	"./nn": 327,
-	"./nn.js": 327,
-	"./pa-in": 328,
-	"./pa-in.js": 328,
-	"./pl": 329,
-	"./pl.js": 329,
-	"./pt": 330,
-	"./pt-br": 331,
-	"./pt-br.js": 331,
-	"./pt.js": 330,
-	"./ro": 332,
-	"./ro.js": 332,
-	"./ru": 333,
-	"./ru.js": 333,
-	"./sd": 334,
-	"./sd.js": 334,
-	"./se": 335,
-	"./se.js": 335,
-	"./si": 336,
-	"./si.js": 336,
-	"./sk": 337,
-	"./sk.js": 337,
-	"./sl": 338,
-	"./sl.js": 338,
-	"./sq": 339,
-	"./sq.js": 339,
-	"./sr": 340,
-	"./sr-cyrl": 341,
-	"./sr-cyrl.js": 341,
-	"./sr.js": 340,
-	"./ss": 342,
-	"./ss.js": 342,
-	"./sv": 343,
-	"./sv.js": 343,
-	"./sw": 344,
-	"./sw.js": 344,
-	"./ta": 345,
-	"./ta.js": 345,
-	"./te": 346,
-	"./te.js": 346,
-	"./tet": 347,
-	"./tet.js": 347,
-	"./th": 348,
-	"./th.js": 348,
-	"./tl-ph": 349,
-	"./tl-ph.js": 349,
-	"./tlh": 350,
-	"./tlh.js": 350,
-	"./tr": 351,
-	"./tr.js": 351,
-	"./tzl": 352,
-	"./tzl.js": 352,
-	"./tzm": 353,
-	"./tzm-latn": 354,
-	"./tzm-latn.js": 354,
-	"./tzm.js": 353,
-	"./uk": 355,
-	"./uk.js": 355,
-	"./ur": 356,
-	"./ur.js": 356,
-	"./uz": 357,
-	"./uz-latn": 358,
-	"./uz-latn.js": 358,
-	"./uz.js": 357,
-	"./vi": 359,
-	"./vi.js": 359,
-	"./x-pseudo": 360,
-	"./x-pseudo.js": 360,
-	"./yo": 361,
-	"./yo.js": 361,
-	"./zh-cn": 362,
-	"./zh-cn.js": 362,
-	"./zh-hk": 363,
-	"./zh-hk.js": 363,
-	"./zh-tw": 364,
-	"./zh-tw.js": 364
+	"./fy": 290,
+	"./fy.js": 290,
+	"./gd": 291,
+	"./gd.js": 291,
+	"./gl": 292,
+	"./gl.js": 292,
+	"./gom-latn": 293,
+	"./gom-latn.js": 293,
+	"./gu": 294,
+	"./gu.js": 294,
+	"./he": 295,
+	"./he.js": 295,
+	"./hi": 296,
+	"./hi.js": 296,
+	"./hr": 297,
+	"./hr.js": 297,
+	"./hu": 298,
+	"./hu.js": 298,
+	"./hy-am": 299,
+	"./hy-am.js": 299,
+	"./id": 300,
+	"./id.js": 300,
+	"./is": 301,
+	"./is.js": 301,
+	"./it": 302,
+	"./it.js": 302,
+	"./ja": 303,
+	"./ja.js": 303,
+	"./jv": 304,
+	"./jv.js": 304,
+	"./ka": 305,
+	"./ka.js": 305,
+	"./kk": 306,
+	"./kk.js": 306,
+	"./km": 307,
+	"./km.js": 307,
+	"./kn": 308,
+	"./kn.js": 308,
+	"./ko": 309,
+	"./ko.js": 309,
+	"./ky": 310,
+	"./ky.js": 310,
+	"./lb": 311,
+	"./lb.js": 311,
+	"./lo": 312,
+	"./lo.js": 312,
+	"./lt": 313,
+	"./lt.js": 313,
+	"./lv": 314,
+	"./lv.js": 314,
+	"./me": 315,
+	"./me.js": 315,
+	"./mi": 316,
+	"./mi.js": 316,
+	"./mk": 317,
+	"./mk.js": 317,
+	"./ml": 318,
+	"./ml.js": 318,
+	"./mr": 319,
+	"./mr.js": 319,
+	"./ms": 320,
+	"./ms-my": 321,
+	"./ms-my.js": 321,
+	"./ms.js": 320,
+	"./mt": 322,
+	"./mt.js": 322,
+	"./my": 323,
+	"./my.js": 323,
+	"./nb": 324,
+	"./nb.js": 324,
+	"./ne": 325,
+	"./ne.js": 325,
+	"./nl": 326,
+	"./nl-be": 327,
+	"./nl-be.js": 327,
+	"./nl.js": 326,
+	"./nn": 328,
+	"./nn.js": 328,
+	"./pa-in": 329,
+	"./pa-in.js": 329,
+	"./pl": 330,
+	"./pl.js": 330,
+	"./pt": 331,
+	"./pt-br": 332,
+	"./pt-br.js": 332,
+	"./pt.js": 331,
+	"./ro": 333,
+	"./ro.js": 333,
+	"./ru": 334,
+	"./ru.js": 334,
+	"./sd": 335,
+	"./sd.js": 335,
+	"./se": 336,
+	"./se.js": 336,
+	"./si": 337,
+	"./si.js": 337,
+	"./sk": 338,
+	"./sk.js": 338,
+	"./sl": 339,
+	"./sl.js": 339,
+	"./sq": 340,
+	"./sq.js": 340,
+	"./sr": 341,
+	"./sr-cyrl": 342,
+	"./sr-cyrl.js": 342,
+	"./sr.js": 341,
+	"./ss": 343,
+	"./ss.js": 343,
+	"./sv": 344,
+	"./sv.js": 344,
+	"./sw": 345,
+	"./sw.js": 345,
+	"./ta": 346,
+	"./ta.js": 346,
+	"./te": 347,
+	"./te.js": 347,
+	"./tet": 348,
+	"./tet.js": 348,
+	"./th": 349,
+	"./th.js": 349,
+	"./tl-ph": 350,
+	"./tl-ph.js": 350,
+	"./tlh": 351,
+	"./tlh.js": 351,
+	"./tr": 352,
+	"./tr.js": 352,
+	"./tzl": 353,
+	"./tzl.js": 353,
+	"./tzm": 354,
+	"./tzm-latn": 355,
+	"./tzm-latn.js": 355,
+	"./tzm.js": 354,
+	"./uk": 356,
+	"./uk.js": 356,
+	"./ur": 357,
+	"./ur.js": 357,
+	"./uz": 358,
+	"./uz-latn": 359,
+	"./uz-latn.js": 359,
+	"./uz.js": 358,
+	"./vi": 360,
+	"./vi.js": 360,
+	"./x-pseudo": 361,
+	"./x-pseudo.js": 361,
+	"./yo": 362,
+	"./yo.js": 362,
+	"./zh-cn": 363,
+	"./zh-cn.js": 363,
+	"./zh-hk": 364,
+	"./zh-hk.js": 364,
+	"./zh-tw": 365,
+	"./zh-tw.js": 365
 };
 function webpackContext(req) {
 	return __webpack_require__(webpackContextResolve(req));
@@ -94438,7 +94500,7 @@ module.exports = __webpack_require__(695);
  * @version     1.2.0 Drop Node 0.8, fix style, switch to lab/code
  */
 
-var Dns = __webpack_require__(206);
+var Dns = __webpack_require__(207);
 
 var internals = {
     defaultThreshold: 16,
@@ -95794,7 +95856,7 @@ module.exports = isEmail;
 /* 696 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var RFC3986 = __webpack_require__(366);
+var RFC3986 = __webpack_require__(367);
 
 var internals = {
     Uri: {
@@ -95824,7 +95886,7 @@ module.exports = internals.Uri;
 /* 697 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var RFC3986 = __webpack_require__(366);
+var RFC3986 = __webpack_require__(367);
 
 var internals = {
     Ip: {
@@ -96726,7 +96788,7 @@ module.exports = new internals.Binary();
 /* 701 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var ms = __webpack_require__(245);
+var ms = __webpack_require__(246);
 
 module.exports = function (time, iat) {
   var timestamp = iat || Math.floor(Date.now() / 1000);
@@ -97361,7 +97423,7 @@ Promise.prototype.nodeify = function (callback, ctx) {
 "use strict";
 
 
-var rawAsap = __webpack_require__(371);
+var rawAsap = __webpack_require__(372);
 var freeTasks = [];
 
 /**
@@ -97568,7 +97630,7 @@ var logger = __webpack_require__(80);
 var consts = __webpack_require__(7);
 var fs = __webpack_require__(37);
 var async = __webpack_require__(32);
-var Promise = __webpack_require__(370);
+var Promise = __webpack_require__(371);
 var path = __webpack_require__(16);
 var DefaultLocalizer = (function () {
     function DefaultLocalizer(root, defaultLocale) {
@@ -98010,7 +98072,7 @@ var __extends = (this && this.__extends) || (function () {
     };
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
-var SessionLogger_1 = __webpack_require__(374);
+var SessionLogger_1 = __webpack_require__(375);
 var RemoteSessionLogger = (function (_super) {
     __extends(RemoteSessionLogger, _super);
     function RemoteSessionLogger(connector, address, relatesTo) {
@@ -105178,14 +105240,14 @@ exports.LocalizedRegExpRecognizer = LocalizedRegExpRecognizer;
 Object.defineProperty(exports, "__esModule", { value: true });
 var Dialog_1 = __webpack_require__(21);
 var Library_1 = __webpack_require__(49);
-var LegacyPrompts_1 = __webpack_require__(379);
+var LegacyPrompts_1 = __webpack_require__(380);
 var Prompt_1 = __webpack_require__(25);
-var PromptAttachment_1 = __webpack_require__(376);
+var PromptAttachment_1 = __webpack_require__(377);
 var PromptChoice_1 = __webpack_require__(148);
-var PromptConfirm_1 = __webpack_require__(377);
-var PromptNumber_1 = __webpack_require__(378);
-var PromptText_1 = __webpack_require__(380);
-var PromptTime_1 = __webpack_require__(381);
+var PromptConfirm_1 = __webpack_require__(378);
+var PromptNumber_1 = __webpack_require__(379);
+var PromptText_1 = __webpack_require__(381);
+var PromptTime_1 = __webpack_require__(382);
 var consts = __webpack_require__(7);
 var utils = __webpack_require__(24);
 var promptPrefix = consts.Library.system + ':prompt-';
@@ -105453,7 +105515,7 @@ Library_1.systemLib.dialog(consts.DialogId.FirstRun, new SimpleDialog_1.SimpleDi
 
 Object.defineProperty(exports, "__esModule", { value: true });
 var UniversalBot_1 = __webpack_require__(143);
-var ChatConnector_1 = __webpack_require__(198);
+var ChatConnector_1 = __webpack_require__(199);
 var BotConnectorBot = (function () {
     function BotConnectorBot(options) {
         console.warn('BotConnectorBot class is deprecated. Use UniversalBot with a ChatConnector class.');
@@ -105546,7 +105608,7 @@ var __extends = (this && this.__extends) || (function () {
 Object.defineProperty(exports, "__esModule", { value: true });
 var Dialog_1 = __webpack_require__(21);
 var IntentDialog_1 = __webpack_require__(147);
-var LuisRecognizer_1 = __webpack_require__(375);
+var LuisRecognizer_1 = __webpack_require__(376);
 var LuisDialog = (function (_super) {
     __extends(LuisDialog, _super);
     function LuisDialog(serviceUri) {
@@ -105651,7 +105713,7 @@ exports.CommandDialog = CommandDialog;
 
 Object.defineProperty(exports, "__esModule", { value: true });
 var UniversalBot_1 = __webpack_require__(143);
-var ConsoleConnector_1 = __webpack_require__(372);
+var ConsoleConnector_1 = __webpack_require__(373);
 var TextBot = (function () {
     function TextBot(options) {
         if (options === void 0) { options = {}; }
@@ -105882,11 +105944,11 @@ var LineConnector = /** @class */ (function () {
                 _this.reply(r, _this.event_cache);
             }
             else if (_this.replyToken !== null) {
-                console.log("wait for 1 second let will make replyToken no use, clean the replytoken");
+                console.log("wait for 2 seconds let will make replyToken no use, clean the replytoken");
             }
             _this.replyToken = null;
             _this.event_cache = [];
-        }, 1000);
+        }, 2000);
     };
     LineConnector.prototype.dispatch = function (body, res) {
         var _this = this;
@@ -106519,7 +106581,7 @@ var Body = __webpack_require__(149);
 var Response = __webpack_require__(812);
 var Headers = __webpack_require__(152);
 var Request = __webpack_require__(813);
-var FetchError = __webpack_require__(385);
+var FetchError = __webpack_require__(386);
 
 // commonjs
 module.exports = Fetch;
@@ -109030,7 +109092,7 @@ module.exports = {
     // GBK (~22000 chars) is an extension of CP936 that added user-mapped chars and some other.
     'gbk': {
         type: '_dbcs',
-        table: function() { return __webpack_require__(151).concat(__webpack_require__(383)) },
+        table: function() { return __webpack_require__(151).concat(__webpack_require__(384)) },
     },
     'xgbk': 'gbk',
     'isoir58': 'gbk',
@@ -109042,7 +109104,7 @@ module.exports = {
     // http://www.khngai.com/chinese/charmap/tblgbk.php?page=0
     'gb18030': {
         type: '_dbcs',
-        table: function() { return __webpack_require__(151).concat(__webpack_require__(383)) },
+        table: function() { return __webpack_require__(151).concat(__webpack_require__(384)) },
         gb18030: function() { return __webpack_require__(804) },
         encodeSkipVals: [0x80],
         encodeAdd: {'€': 0xA2E3},
@@ -109099,14 +109161,14 @@ module.exports = {
     '950': 'cp950',
     'cp950': {
         type: '_dbcs',
-        table: function() { return __webpack_require__(384) },
+        table: function() { return __webpack_require__(385) },
     },
 
     // Big5 has many variations and is an extension of cp950. We use Encoding Standard's as a consensus.
     'big5': 'big5hkscs',
     'big5hkscs': {
         type: '_dbcs',
-        table: function() { return __webpack_require__(384).concat(__webpack_require__(806)) },
+        table: function() { return __webpack_require__(385).concat(__webpack_require__(806)) },
         encodeSkipVals: [0xa2cc],
     },
 
@@ -109712,7 +109774,7 @@ Request.prototype.clone = function() {
  * @private
  */
 
-var deprecate = __webpack_require__(386)('body-parser')
+var deprecate = __webpack_require__(387)('body-parser')
 
 /**
  * Cache of loaded parsers.
@@ -110250,8 +110312,8 @@ function typeChecker (type) {
  * Module dependencies.
  */
 
-var callSiteToString = __webpack_require__(388).callSiteToString
-var eventListenerCount = __webpack_require__(388).eventListenerCount
+var callSiteToString = __webpack_require__(389).callSiteToString
+var eventListenerCount = __webpack_require__(389).eventListenerCount
 var relative = __webpack_require__(16).relative
 
 /**
@@ -111100,7 +111162,7 @@ if (typeof Object.create === 'function') {
  * Expose `debug()` as the module.
  */
 
-exports = module.exports = __webpack_require__(389);
+exports = module.exports = __webpack_require__(390);
 exports.log = log;
 exports.formatArgs = formatArgs;
 exports.save = save;
@@ -111456,7 +111518,7 @@ var util = __webpack_require__(4);
  * Expose `debug()` as the module.
  */
 
-exports = module.exports = __webpack_require__(389);
+exports = module.exports = __webpack_require__(390);
 exports.init = init;
 exports.log = log;
 exports.formatArgs = formatArgs;
@@ -113126,7 +113188,7 @@ var bytes = __webpack_require__(67)
 var contentType = __webpack_require__(153)
 var createError = __webpack_require__(95)
 var debug = __webpack_require__(96)('body-parser:urlencoded')
-var deprecate = __webpack_require__(386)('body-parser')
+var deprecate = __webpack_require__(387)('body-parser')
 var read = __webpack_require__(97)
 var typeis = __webpack_require__(98)
 
