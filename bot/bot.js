@@ -25,20 +25,10 @@ exports.default = (bot) => {
         msg.textLocale('en-US');
         bot.send(msg);
     }
-    bot.dialog("/", [
-        function (s) {
-            // var savedAddress = s.message.address;
-            // // console.log("savedAddress", savedAddress)
-            // s.send("我是小書");
-            // setTimeout(() => {
-            //     sendProactiveMessage(savedAddress);
-            // }, 5000);
-        }
-    ]);
+    bot.dialog("/", s => { });
     bot.dialog('help', function (session, args, next) {
         session.endDialog("我是小書");
-    })
-        .triggerAction({
+    }).triggerAction({
         matches: /^help$/i,
         onSelectAction: (session, args, next) => {
             // Add the help dialog to the dialog stack 
@@ -78,7 +68,60 @@ exports.default = (bot) => {
     bot.dialog("helloUser", [(s) => __awaiter(this, void 0, void 0, function* () {
             // console.log(s.message)
             let u = yield connector.getUserProfile(s.message.user.id);
-            s.send(u.displayName + "好！感謝將我加進群裡！");
+            s.send(u.displayName + "好！感謝加我為好友");
             s.endDialog("謝謝 " + u.displayName);
         })]);
+    bot.dialog("menu", [
+        (s) => __awaiter(this, void 0, void 0, function* () {
+            s.endDialog(new builder.Message(s)
+                .addAttachment(new builder.HeroCard(s)
+                .title("我是小書")
+                .subtitle("線上讀書會賴群管理機器人")
+                .text("我是小書:線上讀書會賴群管理機器人")
+                .images([builder.CardImage.create(s, 'https://imagelab.nownews.com/?w=1080&q=85&src=http://s.nownews.com/11/b9/11b93df1ec7012f4d772c8bb0ac74e10.png')])
+                .buttons([
+                builder.CardAction.imBack(s, "即將舉辦的讀書會", "即將舉辦的讀書會"),
+                builder.CardAction.imBack(s, "之前的讀書會", "之前的讀書會"),
+                builder.CardAction.openUrl(s, "https://docs.google.com/forms/d/1n20MX3dMIw0U1k0V1eFM6yzzOZ3QkfW2wgLelTmRYNY/edit?usp=sharing", "建議事項"),
+                builder.CardAction.imBack(s, "關於我", "關於我"),
+            ])));
+        })
+    ]).triggerAction({
+        matches: /^menu$/i,
+        onSelectAction: (session, args, next) => {
+            // Add the help dialog to the dialog stack 
+            // (override the default behavior of replacing the stack)
+            session.beginDialog(args.action, args);
+        }
+    });
+    bot.dialog("即將舉辦的讀書會", s => {
+        s.endDialog("show 即將舉辦的讀書會");
+    }).triggerAction({
+        matches: /^即將舉辦的讀書會$/i,
+        onSelectAction: (session, args, next) => {
+            // Add the help dialog to the dialog stack 
+            // (override the default behavior of replacing the stack)
+            session.beginDialog(args.action, args);
+        }
+    });
+    bot.dialog("之前的讀書會", s => {
+        s.endDialog("show 之前的讀書會");
+    }).triggerAction({
+        matches: /^之前的讀書會$/i,
+        onSelectAction: (session, args, next) => {
+            // Add the help dialog to the dialog stack 
+            // (override the default behavior of replacing the stack)
+            session.beginDialog(args.action, args);
+        }
+    });
+    bot.dialog("關於我", s => {
+        s.endDialog("show 關於我");
+    }).triggerAction({
+        matches: /^關於我$/i,
+        onSelectAction: (session, args, next) => {
+            // Add the help dialog to the dialog stack 
+            // (override the default behavior of replacing the stack)
+            session.beginDialog(args.action, args);
+        }
+    });
 };

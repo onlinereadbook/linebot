@@ -3,11 +3,6 @@
 const DynamoDB = require('aws-sdk/clients/dynamodb');
 const { DynamoBotStorage } = require('botbuilder-dynamodb-storage');
 
-// Instantiate the bot with a connector instance
-// const bot = new UniversalBot(connector);
-
-// Create a DynamoDB client and select the AWS 
-// region that hosts your instance of DynamoDB.
 const client = new DynamoDB({ region: "ap-northeast-1" });
 
 // Define the adapter settings
@@ -25,10 +20,8 @@ const settings = {
     privateConversationData: 3600 * 24 * 7
   }
 };
-
 // Instantiate the adapter with the client and settings.
 const adapter = new DynamoBotStorage(client, settings)
-
 
 var config = require("./conf");
 // console.log("config", config)
@@ -38,7 +31,7 @@ var botbuilder_linebot_connector_1 = require("botbuilder-linebot-connector");
 // var botbuilder_mongodb_storage_1 = require("botbuilder-mongodb-storage");
 var builder = require('botbuilder');
 var connector = new botbuilder_linebot_connector_1.LineConnector({
-  hasPushApi: false,
+  hasPushApi: true,
   // your line
   channelId: process.env.channelId || config.channelId,
   channelSecret: process.env.channelSecret || config.channelSecret,
