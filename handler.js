@@ -43,6 +43,7 @@ var bot = new builder.UniversalBot(connector).set('storage', adapter);
 bot_dailog.default(bot)
 
 module.exports.line = (event, context, callback) => {
+  console.log("event", event)
   connector.serverlessWebhock(event)
   const response = {
     statusCode: 200,

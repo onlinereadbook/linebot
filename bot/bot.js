@@ -42,7 +42,15 @@ exports.default = (bot) => {
     bot.on('conversationUpdate', function (message) {
         return __awaiter(this, void 0, void 0, function* () {
             // detect event
-            console.log("conversationUpdate");
+            console.log("conversationUpdate", message);
+            let q = `mutation{
+            FbGroupCheckLine(groupId:"temp",lineId:"${message.address.channel.id}"){
+              lineId
+              groupId
+            }
+          }`;
+            let a = yield query_1.get_ql_data(q, "FbGroupCheckLine");
+            // console.log(a)
             switch (message.text) {
                 case 'follow':
                     break;
@@ -82,10 +90,10 @@ exports.default = (bot) => {
                 .text("我是小書:線上讀書會賴群管理機器人")
                 .images([builder.CardImage.create(s, 'https://imagelab.nownews.com/?w=1080&q=85&src=http://s.nownews.com/11/b9/11b93df1ec7012f4d772c8bb0ac74e10.png')])
                 .buttons([
-                builder.CardAction.imBack(s, "即將舉辦的讀書會", "即將舉辦的讀書會"),
-                builder.CardAction.imBack(s, "之前的讀書會", "之前的讀書會"),
+                builder.CardAction.postBack(s, "即將舉辦的讀書會", "即將舉辦的讀書會"),
+                builder.CardAction.postBack(s, "之前的讀書會", "之前的讀書會"),
                 builder.CardAction.openUrl(s, "https://docs.google.com/forms/d/1n20MX3dMIw0U1k0V1eFM6yzzOZ3QkfW2wgLelTmRYNY/edit?usp=sharing", "建議事項"),
-                builder.CardAction.imBack(s, "關於我", "關於我"),
+                builder.CardAction.postBack(s, "關於我", "關於我"),
             ])));
         })
     ]).triggerAction({
@@ -99,12 +107,12 @@ exports.default = (bot) => {
     function getEventList(query, key) {
         return __awaiter(this, void 0, void 0, function* () {
             let a = yield query_1.get_ql_data(query, key);
-            // console.log("a", a)
+            console.log("a", a);
             let text = "";
             a.map((d, i) => {
                 if (i < 10) {
                     let startTime = Date.parse(d.startTime);
-                    console.log(startTime);
+                    // console.log(startTime)
                     let t = new Date(startTime);
                     text += `${d.title} ${t.toLocaleString()}\r\n`;
                 }
@@ -113,8 +121,9 @@ exports.default = (bot) => {
         });
     }
     bot.dialog("即將舉辦的讀書會", (s) => __awaiter(this, void 0, void 0, function* () {
-        let text = yield getEventList(`{
-            FbEventQuery(skip:0){  
+        // console.log(s.message.address)
+        let q = `{
+            FbEventQueryAfter(lineId:"${s.message.address.channel.id}",skip:0){  
               parentGroupId
               parentGroupName,
               owner ,
@@ -124,8 +133,17 @@ exports.default = (bot) => {
               image,
               eventId
           }
-          }`, "FbEventQuery");
-        s.endDialog(text);
+          }`;
+        let text = yield getEventList(q, "FbEventQueryAfter");
+        var isGroup = s.message.address.conversation.isGroup;
+        if (isGroup) {
+            //send to user
+            query_1.notify(s.message.from.id, "", text);
+            s.endDialog();
+        }
+        else {
+            s.endDialog(text);
+        }
         //query server data
     })).triggerAction({
         matches: /^即將舉辦的讀書會$/i,
@@ -135,12 +153,31 @@ exports.default = (bot) => {
             session.beginDialog(args.action, args);
         }
     });
-    bot.dialog("之前的讀書會", s => {
-        s.endDialog("show 之前的讀書會");
-        //query server data
-        //show 
-        s.send("list ....");
-    }).triggerAction({
+    bot.dialog("之前的讀書會", (s) => __awaiter(this, void 0, void 0, function* () {
+        let q = `{
+            FbEventQueryBefore(lineId:"${s.message.address.channel.id}",skip:0){  
+              parentGroupId
+              parentGroupName,
+              owner ,
+              description,
+              title,
+              startTime,
+              image,
+              eventId
+          }
+          }`;
+        console.log(q);
+        let text = yield getEventList(q, "FbEventQueryBefore");
+        var isGroup = s.message.address.conversation.isGroup;
+        if (isGroup) {
+            //send to user
+            query_1.notify(s.message.from.id, "", text);
+            s.endDialog();
+        }
+        else {
+            s.endDialog(text);
+        }
+    })).triggerAction({
         matches: /^之前的讀書會$/i,
         onSelectAction: (session, args, next) => {
             // Add the help dialog to the dialog stack 
@@ -161,7 +198,18 @@ exports.default = (bot) => {
         }
     });
     bot.dialog("關於我", s => {
-        s.endDialog("show 關於我");
+        console.log("s.message", s.message);
+        let text = "show 關於我";
+        let isGroup = s.message.address.conversation.isGroup;
+        if (isGroup) {
+            //send to user
+            query_1.notify(s.message.from.id, "", text);
+            s.endDialog();
+        }
+        else {
+            s.endDialog(text);
+        }
+        // s.endDialog("show 關於我")
     }).triggerAction({
         matches: /^關於我$/i,
         onSelectAction: (session, args, next) => {
