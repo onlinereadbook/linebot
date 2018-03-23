@@ -20,6 +20,7 @@ export const get_ql_data = (q: string, key: string) => new Promise((resolve, rej
 });
 
 export const notify = (LineId: string, title: string, description: string) => new Promise((resolve, rej) => {
+    let status = 0;
     fetch(config.notify_url, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -29,18 +30,30 @@ export const notify = (LineId: string, title: string, description: string) => ne
             description
         }),
     }).then(function (response: any) {
-        if (response.status >= 400) {
-            throw new Error("Bad response from server");
-        }
+        status = response.status
+        // if (response.status >= 400) {
+        //     // console.log(response.body)
+        //     throw new Error("Bad!! response from server");
+        // }
         return response.json();
     })
         .then(function (stories: any) {
-            // console.log(stories);
+            console.log(stories);
+            resolve({
+                message: stories.message,
+                status: status
+            })
+
         });
 })
 
 var main = async () => {
+    let m = notify("xxxxxxxx", "ok", "bad").then(result => {
+        console.log("result", result);
 
+    }).catch(e => {
+        console.log("e", e)
+    })
 
     // let a = await get_ql_data(`
     // {
@@ -64,4 +77,5 @@ var main = async () => {
     // })
 }
 
-main();
+// main();
+

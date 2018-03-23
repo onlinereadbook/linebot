@@ -174,7 +174,7 @@ export default (bot: builder.UniversalBot) => {
               eventId
           }
           }`
-        console.log(q)
+        // console.log(q)
 
         let text = await getEventList(q, "FbEventQueryBefore");
 
@@ -217,7 +217,10 @@ export default (bot: builder.UniversalBot) => {
         let isGroup = s.message.address.conversation.isGroup;
         if (isGroup) {
             //send to user
-            notify(s.message.from.id, "", text)
+            let m: any = notify(s.message.from.id, "", text)
+            if (m.status > 400) {
+                s.endDialog("那位朋友按了 關於我 請加我好友，我才能完全讀到你喔！")
+            }
 
             s.endDialog()
         } else {

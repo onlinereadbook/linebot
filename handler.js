@@ -74,24 +74,36 @@ module.exports.notify = (event, context, callback) => {
     }
     let docItem = doc && doc.Item || {};
     let addressString = docItem.address && docItem.address.S && JSON.parse(docItem.address.S) || {};
+    console.log("addressString", addressString)
 
-    if (addressString) {
+    if (addressString.conversation) {
       // console.log("addressString", addressString)
 
       var msg = new builder.Message().address(addressString);
       msg.text(title + " " + description);
       bot.send(msg);
+      let response = {
+        statusCode: 200,
+        body: JSON.stringify({
+          message: 'done',
+          input: event,
+        }),
+      };
+      callback(null, response);
+    } else {
+      let response = {
+        statusCode: 400,
+        body: JSON.stringify({
+          message: 'can not find user!',
+          input: event,
+        }),
+      };
+      callback(null, response);
+
     }
   })
 
-  const response = {
-    statusCode: 200,
-    body: JSON.stringify({
-      message: 'line notify!',
-      input: event,
-    }),
-  };
-  callback(null, response);
+
 };
 
 

@@ -166,7 +166,7 @@ exports.default = (bot) => {
               eventId
           }
           }`;
-        console.log(q);
+        // console.log(q)
         let text = yield getEventList(q, "FbEventQueryBefore");
         var isGroup = s.message.address.conversation.isGroup;
         if (isGroup) {
@@ -203,7 +203,10 @@ exports.default = (bot) => {
         let isGroup = s.message.address.conversation.isGroup;
         if (isGroup) {
             //send to user
-            query_1.notify(s.message.from.id, "", text);
+            let m = query_1.notify(s.message.from.id, "", text);
+            if (m.status > 400) {
+                s.endDialog("那位朋友按了 關於我 請加我好友，我才能完全讀到你喔！");
+            }
             s.endDialog();
         }
         else {
