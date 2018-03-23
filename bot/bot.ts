@@ -99,23 +99,8 @@ export default (bot: builder.UniversalBot) => {
         }
     });
 
-
-    bot.dialog("即將舉辦的讀書會", async (s) => {
-
-        let a = await get_ql_data(`
-    {
-      FbEventQuery(skip:0){  
-        parentGroupId
-        parentGroupName,
-        owner ,
-        description,
-        title,
-        startTime,
-        image,
-        eventId
-    }
-    }
-    `)
+    async function getEventList(query: string, key: string) {
+        let a = await get_ql_data(query, key)
 
         // console.log("a", a)
         let text = "";
@@ -124,11 +109,28 @@ export default (bot: builder.UniversalBot) => {
                 let startTime = Date.parse(d.startTime)
                 console.log(startTime)
                 let t = new Date(startTime)
-                // text += `${d.title} ${startTime.toLocaleDateString()}  `;
                 text += `${d.title} ${t.toLocaleString()}\r\n`;
             }
         })
+        return text;
 
+    }
+
+
+    bot.dialog("即將舉辦的讀書會", async (s) => {
+
+        let text = await getEventList(`{
+            FbEventQuery(skip:0){  
+              parentGroupId
+              parentGroupName,
+              owner ,
+              description,
+              title,
+              startTime,
+              image,
+              eventId
+          }
+          }`, "FbEventQuery");
         s.endDialog(text);
         //query server data
     }).triggerAction({

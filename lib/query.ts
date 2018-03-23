@@ -1,6 +1,6 @@
 const fetch = require("isomorphic-fetch")
 
-export const get_ql_data = (q: string) => new Promise((resolve, rej) => {
+export const get_ql_data = (q: string, key: string) => new Promise((resolve, rej) => {
 
     fetch('https://17book.me/graphql', {
         method: 'POST',
@@ -12,8 +12,11 @@ export const get_ql_data = (q: string) => new Promise((resolve, rej) => {
         .then(res => res.json())
         .then(res => {
             console.log("show list")
-            resolve(res.data.FbEventQuery)
-            // console.log(res.data.FbEventQuery);
+            // console.log(res.data)
+            // resolve(res.data[0])
+
+            // console.log(res.data[key]);
+            resolve(res.data[key])
 
             // s.endDialog("show list")
 
@@ -40,22 +43,22 @@ export const get_ql_data = (q: string) => new Promise((resolve, rej) => {
 
 var main = async () => {
 
-    // let a = await get_ql_data(`
-    // {
-    //   FbEventQuery(skip:0){  
-    //     parentGroupId
-    //     parentGroupName,
-    //     owner ,
-    //     description,
-    //     title,
-    //     startTime,
-    //     image,
-    //     eventId
-    // }
-    // }
-    // `)
+    let a = await get_ql_data(`
+    {
+      FbEventQueryBefore(skip:0){  
+        parentGroupId
+        parentGroupName,
+        owner ,
+        description,
+        title,
+        startTime,
+        image,
+        eventId
+    }
+    }
+    `, "FbEventQueryBefore")
 
-    // // console.log("a", a)
+    // console.log("a", a)
     // a.map((d, i) => {
     //     console.log(d)
 

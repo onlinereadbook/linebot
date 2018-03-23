@@ -96,32 +96,35 @@ exports.default = (bot) => {
             session.beginDialog(args.action, args);
         }
     });
-    bot.dialog("即將舉辦的讀書會", (s) => __awaiter(this, void 0, void 0, function* () {
-        let a = yield query_1.get_ql_data(`
-    {
-      FbEventQuery(skip:0){  
-        parentGroupId
-        parentGroupName,
-        owner ,
-        description,
-        title,
-        startTime,
-        image,
-        eventId
-    }
-    }
-    `);
-        // console.log("a", a)
-        let text = "";
-        a.map((d, i) => {
-            if (i < 10) {
-                let startTime = Date.parse(d.startTime);
-                console.log(startTime);
-                let t = new Date(startTime);
-                // text += `${d.title} ${startTime.toLocaleDateString()}  `;
-                text += `${d.title} ${t.toLocaleString()}\r\n`;
-            }
+    function getEventList(query, key) {
+        return __awaiter(this, void 0, void 0, function* () {
+            let a = yield query_1.get_ql_data(query, key);
+            // console.log("a", a)
+            let text = "";
+            a.map((d, i) => {
+                if (i < 10) {
+                    let startTime = Date.parse(d.startTime);
+                    console.log(startTime);
+                    let t = new Date(startTime);
+                    text += `${d.title} ${t.toLocaleString()}\r\n`;
+                }
+            });
+            return text;
         });
+    }
+    bot.dialog("即將舉辦的讀書會", (s) => __awaiter(this, void 0, void 0, function* () {
+        let text = yield getEventList(`{
+            FbEventQuery(skip:0){  
+              parentGroupId
+              parentGroupName,
+              owner ,
+              description,
+              title,
+              startTime,
+              image,
+              eventId
+          }
+          }`, "FbEventQuery");
         s.endDialog(text);
         //query server data
     })).triggerAction({
