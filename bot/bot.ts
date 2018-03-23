@@ -1,8 +1,12 @@
+
 import * as builder from "botbuilder";
+// const fetch = require("isomorphic-fetch")
+import { get_ql_data } from "./../lib/query"
 var config = require("./../conf");
 
-var linebot = require("botbuilder-linebot-connector");
-var connector = new linebot.LineConnector({
+var LineConnector = require("botbuilder-linebot-connector");
+// var linebot = require("botbuilder-linebot-connector");
+var connector = new LineConnector.LineConnector({
     hasPushApi: true,
     // your line
     channelId: process.env.channelId || config.channelId,
@@ -55,19 +59,19 @@ export default (bot: builder.UniversalBot) => {
     });
 
     bot.dialog("helloGroup", [async (s) => {
-        s.send("大家好！感謝將我加進群裡！")
-        s.send("要和我互動一定要加我為好友！")
-        s.send("不然我是收不到你的訊息的！")
-
-        s.endDialog("謝謝大家！")
-    }])
+        s.send("大家好！感謝將我加進群裡！要和我互動一定要加我為好友！不然我是收不到你的訊息的！需我服務時，請直輸入 menu ，就可以呼叫出下面的選單，這是我目前的功能，感謝大家！")
+        s.send("menu")
+        s.beginDialog("menu");
+    }
+    ])
 
     bot.dialog("helloUser", [async (s) => {
         // console.log(s.message)
         let u = await connector.getUserProfile(s.message.user.id)
-        s.send(u.displayName + "好！感謝加我為好友")
-        s.endDialog("謝謝 " + u.displayName)
+
+        s.endDialog(u.displayName + "好！感謝加我為好友! 將我加入群組，我才能揮功用喔！")
     }])
+
     bot.dialog("menu", [
         async (s) => {
             s.endDialog(new builder.Message(s)
@@ -95,8 +99,38 @@ export default (bot: builder.UniversalBot) => {
         }
     });
 
-    bot.dialog("即將舉辦的讀書會", s => {
-        s.endDialog("show 即將舉辦的讀書會")
+
+    bot.dialog("即將舉辦的讀書會", async (s) => {
+
+        let a = await get_ql_data(`
+    {
+      FbEventQuery(skip:0){  
+        parentGroupId
+        parentGroupName,
+        owner ,
+        description,
+        title,
+        startTime,
+        image,
+        eventId
+    }
+    }
+    `)
+
+        // console.log("a", a)
+        let text = "";
+        a.map((d, i) => {
+            if (i < 10) {
+                let startTime = Date.parse(d.startTime)
+                console.log(startTime)
+                let t = new Date(startTime)
+                // text += `${d.title} ${startTime.toLocaleDateString()}  `;
+                text += `${d.title} ${t.toLocaleString()}\r\n`;
+            }
+        })
+
+        s.endDialog(text);
+        //query server data
     }).triggerAction({
         matches: /^即將舉辦的讀書會$/i,
         onSelectAction: (session, args, next) => {
@@ -107,7 +141,10 @@ export default (bot: builder.UniversalBot) => {
     });
 
     bot.dialog("之前的讀書會", s => {
-        s.endDialog("show 之前的讀書會")
+        s.endDialog("show 之前的讀書會");
+        //query server data
+        //show 
+        s.send("list ....")
     }).triggerAction({
         matches: /^之前的讀書會$/i,
         onSelectAction: (session, args, next) => {
@@ -117,8 +154,24 @@ export default (bot: builder.UniversalBot) => {
         }
     });
 
+
+
+    bot.dialog("showLineId", s => {
+        console.log(s.message.address.channel.id)
+        let id = "" + s.message.address.channel.id;
+        s.endDialog(id);
+    }).triggerAction({
+        matches: /^showLineId$/i,
+        onSelectAction: (session, args, next) => {
+            // Add the help dialog to the dialog stack 
+            // (override the default behavior of replacing the stack)
+            session.beginDialog(args.action, args);
+        }
+    });
+
     bot.dialog("關於我", s => {
         s.endDialog("show 關於我")
+
     }).triggerAction({
         matches: /^關於我$/i,
         onSelectAction: (session, args, next) => {
