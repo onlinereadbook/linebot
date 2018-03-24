@@ -11,10 +11,11 @@ export const get_ql_data = (q: string, key: string) => new Promise((resolve, rej
             query: q
         }),
     })
-        .then(res => res.json())
-        .then(res => {
+        .then((res: any) => res.json())
+        .then((res: any) => {
             // console.log("res", res)
-            resolve(res.data[key])
+            let r: Array<any> = res.data[key]
+            resolve(r)
         });
 
 });

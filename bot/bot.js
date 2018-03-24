@@ -107,7 +107,7 @@ exports.default = (bot) => {
     function getEventList(query, key) {
         return __awaiter(this, void 0, void 0, function* () {
             let a = yield query_1.get_ql_data(query, key);
-            console.log("a", a);
+            // console.log("a", a)
             let text = "";
             a.map((d, i) => {
                 if (i < 10) {
@@ -185,7 +185,7 @@ exports.default = (bot) => {
             session.beginDialog(args.action, args);
         }
     });
-    bot.dialog("showLineId", s => {
+    bot.dialog("showLineId", (s) => {
         console.log(s.message.address.channel.id);
         let id = "" + s.message.address.channel.id;
         s.endDialog(id);
@@ -197,9 +197,9 @@ exports.default = (bot) => {
             session.beginDialog(args.action, args);
         }
     });
-    bot.dialog("關於我", s => {
+    bot.dialog("關於我", (s) => {
         console.log("s.message", s.message);
-        let text = "小書 目前是 open source 專案 https://github.com/onlinereadbook/linebot，以學習Line群的管理為主要目地，有興趣的朋友，歡迎一起開發同歡。";
+        let text = "小書 目前是 open source 專案 https://github.com/onlinereadbook/linebot，以學習Line群的管理為主要目地，有興趣的朋友，歡迎一起開發同歡。目前開發者 LineBot相關:Wolke LineId:wolkesau,後台：polo ";
         let isGroup = s.message.address.conversation.isGroup;
         if (isGroup) {
             //send to user

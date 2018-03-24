@@ -28,7 +28,7 @@ export default (bot: builder.UniversalBot) => {
         session.endDialog("我是小書");
     }).triggerAction({
         matches: /^help$/i,
-        onSelectAction: (session, args, next) => {
+        onSelectAction: (session, args: any, next) => {
             // Add the help dialog to the dialog stack 
             // (override the default behavior of replacing the stack)
             session.beginDialog(args.action, args);
@@ -101,7 +101,7 @@ export default (bot: builder.UniversalBot) => {
         }
     ]).triggerAction({
         matches: /^menu$/i,
-        onSelectAction: (session, args, next) => {
+        onSelectAction: (session, args: any, next) => {
             // Add the help dialog to the dialog stack 
             // (override the default behavior of replacing the stack)
             session.beginDialog(args.action, args);
@@ -109,9 +109,9 @@ export default (bot: builder.UniversalBot) => {
     });
 
     async function getEventList(query: string, key: string) {
-        let a = await get_ql_data(query, key)
+        let a: Array<any> = await get_ql_data(query, key)
 
-        console.log("a", a)
+        // console.log("a", a)
         let text = "";
         a.map((d, i) => {
             if (i < 10) {
@@ -126,7 +126,7 @@ export default (bot: builder.UniversalBot) => {
     }
 
 
-    bot.dialog("即將舉辦的讀書會", async (s) => {
+    bot.dialog("即將舉辦的讀書會", async (s: any) => {
         // console.log(s.message.address)
         let q = `{
             FbEventQueryAfter(lineId:"${s.message.address.channel.id}",skip:0){  
@@ -154,14 +154,14 @@ export default (bot: builder.UniversalBot) => {
         //query server data
     }).triggerAction({
         matches: /^即將舉辦的讀書會$/i,
-        onSelectAction: (session, args, next) => {
+        onSelectAction: (session, args: any, next) => {
             // Add the help dialog to the dialog stack 
             // (override the default behavior of replacing the stack)
             session.beginDialog(args.action, args);
         }
     });
 
-    bot.dialog("之前的讀書會", async (s) => {
+    bot.dialog("之前的讀書會", async (s: any) => {
         let q = `{
             FbEventQueryBefore(lineId:"${s.message.address.channel.id}",skip:0){  
               parentGroupId
@@ -188,7 +188,7 @@ export default (bot: builder.UniversalBot) => {
         }
     }).triggerAction({
         matches: /^之前的讀書會$/i,
-        onSelectAction: (session, args, next) => {
+        onSelectAction: (session, args: any, next) => {
             // Add the help dialog to the dialog stack 
             // (override the default behavior of replacing the stack)
             session.beginDialog(args.action, args);
@@ -197,20 +197,20 @@ export default (bot: builder.UniversalBot) => {
 
 
 
-    bot.dialog("showLineId", s => {
+    bot.dialog("showLineId", (s: any) => {
         console.log(s.message.address.channel.id)
         let id = "" + s.message.address.channel.id;
         s.endDialog(id);
     }).triggerAction({
         matches: /^showLineId$/i,
-        onSelectAction: (session, args, next) => {
+        onSelectAction: (session, args: any, next) => {
             // Add the help dialog to the dialog stack 
             // (override the default behavior of replacing the stack)
             session.beginDialog(args.action, args);
         }
     });
 
-    bot.dialog("關於我", s => {
+    bot.dialog("關於我", (s: any) => {
         console.log("s.message", s.message)
 
         let text = "小書 目前是 open source 專案 https://github.com/onlinereadbook/linebot，以學習Line群的管理為主要目地，有興趣的朋友，歡迎一起開發同歡。目前開發者 LineBot相關:Wolke LineId:wolkesau,後台：polo "
@@ -229,7 +229,7 @@ export default (bot: builder.UniversalBot) => {
 
     }).triggerAction({
         matches: /^關於我$/i,
-        onSelectAction: (session, args, next) => {
+        onSelectAction: (session, args: any, next) => {
             // Add the help dialog to the dialog stack 
             // (override the default behavior of replacing the stack)
             session.beginDialog(args.action, args);
