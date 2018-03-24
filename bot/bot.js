@@ -42,7 +42,7 @@ exports.default = (bot) => {
     bot.on('conversationUpdate', function (message) {
         return __awaiter(this, void 0, void 0, function* () {
             // detect event
-            console.log("conversationUpdate", message);
+            // console.log("conversationUpdate", message)
             let q = `mutation{
             FbGroupCheckLine(groupId:"temp",lineId:"${message.address.channel.id}"){
               lineId
@@ -83,18 +83,33 @@ exports.default = (bot) => {
         })]);
     bot.dialog("menu", [
         (s) => __awaiter(this, void 0, void 0, function* () {
-            s.endDialog(new builder.Message(s)
-                .addAttachment(new builder.HeroCard(s)
-                .title("我是小書")
-                .subtitle("線上讀書會賴群管理機器人")
-                .text("我是小書:線上讀書會賴群管理機器人")
-                .images([builder.CardImage.create(s, 'https://imagelab.nownews.com/?w=1080&q=85&src=http://s.nownews.com/11/b9/11b93df1ec7012f4d772c8bb0ac74e10.png')])
-                .buttons([
-                builder.CardAction.postBack(s, "即將舉辦的讀書會", "即將舉辦的讀書會"),
-                builder.CardAction.postBack(s, "之前的讀書會", "之前的讀書會"),
-                builder.CardAction.openUrl(s, "https://docs.google.com/forms/d/1n20MX3dMIw0U1k0V1eFM6yzzOZ3QkfW2wgLelTmRYNY/edit?usp=sharing", "建議事項"),
-                builder.CardAction.postBack(s, "關於我", "關於我"),
-            ])));
+            var isGroup = s.message.address.conversation.isGroup;
+            if (isGroup) {
+                s.endDialog(new builder.Message(s)
+                    .addAttachment(new builder.HeroCard(s)
+                    .title("我是小書")
+                    .subtitle("線上讀書會賴群管理機器人")
+                    .text("我是小書:線上讀書會賴群管理機器人")
+                    .images([builder.CardImage.create(s, 'https://imagelab.nownews.com/?w=1080&q=85&src=http://s.nownews.com/11/b9/11b93df1ec7012f4d772c8bb0ac74e10.png')])
+                    .buttons([
+                    builder.CardAction.postBack(s, "即將舉辦的讀書會", "即將舉辦的讀書會"),
+                    builder.CardAction.postBack(s, "之前的讀書會", "之前的讀書會"),
+                    builder.CardAction.openUrl(s, "https://docs.google.com/forms/d/1n20MX3dMIw0U1k0V1eFM6yzzOZ3QkfW2wgLelTmRYNY/edit?usp=sharing", "建議事項"),
+                    builder.CardAction.postBack(s, "關於我", "關於我"),
+                ])));
+            }
+            else {
+                s.endDialog(new builder.Message(s)
+                    .addAttachment(new builder.HeroCard(s)
+                    .title("我是小書")
+                    .subtitle("線上讀書會賴群管理機器人")
+                    .text("我是小書:線上讀書會賴群管理機器人")
+                    .images([builder.CardImage.create(s, 'https://imagelab.nownews.com/?w=1080&q=85&src=http://s.nownews.com/11/b9/11b93df1ec7012f4d772c8bb0ac74e10.png')])
+                    .buttons([
+                    builder.CardAction.openUrl(s, "https://docs.google.com/forms/d/1n20MX3dMIw0U1k0V1eFM6yzzOZ3QkfW2wgLelTmRYNY/edit?usp=sharing", "建議事項"),
+                    builder.CardAction.postBack(s, "關於我", "關於我"),
+                ])));
+            }
         })
     ]).triggerAction({
         matches: /^menu$/i,
@@ -107,7 +122,7 @@ exports.default = (bot) => {
     function getEventList(query, key) {
         return __awaiter(this, void 0, void 0, function* () {
             let a = yield query_1.get_ql_data(query, key);
-            // console.log("a", a)
+            console.log("a", a);
             let text = "";
             a.map((d, i) => {
                 if (i < 10) {
@@ -135,10 +150,11 @@ exports.default = (bot) => {
           }
           }`;
         let text = yield getEventList(q, "FbEventQueryAfter");
+        console.log("text", text.length);
         var isGroup = s.message.address.conversation.isGroup;
         if (isGroup) {
             //send to user
-            query_1.notify(s.message.from.id, "", text);
+            query_1.notify(s.message.from.id, "", text.length > 0 ? text : "目前無讀書會將舉辦！");
             s.endDialog();
         }
         else {
@@ -171,7 +187,7 @@ exports.default = (bot) => {
         var isGroup = s.message.address.conversation.isGroup;
         if (isGroup) {
             //send to user
-            query_1.notify(s.message.from.id, "", text);
+            query_1.notify(s.message.from.id, "", text.length > 0 ? text : "過去沒有相關的讀書會！");
             s.endDialog();
         }
         else {
@@ -199,7 +215,7 @@ exports.default = (bot) => {
     });
     bot.dialog("關於我", (s) => {
         console.log("s.message", s.message);
-        let text = "小書 目前是 open source 專案 https://github.com/onlinereadbook/linebot，以學習Line群的管理為主要目地，有興趣的朋友，歡迎一起開發同歡。目前開發者 LineBot相關:Wolke LineId:wolkesau,後台：polo ";
+        let text = "小書 目前是 open source 專案 https://github.com/onlinereadbook/linebot ，以學習Line群的管理為主要目地，有興趣的朋友，歡迎一起開發同歡。\r\n開發者：\r\n  LineBot:Wolke LineId:wolkesau,\r\n後台：polo ";
         let isGroup = s.message.address.conversation.isGroup;
         if (isGroup) {
             //send to user
