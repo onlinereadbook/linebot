@@ -213,7 +213,7 @@ export default (bot: builder.UniversalBot) => {
     bot.dialog("關於我", s => {
         console.log("s.message", s.message)
 
-        let text = "show 關於我"
+        let text = "小書 目前是 open source 專案 https://github.com/onlinereadbook/linebot，以學習Line群的管理為主要目地，有興趣的朋友，歡迎一起開發同歡。"
         let isGroup = s.message.address.conversation.isGroup;
         if (isGroup) {
             //send to user
@@ -221,7 +221,6 @@ export default (bot: builder.UniversalBot) => {
             if (m.status > 400) {
                 s.endDialog("那位朋友按了 關於我 請加我好友，我才能完全讀到你喔！")
             }
-
             s.endDialog()
         } else {
             s.endDialog(text)

@@ -199,7 +199,7 @@ exports.default = (bot) => {
     });
     bot.dialog("關於我", s => {
         console.log("s.message", s.message);
-        let text = "show 關於我";
+        let text = "小書 目前是 open source 專案 https://github.com/onlinereadbook/linebot，以學習Line群的管理為主要目地，有興趣的朋友，歡迎一起開發同歡。";
         let isGroup = s.message.address.conversation.isGroup;
         if (isGroup) {
             //send to user
