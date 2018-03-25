@@ -91,7 +91,7 @@ export default (bot: builder.UniversalBot) => {
                             .title("我是小書")
                             .subtitle("線上讀書會賴群管理機器人")
                             .text("我是小書:線上讀書會賴群管理機器人")
-                            .images([builder.CardImage.create(s, 'https://imagelab.nownews.com/?w=1080&q=85&src=http://s.nownews.com/11/b9/11b93df1ec7012f4d772c8bb0ac74e10.png')])
+                            .images([builder.CardImage.create(s, 'https://lh3.googleusercontent.com/-iGWbw_D0cMY/TBjFfD4thMI/AAAAAAAAB88/EmznH_rd_WAlgc16mm1LbGpvZOLNUgzIwCHMYBhgL/s640/02102010%2528008%2529.jpg')])
 
                             .buttons([
                                 builder.CardAction.postBack(s, "即將舉辦的讀書會", "即將舉辦的讀書會"),
