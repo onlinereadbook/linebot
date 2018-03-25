@@ -71,8 +71,8 @@ exports.default = (bot) => {
         });
     });
     bot.dialog("helloGroup", [(s) => __awaiter(this, void 0, void 0, function* () {
-            let p = yield connector.getUserProfile(s.message.address.channel.id);
-            console.log(p);
+            // let p = await connector.getUserProfile(s.message.address.channel.id)
+            // console.log(p);
             s.send("大家好！感謝將我加進群裡！要和我互動一定要加我為好友！不然我是收不到你的訊息的！需我服務時，請直輸入 menu ，就可以呼叫出下面的選單，這是我目前的功能，感謝大家！");
             s.send("menu");
             s.beginDialog("menu");
