@@ -71,6 +71,8 @@ exports.default = (bot) => {
         });
     });
     bot.dialog("helloGroup", [(s) => __awaiter(this, void 0, void 0, function* () {
+            let p = yield connector.getUserProfile(s.message.address.channel.id);
+            console.log(p);
             s.send("大家好！感謝將我加進群裡！要和我互動一定要加我為好友！不然我是收不到你的訊息的！需我服務時，請直輸入 menu ，就可以呼叫出下面的選單，這是我目前的功能，感謝大家！");
             s.send("menu");
             s.beginDialog("menu");
@@ -104,7 +106,7 @@ exports.default = (bot) => {
                     .title("我是小書")
                     .subtitle("線上讀書會賴群管理機器人")
                     .text("我是小書:線上讀書會賴群管理機器人")
-                    .images([builder.CardImage.create(s, 'https://imagelab.nownews.com/?w=1080&q=85&src=http://s.nownews.com/11/b9/11b93df1ec7012f4d772c8bb0ac74e10.png')])
+                    .images([builder.CardImage.create(s, 'https://lh3.googleusercontent.com/-iGWbw_D0cMY/TBjFfD4thMI/AAAAAAAAB88/EmznH_rd_WAlgc16mm1LbGpvZOLNUgzIwCHMYBhgL/s640/02102010%2528008%2529.jpg')])
                     .buttons([
                     builder.CardAction.openUrl(s, "https://docs.google.com/forms/d/1n20MX3dMIw0U1k0V1eFM6yzzOZ3QkfW2wgLelTmRYNY/edit?usp=sharing", "建議事項"),
                     builder.CardAction.postBack(s, "關於我", "關於我"),
@@ -124,14 +126,16 @@ exports.default = (bot) => {
             let a = yield query_1.get_ql_data(query, key);
             console.log("a", a);
             let text = "";
-            a.map((d, i) => {
-                if (i < 10) {
-                    let startTime = Date.parse(d.startTime);
-                    // console.log(startTime)
-                    let t = new Date(startTime);
-                    text += `${d.title} ${t.toLocaleString()}\r\n`;
-                }
-            });
+            if (a) {
+                a.map((d, i) => {
+                    if (i < 10) {
+                        let startTime = Date.parse(d.startTime);
+                        // console.log(startTime)
+                        let t = new Date(startTime);
+                        text += `${d.title} ${t.toLocaleString()}\r\n`;
+                    }
+                });
+            }
             return text;
         });
     }
@@ -150,16 +154,19 @@ exports.default = (bot) => {
           }
           }`;
         let text = yield getEventList(q, "FbEventQueryAfter");
-        console.log("text", text.length);
+        // console.log("text", text.length)
         var isGroup = s.message.address.conversation.isGroup;
         if (isGroup) {
             //send to user
             try {
                 let r = yield query_1.notify(s.message.from.id, "", text.length > 0 ? text : "目前無讀書會將舉辦！");
-                console.log("r", r);
+                s.conversationData.alert = false;
             }
             catch (e) {
-                s.endDialog("那位朋友按了 即將舉辦的讀書會　，請先加我好友，我才能讀到你喔！");
+                if (!s.conversationData.alert) {
+                    s.endDialog("那位朋友按了 即將舉辦的讀書會　，請先加我好友，我才能讀到你喔！");
+                }
+                s.conversationData.alert = true;
             }
             s.endDialog();
         }
@@ -197,10 +204,14 @@ exports.default = (bot) => {
                 //send to user
                 try {
                     let r = yield query_1.notify(s.message.from.id, "", text.length > 0 ? text : "過去沒有相關的讀書會！");
-                    console.log("r", r);
+                    s.conversationData.alert = false;
+                    // console.log("r", r)
                 }
                 catch (e) {
-                    s.endDialog("那位朋友按了 之前的讀書會， 請先加我好友，我才能讀到你喔！");
+                    if (!s.conversationData.alert) {
+                        s.endDialog("那位朋友按了 之前的讀書會， 請先加我好友，我才能讀到你喔！");
+                    }
+                    s.conversationData.alert = true;
                 }
             }
             else {
@@ -232,17 +243,20 @@ exports.default = (bot) => {
         }
     });
     bot.dialog("關於我", (s) => __awaiter(this, void 0, void 0, function* () {
-        // console.log("s.message", s.message)
+        // console.log("s.message.address", s.message.address)
         let text = "小書 目前是 open source 專案 https://github.com/onlinereadbook/linebot ，以學習Line群的管理為主要目地，有興趣的朋友，歡迎一起開發同歡。\r\n開發者：\r\n  LineBot:Wolke LineId:wolkesau,\r\n後台：polo ";
         let isGroup = s.message.address.conversation.isGroup;
         if (isGroup) {
             //send to user
             try {
                 let r = yield query_1.notify(s.message.from.id, "", text);
-                console.log("r", r);
+                s.conversationData.alert = false;
             }
             catch (e) {
-                s.endDialog("那位朋友按了 關於我 請先加我好友，我才能讀到你喔！");
+                if (!s.conversationData.alert) {
+                    s.endDialog("那位朋友按了 關於我 請先加我好友，我才能讀到你喔！");
+                    s.conversationData.alert = true;
+                }
             }
         }
         else {
