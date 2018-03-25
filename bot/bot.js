@@ -154,7 +154,13 @@ exports.default = (bot) => {
         var isGroup = s.message.address.conversation.isGroup;
         if (isGroup) {
             //send to user
-            query_1.notify(s.message.from.id, "", text.length > 0 ? text : "目前無讀書會將舉辦！");
+            try {
+                let r = yield query_1.notify(s.message.from.id, "", text.length > 0 ? text : "目前無讀書會將舉辦！");
+                console.log("r", r);
+            }
+            catch (e) {
+                s.endDialog("那位朋友按了 即將舉辦的讀書會　，請先加我好友，我才能讀到你喔！");
+            }
             s.endDialog();
         }
         else {
@@ -187,7 +193,19 @@ exports.default = (bot) => {
         var isGroup = s.message.address.conversation.isGroup;
         if (isGroup) {
             //send to user
-            query_1.notify(s.message.from.id, "", text.length > 0 ? text : "過去沒有相關的讀書會！");
+            if (isGroup) {
+                //send to user
+                try {
+                    let r = yield query_1.notify(s.message.from.id, "", text.length > 0 ? text : "過去沒有相關的讀書會！");
+                    console.log("r", r);
+                }
+                catch (e) {
+                    s.endDialog("那位朋友按了 之前的讀書會， 請先加我好友，我才能讀到你喔！");
+                }
+            }
+            else {
+                s.endDialog(text);
+            }
             s.endDialog();
         }
         else {
@@ -213,23 +231,25 @@ exports.default = (bot) => {
             session.beginDialog(args.action, args);
         }
     });
-    bot.dialog("關於我", (s) => {
-        console.log("s.message", s.message);
+    bot.dialog("關於我", (s) => __awaiter(this, void 0, void 0, function* () {
+        // console.log("s.message", s.message)
         let text = "小書 目前是 open source 專案 https://github.com/onlinereadbook/linebot ，以學習Line群的管理為主要目地，有興趣的朋友，歡迎一起開發同歡。\r\n開發者：\r\n  LineBot:Wolke LineId:wolkesau,\r\n後台：polo ";
         let isGroup = s.message.address.conversation.isGroup;
         if (isGroup) {
             //send to user
-            let m = query_1.notify(s.message.from.id, "", text);
-            if (m.status > 400) {
-                s.endDialog("那位朋友按了 關於我 請加我好友，我才能完全讀到你喔！");
+            try {
+                let r = yield query_1.notify(s.message.from.id, "", text);
+                console.log("r", r);
             }
-            s.endDialog();
+            catch (e) {
+                s.endDialog("那位朋友按了 關於我 請先加我好友，我才能讀到你喔！");
+            }
         }
         else {
             s.endDialog(text);
         }
         // s.endDialog("show 關於我")
-    }).triggerAction({
+    })).triggerAction({
         matches: /^關於我$/i,
         onSelectAction: (session, args, next) => {
             // Add the help dialog to the dialog stack 

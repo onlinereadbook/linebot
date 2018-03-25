@@ -39,12 +39,18 @@ export const notify = (LineId: string, title: string, description: string) => ne
         return response.json();
     })
         .then(function (stories: any) {
-            console.log(stories);
-            resolve({
-                message: stories.message,
-                status: status
-            })
-
+            // console.log(stories);
+            if (stories.message.indexOf("done") > -1) {
+                resolve({
+                    message: stories.message,
+                    status: status
+                })
+            } else {
+                rej({
+                    message: stories.message,
+                    status: status
+                })
+            }
         });
 })
 
