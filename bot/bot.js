@@ -43,13 +43,6 @@ exports.default = (bot) => {
         return __awaiter(this, void 0, void 0, function* () {
             // detect event
             // console.log("conversationUpdate", message)
-            let q = `mutation{
-            FbGroupCheckLine(groupId:"temp",lineId:"${message.address.channel.id}"){
-              lineId
-              groupId
-            }
-          }`;
-            let a = yield query_1.get_ql_data(q, "FbGroupCheckLine");
             // console.log(a)
             switch (message.text) {
                 case 'follow':
@@ -63,6 +56,13 @@ exports.default = (bot) => {
             }
             var isGroup = message.address.conversation.isGroup;
             if (isGroup) {
+                let q = `mutation{
+                FbGroupCheckLine(groupId:"temp",lineId:"${message.address.channel.id}"){
+                  lineId
+                  groupId
+                }
+              }`;
+                let a = yield query_1.get_ql_data(q, "FbGroupCheckLine");
                 bot.beginDialog(message.address, "helloGroup");
             }
             else {
@@ -92,7 +92,7 @@ exports.default = (bot) => {
                     .title("我是小書")
                     .subtitle("線上讀書會賴群管理機器人")
                     .text("我是小書:線上讀書會賴群管理機器人")
-                    .images([builder.CardImage.create(s, 'https://lh3.googleusercontent.com/-iGWbw_D0cMY/TBjFfD4thMI/AAAAAAAAB88/EmznH_rd_WAlgc16mm1LbGpvZOLNUgzIwCHMYBhgL/s640/02102010%2528008%2529.jpg')])
+                    .images([builder.CardImage.create(s, 'https://17book.me/logo/logo-with-blank.png')])
                     .buttons([
                     builder.CardAction.postBack(s, "即將舉辦的讀書會", "即將舉辦的讀書會"),
                     builder.CardAction.postBack(s, "之前的讀書會", "之前的讀書會"),
@@ -106,7 +106,7 @@ exports.default = (bot) => {
                     .title("我是小書")
                     .subtitle("線上讀書會賴群管理機器人")
                     .text("我是小書:線上讀書會賴群管理機器人")
-                    .images([builder.CardImage.create(s, 'https://lh3.googleusercontent.com/-iGWbw_D0cMY/TBjFfD4thMI/AAAAAAAAB88/EmznH_rd_WAlgc16mm1LbGpvZOLNUgzIwCHMYBhgL/s640/02102010%2528008%2529.jpg')])
+                    .images([builder.CardImage.create(s, 'https://17book.me/logo/logo-with-blank.png')])
                     .buttons([
                     builder.CardAction.openUrl(s, "https://docs.google.com/forms/d/1n20MX3dMIw0U1k0V1eFM6yzzOZ3QkfW2wgLelTmRYNY/edit?usp=sharing", "建議事項"),
                     builder.CardAction.postBack(s, "關於我", "關於我"),
