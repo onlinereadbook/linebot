@@ -96,7 +96,7 @@ export default (bot: builder.UniversalBot) => {
                             .title("我是小書")
                             .subtitle("線上讀書會賴群管理機器人")
                             .text("我是小書:線上讀書會賴群管理機器人")
-                            .images([builder.CardImage.create(s, 'https://17book.me/logo/logo-with-blank.png')])
+                            .images([builder.CardImage.create(s, 'https://17book.me/static/logo/logo-with-blank.png')])
 
                             .buttons([
                                 builder.CardAction.postBack(s, "即將舉辦的讀書會", "即將舉辦的讀書會"),
@@ -112,7 +112,7 @@ export default (bot: builder.UniversalBot) => {
                             .title("我是小書")
                             .subtitle("線上讀書會賴群管理機器人")
                             .text("我是小書:線上讀書會賴群管理機器人")
-                            .images([builder.CardImage.create(s, 'https://17book.me/logo/logo-with-blank.png')])
+                            .images([builder.CardImage.create(s, 'https://17book.me/static/logo/logo-with-blank.png')])
 
                             .buttons([
                                 builder.CardAction.openUrl(s, "https://docs.google.com/forms/d/1n20MX3dMIw0U1k0V1eFM6yzzOZ3QkfW2wgLelTmRYNY/edit?usp=sharing", "建議事項"),
