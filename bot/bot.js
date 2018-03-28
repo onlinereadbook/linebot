@@ -242,6 +242,31 @@ exports.default = (bot) => {
             session.beginDialog(args.action, args);
         }
     });
+    bot.dialog("setGroupId", [(s) => {
+            if (config.adminUserLineId.indexOf(s.message.address.channel.id) === -1) {
+                s.endConversation("only for admin user");
+                return;
+            }
+            builder.Prompts.text(s, '請輸入fbGroupId?');
+        }, (s, r) => {
+            builder.Prompts.choice(s, `確定是${r.response}`, "正確|不是");
+        }, (s, r) => {
+            if (r.response === "正確") {
+                //set data
+                s.endDialog("設定完成");
+            }
+            else {
+                s.endDialog("沒有設定");
+            }
+        }
+    ]).triggerAction({
+        matches: /^showLineId$/i,
+        onSelectAction: (session, args, next) => {
+            // Add the help dialog to the dialog stack 
+            // (override the default behavior of replacing the stack)
+            session.beginDialog(args.action, args);
+        }
+    });
     bot.dialog("關於我", (s) => __awaiter(this, void 0, void 0, function* () {
         // console.log("s.message.address", s.message.address)
         let text = "小書 目前是 open source 專案 https://github.com/onlinereadbook/linebot ，以學習Line群的管理為主要目地，有興趣的朋友，歡迎一起開發同歡。\r\n開發者：\r\n  LineBot:Wolke LineId:wolkesau,\r\n後台：polo ";

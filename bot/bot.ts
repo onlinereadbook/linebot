@@ -269,6 +269,39 @@ export default (bot: builder.UniversalBot) => {
         }
     });
 
+    bot.dialog("setGroupId", [(s: any) => {
+        if (config.adminUserLineId.indexOf(s.message.address.channel.id) === -1) {
+            s.endConversation("only for admin user");
+            return;
+        }
+        builder.Prompts.text(s, '請輸入fbGroupId?');
+
+    }, (s, r) => {
+        builder.Prompts.choice(s, `確定是${r.response}`, "正確|不是");
+    }, (s, r) => {
+        if (r.response === "正確") {
+            //set data
+            s.endDialog("設定完成")
+        } else {
+            s.endDialog("沒有設定")
+
+        }
+
+    }
+
+    ]
+    ).triggerAction({
+        matches: /^showLineId$/i,
+        onSelectAction: (session, args: any, next) => {
+            // Add the help dialog to the dialog stack 
+            // (override the default behavior of replacing the stack)
+            session.beginDialog(args.action, args);
+        }
+    });
+
+
+
+
     bot.dialog("關於我", async (s: any) => {
         // console.log("s.message.address", s.message.address)
 
